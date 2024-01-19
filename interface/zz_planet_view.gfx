@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_planet_view_bombarded"
+		texturefile = "gfx/interface/icons/planet_modifiers/pm_under_orbital_bombardment.dds"
+		noOfFrames = 6
+	}
+
+}

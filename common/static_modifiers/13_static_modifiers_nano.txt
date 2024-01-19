@@ -1,0 +1,166 @@
+
+### Planet Fog modifiers ###
+
+# Utility Fog modifier
+utility_fog = {
+	pop_happiness = 0.05
+	planet_amenities_mult = 0.05
+	planet_jobs_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_utility_fog.dds"
+	icon_frame = 1
+}
+
+# Angelnet Modifier
+angelnet = {
+	pop_happiness = 0.1
+	planet_amenities_mult = 0.1
+	planet_jobs_produces_mult = 0.1
+	planet_crime_add = -10
+	pop_government_ethic_attraction = 0.25
+	planet_orbital_bombardment_damage = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_angelnet.dds"
+	icon_frame = 1
+}
+
+# Sophont Angelnet Modifier
+sophont_angelnet = {
+	planet_stability_add = 10
+	pop_happiness = 0.15
+	planet_amenities_mult = 0.15
+	planet_jobs_produces_mult = 0.15
+	planet_crime_add = -15
+	pop_government_ethic_attraction = 0.5
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sophont_angelnet.dds"
+	icon_frame = 1
+}
+
+# Topoophont Angelnet Modifier
+toposophont_angelnet = {
+	planet_stability_add = 15
+	pop_happiness = 0.15
+	planet_amenities_mult = 0.15
+	planet_jobs_produces_mult = 0.25
+	planet_crime_add = -25
+	pop_government_ethic_attraction = 0.5
+	planet_orbital_bombardment_damage = -0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_toposophont_angelnet.dds"
+	icon_frame = 1
+}
+
+### Gestalt Variants ###
+utility_fog_hive = {
+	pop_happiness = 0.05
+	planet_amenities_mult = 0.05
+	planet_jobs_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_utility_fog.dds"
+	icon_frame = 1
+}
+
+# Angelnet Modifier
+angelnet_hive = {
+	pop_happiness = 0.1
+	planet_amenities_mult = 0.1
+	planet_jobs_produces_mult = 0.1
+	planet_crime_no_happiness_add = -10
+	planet_orbital_bombardment_damage = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_angelnet.dds"
+	icon_frame = 1
+}
+
+# Sophont Angelnet Modifier
+sophont_angelnet_hive = {
+	planet_stability_add = 10
+	pop_happiness = 0.15
+	planet_amenities_mult = 0.15
+	planet_jobs_produces_mult = 0.15
+	planet_crime_no_happiness_add = -15
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sophont_angelnet.dds"
+	icon_frame = 1
+}
+
+# Toposophont Angelnet Modifier
+toposophont_angelnet_hive = {
+	planet_stability_add = 15
+	pop_happiness = 0.15
+	planet_amenities_mult = 0.15
+	planet_jobs_produces_mult = 0.25
+	planet_crime_no_happiness_add = -25
+	planet_orbital_bombardment_damage = -0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_toposophont_angelnet.dds"
+	icon_frame = 1
+}
+
+### Archailect Modifiers
+
+archailect_calculated_strategist = {
+	country_command_limit_add = 120
+	country_naval_cap_mult = 0.25
+	country_alloys_produces_mult = 0.15
+}
+
+archailect_serenity_now = {
+	planet_stability_add = 10
+	country_consumer_goods_produces_mult = 0.15
+	local_trade_protection_add = 100
+}
+
+archailect_species_first = {
+	intel_encryption_add = 2
+	pop_growth_speed = 0.15
+	country_starbase_capacity_add = 25
+}
+
+archailect_species_first_synth = {
+	intel_encryption_add = 2
+	planet_pop_assembly_mult = 0.15
+	country_starbase_capacity_add = 25
+}
+
+archailect_diverse_future = {
+	envoys_add = 4
+	trade_value_mult = 0.25
+	planet_immigration_pull_mult = 0.75
+}
+
+archailect_revolutionary_awakening = {
+	pop_happiness = 0.10
+	planet_jobs_worker_produces_mult = 0.10
+	pop_ethic_egalitarian_attraction_mult = 1.00
+}
+
+archailect_absolute_monarch = {
+	pop_citizen_happiness = 0.10
+	planet_jobs_ruler_produces_mult = 0.25
+	pop_ethic_authoritarian_attraction_mult = 1.00
+}
+
+archailect_divine_calling = {
+	country_unity_produces_mult = 0.15
+	planet_building_build_speed_mult = 0.25
+	megastructure_build_speed_mult = 0.5
+}
+
+archailect_master_mundane = {
+	intel_decryption_add = 2
+	all_technology_research_speed = 0.15
+	planet_jobs_robotic_produces_mult = 0.15
+}
+
+archailect_hive_ai = {
+	pop_growth_speed = 0.15
+	country_energy_produces_mult = 0.15
+	planet_jobs_upkeep_mult = -0.15
+}
+
+archailect_machine_ai = {
+	planet_pop_assembly_mult = 0.15
+	planet_amenities_no_happiness_mult = 0.15
+	terraform_speed_mult = 1.00
+}
+
+archailect_default = {
+	country_edict_fund_add = 250
+	country_leader_cap_add = 2
+}

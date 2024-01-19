@@ -1,0 +1,127 @@
+####################
+# Synthetic Traits #
+####################
+
+leader_trait_nanite_entity = {
+	is_councilor_trait_for_ruler = yes
+	inline_script = {
+		script = trait/icon
+		ICON = "GFX_leader_trait_nanite_entity"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		ship_fire_rate_mult = 0.05
+		ship_evasion_mult = 0.05
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.10
+		ship_anomaly_research_speed_mult = 0.10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = general
+		}
+		armies_upkeep_mult = -0.15
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = governor
+		}
+		planet_building_build_speed_mult = 0.10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		council_agenda_progress_speed = 0.10
+		councilor_exp_gain = 0.15
+	}
+	self_modifier = {
+		councilor_exp_gain = 0.15
+		leader_trait_selection_options_add = 1
+	}
+	initial = no
+	randomized = no
+
+	leader_class = { admiral governor scientist general }
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+####################
+## Machine Traits ##
+####################
+
+leader_trait_terminal_nanites = {
+	is_councilor_trait_for_ruler = yes
+	inline_script = {
+		script = trait/icon
+		ICON = "GFX_leader_trait_nanite_entity"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		ship_fire_rate_mult = 0.05
+		ship_evasion_mult = 0.05
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.10
+		ship_anomaly_research_speed_mult = 0.10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = general
+		}
+		armies_upkeep_mult = -0.15
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = governor
+		}
+		planet_building_build_speed_mult = 0.10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		council_agenda_progress_speed = 0.10
+		councilor_exp_gain = 0.15
+	}
+	self_modifier = {
+		councilor_exp_gain = 0.15
+		leader_trait_selection_options_add = 1
+	}
+	initial = no
+	randomized = no
+
+	leader_class = { admiral governor scientist general }
+
+	ai_weight = {
+		weight = 0
+	}
+}

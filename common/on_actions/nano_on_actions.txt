@@ -1,0 +1,59 @@
+### Set global flag ###
+on_game_start = {
+	events = { 
+		nano.1
+	} 
+}
+
+### Subsumption Bombardment ###
+on_planet_zero_pops = {							
+	events = { 
+		nano.1300
+	}
+}
+
+### Trait Events ###
+on_tech_increased = {
+	events = {
+		nano.1310 #Synth
+		nano.1320 #Machine
+		nano.1330 #Organic
+		nano.1332 #Cybernetic
+	}
+}
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		nano.1312 # New Leaders Get Nanite Entity Trait
+		nano.1322	# New Leaders Get Terminal Nanites Trait
+	}
+}
+
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+on_army_killed_in_combat = {
+	events = {
+		nano.1350
+	}
+}
+
+#A district construction has been completed.
+# This = Planet
+#on_district_complete = {
+#	events = {
+#		nano.180 # Districts built counter
+#	}
+#}
+
+# A district construction has demolished.
+# This = Planet
+#on_district_demolished = {
+#	events = {
+#		nano.181
+#	}
+#}

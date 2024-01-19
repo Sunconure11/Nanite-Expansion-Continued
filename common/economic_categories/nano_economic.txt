@@ -1,0 +1,7 @@
+planet_nanoroboticists = {
+	icon = job_nanoroboticist
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}

@@ -1,0 +1,6 @@
+############## Sumbsumption Bombardment ##############
+on_planet_zero_pops = {							
+	events = { 
+		nano.1300
+	} 
+}

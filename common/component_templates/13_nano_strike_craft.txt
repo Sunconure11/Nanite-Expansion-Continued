@@ -1,0 +1,71 @@
+@attack_range = 10
+@engagement_range = 125
+@launch_time = 1.5
+@speed1 = 550
+@speed2 = 600
+@speed3 = 650
+@speed4 = 700
+@speed5 = 725
+@count = 10
+@regen = 1
+
+@power1 = -20
+@power2 = -34
+@power3 = -45
+@power4 = -59
+
+strike_craft_component_template = {
+	key = "STRIKE_CRAFT_HANGAR_AUTOWAR"
+	size = LARGE
+	entity = "gatebuilder_01_strikecraft_entity"
+
+	weapon_type = instant
+	projectile_gfx = "strike_craft_laser_3"
+
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+			nanites = @m_t5_rare
+		}
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+
+	count = 10
+	regeneration_per_day = @regen
+	launch_time = 1.0
+
+	damage = { min = 13 max = 22 }
+	cooldown = 2.3
+	range = 20
+	engagement_range = 125
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 100
+	armor = 50
+	shield = 50
+	evasion = 0.80
+
+	speed = @speed5
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1.0
+	armor_damage = 1.5
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_strike_craft_autowar"
+	icon_frame = 1
+	component_set = "STRIKE_CRAFT_HANGAR_AUTOWAR"
+	prerequisites = { "tech_miniaturized_autowars" }
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense }
+
+}

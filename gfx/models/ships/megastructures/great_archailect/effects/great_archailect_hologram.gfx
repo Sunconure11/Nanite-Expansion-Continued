@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "nano_holo_light_mesh"
+		file = "gfx/models/ships/megastructures/interstellar_assembly/effects/globe_glow_1.mesh"
+
+		meshsettings = {
+			name = "polySurfaceShape12"
+			index = 0
+			texture_diffuse = "nano_hologram_light.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}

@@ -1,0 +1,63 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_nano_deconstructor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mass_deconstructor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ship_part_nano_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nano_armor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_phased_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_phased_beam.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_strike_craft_autowar"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_strike_craft_autowar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nano_torpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nano_torpedo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nano_swarmer_missile"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nano_swarmer_missile.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_computer_swarm_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_toposophont.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_toposophont.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_computer_line_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_toposophont.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_toposophont.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_toposophont.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_toposophont"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_toposophont.dds"
+	}
+
+}

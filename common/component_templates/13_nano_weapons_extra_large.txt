@@ -1,0 +1,120 @@
+# ####################
+#  Titan Laser
+# ####################
+
+# ## Phased Array Beam
+weapon_component_template = {
+	key = "NANO_BEAM_TITAN"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_ship_part_phased_beam"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	use_ship_kill_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+
+	damage = { min = 7000 max = 14000 }
+	windup = { min = 30.0 max = 45.0 }
+	power = -500
+	range = 250
+	tracking = 0.00
+	accuracy = 1.00
+	total_fire_time = 180
+	hull_damage = 1.25
+	shield_damage = 0.75
+	shield_penetration = 0
+	armor_damage = 1.5
+	armor_penetration = 0
+	
+	prerequisites = { "tech_optical_phased_arrays" }
+	component_set = "NANO_BEAM"
+	upgrades_to = "ENERGY_LANCE_TEMPORAL"
+	projectile_gfx = "nemesis_01_ion_cannon"
+	size_restriction = { titan ion_cannon }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t6_cost
+			nanites = @titanic_t6_rare
+		}		
+		upkeep = {
+			energy = @titanic_t6_upkeep_energy
+			alloys = @titanic_t6_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+}
+
+# ## Phased Ion Beam
+#weapon_component_template = {
+#	key = "NANO_BEAM_ION"
+#	size = titanic
+#	type = instant
+#	prio_projectile = yes
+#		
+#	icon = "GFX_ship_part_phased_beam"
+#	icon_frame = 1
+#	
+#	firing_arc = 10.0
+#	min_range = 30.0
+#	use_ship_kill_target = no
+#
+#	tags = { weapon_type_energy }
+#
+#	damage = { min = 7000 max = 14000 }
+#	windup = { min = 30.0 max = 45.0 }
+#	range = 250
+#	tracking = 0.00
+#	accuracy = 1.00
+#	total_fire_time = 180
+#	hull_damage = 1.25
+#	shield_damage = 0.75
+#	shield_penetration = 0
+#	armor_damage = 1.5
+#	armor_penetration = 0
+#	
+#	prerequisites = { "tech_optical_phased_arrays" }
+#	component_set = "NANO_BEAM"
+#	projectile_gfx = "nemesis_01_ion_cannon"
+#	size_restriction = { ion_cannon }
+#	resources = {
+#		category = ship_components
+#		cost = {
+#			alloys = @titanic_t6_cost
+#			nanites = @titanic_t6_rare
+#		}		
+#		upkeep = {
+#			energy = @titanic_t6_upkeep_energy
+#			alloys = @titanic_t6_upkeep_alloys
+#		}
+#	}
+#
+#	target_weights = {
+#		titan = 3
+#		battleship = 2
+#	}
+#
+#	ai_weight = {
+#		weight = 6
+#		modifier = {
+#			factor = 0.0
+#			is_country_type = fallen_empire
+#		}
+#	}
+#}

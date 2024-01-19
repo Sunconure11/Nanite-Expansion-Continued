@@ -1,0 +1,104 @@
+entity = {
+	name = "holo_galaxy_entity"
+	pdxmesh = "holo_galaxy_mesh"
+	locator = { name = "base"  position = { 0 0 0 }}
+	scale = .8
+		
+		game_data = {
+		bloom_factor			= 1.8
+		uv_animation_speed 		= .1
+		uv_animation_direction 	= { 1 0.0 }
+		}
+
+}
+
+entity = {
+	name = "holo_earth_entity"
+	pdxmesh = "holo_earth_mesh"
+	locator = { name = "base"  position = { 0 0 0 }}
+	scale = .8
+		
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= .1
+		uv_animation_direction 	= { 1 0.50 }
+		}
+
+}
+
+entity = {
+	name = "nano_holo_light_entity"
+	pdxmesh = "nano_holo_light_mesh"
+	locator = { name = "base"  position = { 0 0 0 }}
+	scale = .8
+
+	
+		game_data = {
+
+		bloom_factor			= 1
+		uv_animation_speed 		= .2
+		uv_animation_direction 	= { 0 1.0 }
+		}
+
+}
+
+entity = {
+	name = "holo_globe_edge_entity"
+	pdxmesh = "holo_globe_edge_mesh"
+	default_state = "idle"
+	
+	state = { name = "idle" animation = "idle" animation_speed = 0.25 }	
+	game_data = {
+		bloom_factor			= 2.5
+		uv_animation_speed 		= 0.25
+		uv_animation_direction 	= { 0.10 1.0 }
+	}
+}
+
+## Animation
+
+	animation = {
+	name = "globe_edge_idle_animation"
+	file = "globe_edge_idle.anim"
+	}
+
+entity = {
+	name = "interstellar_light_shaft_entity"
+	pdxmesh = "interstellar_light_shaft_mesh"
+	
+	game_data = {
+		bloom_factor			= 1.6
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.10 1.0 }
+	}
+}
+
+
+entity = {
+	name = "nano_hologram_effect_entity"
+
+	locator = { name = "base"  position = { 0 25 0 }}
+	scale = 10.1
+	default_state = "idle"
+	
+	state = { name = "idle" state_time = 15 looping = yes
+	
+		event = { time = 0 node = "base" particle = "interstellar_assembly_2_effect" keep_particle = yes trigger_once = yes life = 15}
+	}			
+		attach = { base = "nano_holo_light_entity" }	
+		attach = { base = "holo_globe_edge_entity" }
+		
+
+}
+
+entity = {
+	name = "interstellar_assembly_effect_2_entity"
+	pdxmesh = "interstellar_assembly_effect_2_mesh"
+	
+	game_data = {
+		bloom_factor			= 2
+		uv_animation_speed 		= 0.1
+		uv_animation_direction 	= { 0.10 1.0 }
+	}
+}
+

@@ -1,0 +1,6 @@
+component_set = {
+	key = "NANO_ARMOR"
+	
+	icon = "GFX_ship_part_nano_armor"
+	icon_frame = 1
+}

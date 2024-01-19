@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_army_type_nano"
+		texturefile = "gfx/interface/icons/armies/nano_army_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_army_type_nano_puppet"
+		texturefile = "gfx/interface/icons/armies/nano_puppet_army_icon.dds"
+	}
+}

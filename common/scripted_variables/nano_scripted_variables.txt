@@ -1,0 +1,8 @@
+# Add global variables here that will be available in all script files.
+# @something = 42
+# They can be overridden in each normal script file.
+
+# TECH COSTS
+@nanotier6cost1 = 64000
+@nanotier6cost2 = 80000
+@nanotier6cost3 = 96000

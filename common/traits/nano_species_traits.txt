@@ -1,0 +1,114 @@
+################
+#  Pop Traits  #
+################
+
+trait_nanite_enhanced = {
+	cost = 0
+	potential_crossbreeding_chance = 1.0
+	icon = "gfx/interface/icons/traits/trait_nanite_enhanced_species.dds"
+
+	improves_leaders = no
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = yes
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+	immortal_leaders = yes
+	prerequisites = { tech_perpetual_herd_immunity }
+
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		pop_environment_tolerance = 0.20
+	}
+}
+
+trait_nanite_augments = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_nanite_enhanced_species.dds"
+
+	improves_leaders = no
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = yes
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+	prerequisites = { tech_nanite_augmentation }
+
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		planet_pop_assemblers_upkeep_mult = -0.25
+		army_health = 1.5
+	}
+}
+
+trait_robot_nanite_entity = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_robot_nanite_entity_species.dds"
+
+	improves_leaders = yes
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = yes
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+	prerequisites = { tech_nanoform_uplifting }
+
+	allowed_archetypes = { ROBOT }
+
+	modifier = {
+		pop_happiness = 0.05
+		planet_jobs_produces_mult = 0.15
+		planet_pop_assembly_mult = 0.15
+	}
+}
+
+trait_robot_terminal_nanites = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_robot_nanite_entity_species.dds"
+
+	improves_leaders = yes
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = yes
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+	prerequisites = { tech_terminal_integration }
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		planet_researchers_produces_mult = 0.1
+		planet_jobs_produces_mult = 0.15
+		pop_assembly_speed = 0.15
+	}
+}

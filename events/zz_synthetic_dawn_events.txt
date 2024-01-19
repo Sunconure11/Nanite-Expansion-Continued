@@ -1,0 +1,375 @@
+
+##############################
+##############################
+### SYNTHETIC DAWN events  ###
+### by Maximilian Olbers,  ###
+### Miranda van den Brink, ###
+### & Dee Majek			   ###
+##############################
+##############################
+
+namespace = syndaw
+
+# machine leaders malfunction
+event = {
+	id = syndaw.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				OR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+					has_technology = "tech_synthetic_workers"
+				}
+			}
+			country_event = { id = syndaw.11 random = 200 }
+		}
+	}
+}
+
+country_event = {
+	id = syndaw.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			88 = { # 88% chance nothing happens
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # surveying scientist
+					limit = {
+						any_owned_leader = {
+							leader_class = scientist
+							exists = fleet
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = scientist
+							exists = fleet
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						fleet = { save_event_target_as = malfunctioning_leader_fleet }
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.21 }
+							}
+							else = {
+								country_event = { id = action.71 }
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # engineering scientist
+					limit = {
+						any_owned_leader = {
+							leader_class = scientist
+							is_researching_area = engineering
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = scientist
+							is_researching_area = engineering
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.22 }
+							}
+							else = {
+								country_event = { id = action.72 }
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # society scientist
+					limit = {
+						any_owned_leader = {
+							leader_class = scientist
+							is_researching_area = society
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = scientist
+							is_researching_area = society
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.23 }
+							}
+							else = {
+								country_event = { id = action.73 }
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # society scientist
+					limit = {
+						any_owned_leader = {
+							leader_class = scientist
+							is_researching_area = physics
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = scientist
+							is_researching_area = physics
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.24 }
+							}
+							else = {
+								country_event = { id = action.74 }
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # commanding admiral
+					limit = {
+						any_owned_leader = {
+							leader_class = admiral
+							exists = fleet
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = admiral
+							exists = fleet
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.25 }
+							}
+							else = {
+								country_event = { id = action.75 }
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				modifier = { # 50% chance if self preservation in effect
+					has_active_tradition = tr_synchronicity_self_preservation
+					factor = 0.5
+				}
+				modifier = { # 50% chance if zro crystal edict is in effect
+					has_edict = zro_crystal_machine
+					factor = 0.5
+				}
+				modifier = {
+					OR = {
+						has_technology = tech_nanoform_uplifting
+						has_technology = tech_terminal_integration
+					}
+					factor = 0.0
+				}
+				if = { # planet governor
+					limit = {
+						any_owned_leader = {
+							leader_class = governor
+							exists = sector
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+							exists = sector
+							species = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+							}
+						}
+						save_event_target_as = malfunctioning_leader
+						root = {
+							if = {
+								limit = {
+									has_authority = auth_machine_intelligence
+								}
+								country_event = { id = syndaw.26 }
+							}
+							else = {
+								country_event = { id = action.76 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

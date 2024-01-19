@@ -1,0 +1,510 @@
+#############
+# Resource buildings
+#############
+
+building_nanite_fabricator_1 = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				exists = owner
+				buildings_no_motes = yes
+				buildings_no_crystals = yes
+				buildings_no_exotic_gases = yes
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_nanoroboticist_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_nanoroboticist_drone_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 1000
+		}
+		upkeep = {
+			rare_crystals = 2
+			volatile_motes = 2
+			exotic_gases = 2
+			energy = 5
+		}
+	}
+
+	upgrades = {
+		building_nanite_fabricator_2
+	}
+
+	prerequisites = {
+		"tech_micromechanic_constructs"
+	}
+
+	ai_resource_production = {
+		nanites = 2
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_nanite_fabricator_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	category = manufacturing
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				exists = owner
+				buildings_no_motes = yes
+				buildings_no_crystals = yes
+				buildings_no_exotic_gases = yes
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_nanoroboticist_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_nanoroboticist_drone_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 1000
+		}
+		upkeep = {
+			rare_crystals = 3
+			volatile_motes = 3
+			exotic_gases = 3
+			energy = 10
+		}
+	}
+
+	upgrades = {
+		building_nanite_fabricator_3
+	}
+
+	prerequisites = {
+		"tech_nanoscale_automatons"
+	}
+
+	ai_resource_production = {
+		nanites = 6
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_nanite_fabricator_3 = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+	can_build = no
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				exists = owner
+				buildings_no_motes = yes
+				buildings_no_crystals = yes
+				buildings_no_exotic_gases = yes
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_nanoroboticist_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_nanoroboticist_drone_add = 5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 1000
+		}
+		upkeep = {
+			rare_crystals = 5
+			volatile_motes = 5
+			exotic_gases = 5
+			energy = 15
+		}
+	}
+
+	prerequisites = {
+		"tech_femtoscale_robotics"
+	}
+
+	ai_resource_production = {
+		nanites = 10
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_universal_constructor_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+
+		# Normal Planets Tier 1
+        produces = {
+			alloys = 2
+			consumer_goods = 2
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+		produces = { 
+			trigger = { 
+				owner = {
+					has_technology = tech_atto_optimizations
+				}
+			} 
+			alloys = 2
+			consumer_goods = 2
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+
+		cost = {
+			alloys = 1000
+			nanites = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			nanites = 5
+		}
+	}
+
+	upgrades = {
+		building_universal_constructor_2
+	}
+
+	prerequisites = {
+		tech_self_reconfiguring_micromatter
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_1_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_1_atto_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_1_ring_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_1_ring_atto_modifier_desc
+	}
+}
+
+building_universal_constructor_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	category = manufacturing
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+
+		# Normal Planets Tier 1
+        produces = {
+			exotic_gases = 1
+			rare_crystals = 1
+			volatile_motes = 1
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+		produces = { 
+			trigger = { 
+				owner = {
+					has_technology = tech_atto_optimizations
+				}
+			} 
+			exotic_gases = 1
+			rare_crystals = 1
+			volatile_motes = 1
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+
+		cost = {
+			alloys = 1500
+			nanites = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			nanites = 10
+		}
+	}
+
+	upgrades = {
+		building_universal_constructor_3
+	}
+
+	prerequisites = {
+		tech_self_replicating_nanites
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_2_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_2_atto_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_2_ring_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_2_ring_atto_modifier_desc
+	}
+
+}
+
+building_universal_constructor_3 = {
+	base_buildtime = @b3_time
+	can_build = no
+	category = manufacturing
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+
+		# Normal Planets Tier 1
+        produces = { 
+			sr_dark_matter = 1
+			sr_living_metal = 1
+			sr_zro = 1
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+        produces = { 
+			trigger = { 
+				owner = {
+					has_technology = tech_atto_optimizations
+				}
+			} 
+			sr_dark_matter = 1
+			sr_living_metal = 1
+			sr_zro = 1
+			nanites = -1
+			mult = planet.value:toxic_attendant_growth
+		}
+		cost = {
+			alloys = 2000
+			nanites = 300
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			nanites = 15
+		}
+	}
+
+	prerequisites = {
+		tech_universal_programmable_matter
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_3_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			NOT = {
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		text = building_universal_constructor_3_atto_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_atto_optimizations } }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_3_ring_modifier_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_atto_optimizations }
+			is_planet_class = pc_ringworld_habitable
+		}
+		text = building_universal_constructor_3_ring_atto_modifier_desc
+	}
+}

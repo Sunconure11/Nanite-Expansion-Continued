@@ -1,0 +1,8 @@
+# Icons set here are the ones shown in compnent editor list.
+
+component_set = {
+	key = "STRIKE_CRAFT_HANGAR_AUTOWAR"
+	
+	icon = "GFX_ship_part_strike_craft_autowar"
+	icon_frame = 1	
+}

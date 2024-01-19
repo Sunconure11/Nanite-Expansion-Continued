@@ -1,0 +1,3 @@
+orbital_hyperfog_0 = {
+	entity = ""
+}

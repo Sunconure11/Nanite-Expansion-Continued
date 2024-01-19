@@ -1,0 +1,125 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+@missile_speed = 5
+
+### Transmuter Torpedoes
+weapon_component_template = {
+	key = "TORPEDO_NANO"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	
+	icon = "GFX_ship_part_nano_torpedo"
+	icon_frame = 1
+	type = missile
+
+	firing_arc = 25.0
+	
+	prerequisites = { "tech_nano_torpedoes" }
+	component_set = "TORPEDO_NANO"
+	upgrades_to = "TORPEDO_TEMPORAL"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+			nanites = @m_t5_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+
+	damage = { min = 220 max = 330 }
+	windup = { min = 2 max = 10 }
+	power = -32.00
+	total_fire_time = 200
+	range = 30
+	accuracy = 1.00
+	tracking = 0.15
+	size_damage_factor = 1
+	missile_speed = 250
+	missile_evasion = 0.00
+	missile_health = 18.00
+	missile_armor = 18.00
+	shield_penetration = 1.00
+	armor_damage = 1.5
+	missile_retarget_range = 100
+}
+
+### Nanite Swarmer Missile Launcher
+weapon_component_template = {
+	key = "NANO_SWARMER_MISSILE"
+	size = medium
+	
+	icon = "GFX_ship_part_nano_swarmer_missile"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "tech_nano_swarmer_missile" }
+	component_set = "NANO_SWARMER_MISSILE"
+	upgrades_to = "TEMPORAL_SWARMER_MISSILE"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+			nanites = @m_t5_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+
+	damage = { min = 104 max = 145 }
+	windup = { min = 5 max = 20 }
+	power = -26.00
+	total_fire_time = 30
+	range = 120
+	accuracy = 1.00
+	tracking = 0.40
+	missile_speed = 400
+	missile_evasion = 0.00
+	missile_health = 40.00
+	missile_armor = 20
+	shield_penetration = 1.00
+	armor_damage = 1.00
+	missile_retarget_range = 100
+}

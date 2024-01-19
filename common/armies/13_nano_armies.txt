@@ -1,0 +1,116 @@
+#Defensive armies can't transport of the planet
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+#morale_damage = 1		# average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+
+# Nanoswarm Armies
+nanoswarm_army = {
+	damage = 2.00
+	morale_damage = 1.0
+	health = 1.00
+	has_morale = no
+	collateral_damage = 5.0
+	war_exhaustion = 0.25
+	time = 30
+	icon = GFX_army_type_nano
+	has_species = no
+
+	resources = {
+		category = armies
+		cost = {
+			nanites = 75
+		}
+
+		upkeep = {
+			energy = 0.75
+		}
+	}
+
+	prerequisites = { "tech_military_micromachines" }
+}
+
+# Nanoswarm Blights
+nanoblight_army = {
+	damage = 2.0
+	morale_damage = 1.75
+	health = 1.50
+	has_morale = no
+	collateral_damage = 0.5
+	war_exhaustion = 2.5
+	time = 100
+	icon = GFX_army_type_nano
+	has_species = no
+
+	resources = {
+		category = armies
+		cost = {
+			nanites= 125
+		}
+
+		upkeep = {
+			energy = 2.5
+		}
+	}
+
+	prerequisites = { "tech_identity_subsumption" }
+}
+
+# Nanite Dreadnought
+nanite_dreadnought = {
+	damage = 8.0
+	health = 16.0
+	has_morale = no
+	morale_damage = 5.0
+	collateral_damage = 5.0
+	war_exhaustion = 4.0
+	time = 720
+	has_species = no
+
+	icon = GFX_army_type_nano
+
+	resources = {
+		category = armies
+		cost = {
+			nanites = 500
+		}
+
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	prerequisites = { "tech_megamachine_strategies" }
+}
+
+# Subsumed Armies
+nanite_subsumed_army = {
+	damage = 1.00
+	health = 1.00
+	has_morale = no
+	collateral_damage = 1.25
+	morale_damage = 2.00
+	war_exhaustion = 0.50
+	icon = GFX_army_type_nano_puppet
+	pop_limited = no
+	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+	prerequisites = { "tech_identity_subsumption" }
+	
+	resources = {
+		category = armies
+
+		upkeep = {
+			energy = 0.75
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_valid_civic = civic_reanimated_armies
+	}
+
+	potential_country = {
+		always = no
+	}
+
+	ai_weight = {
+		base = 100
+	}
+}

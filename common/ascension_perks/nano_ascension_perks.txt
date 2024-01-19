@@ -1,0 +1,56 @@
+ap_nanotech = {
+	on_enabled = {
+		custom_tooltip = "nanotech_tooltip"
+		hidden_effect = {
+			country_event = { id = nano.1303 }
+		}
+		add_research_option = tech_micromechanic_constructs
+	}
+	modifier = {
+		planet_researchers_engineering_research_produces_mult = 0.2
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+		custom_tooltip = {
+			fail_text = "requires_technology_nanite_transmutation"
+			has_technology = tech_nanite_transmutation
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Distant Stars Story Pack"
+		host_has_dlc = "Utopia"
+		#is_ai = no
+	}
+
+	ai_weight = {
+		factor = 15
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_synthetic_evolution
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_synthetic_age
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_engineered_evolution
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_mind_over_matter
+		}
+	}
+}

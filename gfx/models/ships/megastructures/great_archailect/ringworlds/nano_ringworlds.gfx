@@ -1,0 +1,27 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "nano_vanilla_seam_mesh"
+		file = "gfx/models/ships/megastructures/great_archailect/ringworlds/nano_van_ringworld_seam.mesh"
+		cull_distance = 99999999.0f
+	}
+
+	pdxmesh = {
+		name = "nano_vanilla_construction_mesh"
+		file = "gfx/models/ships/megastructures/great_archailect/ringworlds/nano_van_ringworld_construction.mesh"
+		cull_distance = 99999999.0f
+	}
+
+	pdxmesh = {
+		name = "nano_vanilla_tech_mesh"
+		file = "gfx/models/ships/megastructures/great_archailect/ringworlds/nano_van_ringworld_tech.mesh"
+		cull_distance = 99999999.0f
+	}
+
+	pdxmesh = {
+		name = "nano_vanilla_weld_mesh"
+		file = "gfx/models/ships/megastructures/great_archailect/ringworlds/nano_van_ringworld_weld.mesh"
+		cull_distance = 99999999.0f
+	}
+	
+}

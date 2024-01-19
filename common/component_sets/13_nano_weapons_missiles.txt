@@ -1,0 +1,13 @@
+component_set = {
+	key = "TORPEDO_NANO"
+	
+	icon = "GFX_ship_part_nano_torpedo"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "NANO_SWARMER_MISSILE"
+	
+	icon = "GFX_ship_part_nano_swarmer_missile"
+	icon_frame = 1	
+}

@@ -1,0 +1,11 @@
+# ###########
+# Random Lists
+# ###########
+
+random_list = {
+	name = "rl_nano_broken_worlds"
+	planets = {
+		"pc_broken"
+		"pc_shattered"
+	}
+}

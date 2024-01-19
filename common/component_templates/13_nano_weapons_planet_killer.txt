@@ -1,0 +1,30 @@
+# ####################
+#  Planet killer beam?
+# ####################
+
+weapon_component_template = { # Mass Deconstructor
+	key = "PLANET_KILLER_NANO"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+	power = -7500
+
+	prerequisites = { "tech_pk_mass_deconstructor" }
+
+	icon = GFX_ship_part_nano_deconstructor
+	icon_frame = 1
+
+	component_set = "PLANET_KILLER_NANO"
+
+	windup = { min = 90 max = 90 }
+	total_fire_time = 30
+
+	planet_destruction_gfx = "assimilation_nanobots_gfx"
+
+	ai_weight = {
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+}

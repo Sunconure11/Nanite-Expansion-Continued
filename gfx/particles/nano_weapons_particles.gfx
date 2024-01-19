@@ -1,0 +1,10 @@
+### Compound Weapon/Stellar Annihilator Weapon Particles
+
+objectTypes = {
+
+	# Subsumption Bombardment	
+	pdxparticle = {
+		name = "subsumption_bombardment_effect"
+		type = "subsumption_bombardment"
+	}
+}

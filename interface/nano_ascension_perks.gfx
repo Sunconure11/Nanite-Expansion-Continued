@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_nanotech"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_nanotech_synthetic.dds"
+		alwaystransparent = yes
+	}
+}

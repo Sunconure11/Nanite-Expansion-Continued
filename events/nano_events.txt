@@ -1,0 +1,752 @@
+namespace = nano
+
+event = {
+    id = nano.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = nanite_expansion_active
+    }
+}
+
+### Bombardment Events ###
+
+# Subsumption Bombardment
+planet_event = {
+	id = nano.1300
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_orbital_bombardment_stance = subsumption
+		from = {
+			OR = {
+				is_country_type = default
+				is_fallen_empire = yes
+			}
+		}
+		habitable_planet = yes
+	}
+
+	immediate = {
+		owner = {
+			add_static_war_exhaustion = {
+				attacker = from
+				location = root
+				value_for_planet_destruction = 0.5
+			}
+			country_event = { id = nano.1301 }
+		}
+		from = { country_event = { id = nano.1302 } }
+		change_pc = pc_gray_goo
+		clear_planet_modifiers = yes
+		reroll_planet = yes
+		add_modifier = { modifier = terraforming_candidate days = -1 }
+	}
+}
+
+# Planet is turned into gray goo world by Subsumption bombing stance (former owner)
+country_event = {
+	id = nano.1301
+	title = "nano.1301.name"
+	desc = "nano.1301.desc"
+	picture = GFX_evt_gray_gooed_planet
+	location = from
+	is_triggered_only = yes
+
+	option = {
+		name = nano.1301.a
+		custom_tooltip = "bombed_to_gray_goo_world"
+	}
+}
+
+# Planet is turned into gray goo world by Subsumption bombing stance (bombarder)
+country_event = {
+	id = nano.1302
+	title = "nano.1301.name"
+	desc = "nano.1302.desc"
+	picture = GFX_evt_gray_gooed_planet
+	location = from
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = bombed_to_gray_goo_world
+	}
+}
+
+### Ascension Perk Events ###
+
+# Nanotech Announcement
+country_event = {
+	id = nano.1303
+	title = "nano.1303.name"
+	desc = "nano.1303.desc"
+	picture = GFX_evt_gray_goo
+	show_sound = event_the_flesh_is_weak
+
+	is_triggered_only = yes
+
+	option = {
+		name = "nano.1303.a"
+		custom_tooltip = NANOTECHNOLOGY_TREE_UNLOCKED
+	}
+}
+
+### Trait Events ###
+
+### Synthetic Trait Project Chain ###
+country_event = {
+	id = nano.1310
+	title = "nano.1310.name"
+	desc = "nano.1310.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_nanoform_workers
+		exists = capital_scope
+	}
+
+	option = {
+		name = "nano.1310.a"
+		hidden_effect = { save_event_target_as = synth_nano_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "SYNTHETIC_NANITE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Trait Event
+country_event = {
+	id = nano.1311
+	title = "nano.1311.name"
+	desc = "nano.1311.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	immediate = {
+		give_technology = { tech = tech_nanoform_uplifting }
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_mechanical
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_robot_nanite_entity
+				effect = {
+					save_event_target_as = nanoform_species
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:nanoform_species change_all = yes }
+	}
+	option = {
+		name = "nano.1311.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_fallen_empire = yes
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = {
+						#	has_trait = trait_nanite_entity
+						#	is_same_value = event_target:nanoform_species
+						#}
+						NOT = {
+							has_trait =	leader_trait_nanite_entity
+						}
+					}
+					add_trait = leader_trait_nanite_entity
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = {
+						#	has_trait = trait_nanite_entity
+						#	is_same_value = event_target:nanoform_species
+						#}
+						NOT = {
+							has_trait = leader_trait_nanite_entity
+						}
+					}
+					add_trait = leader_trait_nanite_entity
+				}
+			}
+		}
+	}
+}
+
+# New Leaders Get Nanite Entity Trait
+country_event = {
+	id = nano.1312
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = trait_robot_nanite_entity }
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait = leader_trait_nanite_entity
+		}
+	}
+}
+
+### Machine Trait Project Event Chain ###
+country_event = {
+	id = nano.1320
+	title = "nano.1320.name"
+	desc = "nano.1320.desc"
+	picture = GFX_evt_sapient_AI
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_nanoform_gestalt
+		exists = capital_scope
+	}
+
+	option = {
+		name = "nano.1320.a"
+		hidden_effect = { save_event_target_as = machine_nano_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "MACHINE_NANITE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Machine Trait Event
+country_event = {
+	id = nano.1321
+	title = "nano.1321.name"
+	desc = "nano.1321.desc"
+	picture = GFX_evt_sapient_AI
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	immediate = {
+		give_technology = { tech = tech_terminal_integration }
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_machine_unit
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_robot_terminal_nanites
+				effect = {
+					save_event_target_as = naniteterminal_species
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:naniteterminal_species change_all = yes }
+	}
+	option = {
+		name = "nano.1321.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_fallen_empire = yes
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = {
+						#	has_trait = trait_terminal_nanites
+						#	is_same_value = event_target:naniteterminal_species
+						#}
+						NOT = {
+							has_trait =	leader_trait_terminal_nanites
+						}
+					}
+					add_trait = leader_trait_terminal_nanites
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = {
+						#	has_trait = trait_terminal_nanites
+						#	is_same_value = event_target:naniteterminal_species
+						#}
+						NOT = {
+							has_trait = leader_trait_terminal_nanites
+						}
+					}
+					add_trait = leader_trait_terminal_nanites
+				}
+			}
+		}
+	}
+}
+
+# New Leaders Get Terminal Nanites Trait
+country_event = {
+	id = nano.1322
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = trait_robot_terminal_nanites }
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait = leader_trait_terminal_nanites
+		}
+	}
+}
+
+### Organic Trait Project Event Chain ###
+country_event = {
+	id = nano.1330
+	title = "nano.1330.name"
+	desc = "nano.1330.desc"
+	picture = GFX_evt_circuitry_modification
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_smart_immune_systems
+		exists = capital_scope
+	}
+
+	option = {
+		name = "nano.1330.a"
+		hidden_effect = { save_event_target_as = organic_nano_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "ORGANIC_NANITE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Organic Trait
+country_event = {
+	id = nano.1331
+	title = "nano.1331.name"
+	desc = "nano.1331.desc"
+	picture = GFX_evt_circuitry_modification
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	immediate = {
+		give_technology = { tech = tech_perpetual_herd_immunity }
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_nanite_enhanced
+				effect = {
+					save_event_target_as = naniteenhanced_species
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:naniteenhanced_species change_all = yes }
+	}
+	option = {
+		name = "nano.1331.a"
+	}
+}
+
+### Cyborg Trait Project Event Chain ###
+country_event = {
+	id = nano.1332
+	title = "nano.1332.name"
+	desc = "nano.1332.desc"
+	picture = GFX_evt_cybernetics
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_post_mechanical_cybernetics
+		exists = capital_scope
+	}
+
+	option = {
+		name = "nano.1332.a"
+		hidden_effect = { save_event_target_as = cyborg_nano_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "CYBORG_NANITE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Cyborg Trait
+country_event = {
+	id = nano.1333
+	title = "nano.1333.name"
+	desc = "nano.1333.desc"
+	picture = GFX_evt_cybernetics
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	immediate = {
+		give_technology = { tech = tech_nanite_augmentation }
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_cybernetic
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_nanite_augments
+				effect = {
+					save_event_target_as = nanitecyborg_species
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:nanitecyborg_species change_all = yes }
+	}
+	option = {
+		name = "nano.1333.a"
+	}
+}
+
+### Great Archailect Personality Event
+country_event = {
+	id = nano.1340
+	title = nano.1340.name
+	desc = nano.1340.desc
+	picture = GFX_evt_sapient_AI
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			set_country_flag = great_archailect_event
+		}
+	}
+
+	after = {
+		owner = {
+			add_research_option = tech_toposophont_fogs
+			add_research_option = tech_toposophont_combat_computers
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				is_militarist = yes
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_strength_of_legions
+				has_valid_civic = civic_machine_warbots
+			}
+		}
+		name = nano.1340.a
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_8
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_calculated_strategist
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_pacifist = yes
+		}
+		name = nano.1340.b
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_9
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_serenity_now
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_xenophobe = yes
+			NOT = {
+				has_ascension_perk = ap_synthetic_evolution
+			}
+		}
+		name = nano.1340.c
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_10
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_species_first
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_synthetic_empire = yes
+			is_xenophobe = yes
+		}
+		name = nano.1340.c
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_10
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_species_first_synth
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_xenophile = yes
+		}
+		name = nano.1340.d
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_11
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_diverse_future
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				is_egalitarian = yes
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		name = nano.1340.e
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_12
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_revolutionary_awakening
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_authoritarian = yes
+		}
+		name = nano.1340.f
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_13
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_absolute_monarch
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				is_spiritualist = yes
+				has_valid_civic = civic_hive_memorialist
+				has_valid_civic = civic_machine_memorialist
+			}
+		}
+		name = nano.1340.g
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_14
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_divine_calling
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				is_materialist = yes
+				has_valid_civic = civic_machine_introspective
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_hive_natural_neural_network
+			}
+		}
+		name = nano.1340.h
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_15
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_master_mundane
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_hive_empire = yes
+		}
+		name = nano.1340.i
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_16
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_hive_ai
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			is_machine_empire = yes
+		}
+		name = nano.1340.j
+		event_target:nano_personality_decision = {
+			upgrade_megastructure_to = great_archailect_17
+		}
+		owner = {
+			add_modifier = {
+				modifier = archailect_machine_ai
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		name = nano.1340.k
+		owner = {
+			add_modifier = {
+				modifier = archailect_default
+				days = -1
+			}
+		}
+	}
+
+}
+
+#Subsumed Armies: Subsuming the enemy's army as your own
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+country_event = {
+	id = nano.1350
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+		fromfrom = {
+			any_owned_army = {
+				army_type = nanoblight_army
+			}
+		}
+		from = {
+			exists = species
+			species = {
+				is_robotic = no
+			}
+		}
+		NOT = { is_country_type = "gate_builders" }
+	}
+
+	immediate = {
+		random_list = {
+			2 = { }
+			1 = {
+				if = {
+					limit = {
+						fromfromfrom = {
+							OR = {
+								any_ground_combat_defender = {
+									army_type = nanoblight_army
+								}
+								any_ground_combat_attacker = {
+									army_type = nanoblight_army
+								}
+							}
+						}
+						fromfrom = {
+							any_owned_army = {
+								army_type = nanoblight_army
+							}
+						}
+					}
+					fromfromfrom = {
+						create_army = {
+							owner = root.fromfrom
+							type = nanite_subsumed_army
+							species = root.from.species
+						}
+					}
+				}
+			}
+		}
+	}
+}

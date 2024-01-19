@@ -1,0 +1,6 @@
+component_set = {
+	key = "PLANET_KILLER_NANO"
+	
+	icon = "GFX_ship_part_nano_deconstructor"
+	icon_frame = 1
+}

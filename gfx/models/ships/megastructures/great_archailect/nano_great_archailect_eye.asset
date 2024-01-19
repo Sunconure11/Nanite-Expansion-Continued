@@ -1,0 +1,436 @@
+entity = {
+	name = "great_archailect_eye_01_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+}
+
+###########
+
+
+#####################################################
+#####											#####
+#####				Arthropoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "arthropoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+##		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "arthropoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "arthropoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "arthropoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####				Humanoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "humanoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+##		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "humanoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "humanoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "humanoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Avian					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "avian_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+##		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "avian_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "avian_01_interstellar_assembly_normal.dds"
+		texture_specular = "avian_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Molluscoid				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "molluscoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "molluscoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "molluscoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "molluscoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Fungoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "fungoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "fungoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "fungoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "fungoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Reptilian				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "reptilian_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "reptilian_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "reptilian_01_interstellar_assembly_normal.dds"
+		texture_specular = "reptilian_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Mammalian				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "mammalian_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "mammalian_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "mammalian_01_interstellar_assembly_normal.dds"
+		texture_specular = "mammalian_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Plantoid				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "plantoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "plantoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "plantoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "plantoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Lithoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "lithoid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "lithoid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "lithoid_01_interstellar_assembly_normal.dds"
+		texture_specular = "lithoid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+	
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}	
+}
+
+#####################################################
+#####											#####
+#####					necroid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "necroid_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "necroid_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "necroid_01_interstellar_assembly_normal.dds"
+		texture_specular = "necroid_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+	
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}	
+}
+
+#####################################################
+#####											#####
+#####					nemesis					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "nemesis_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "nemesis_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "nemesis_01_interstellar_assembly_normal.dds"
+		texture_specular = "nemesis_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+	
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}	
+}
+
+#####################################################
+#####											#####
+#####					aquatic					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "aquatic_01_great_archailect_eye_entity"
+	pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2 
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+
+	meshsettings = {
+		name = "body_4Shape"
+		index = 0
+		texture_diffuse = "aquatic_01_interstellar_assembly_diffuse.dds"
+		texture_normal = "aquatic_01_interstellar_assembly_normal.dds"
+		texture_specular = "aquatic_01_interstellar_assembly_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	attach = { ring_1 = "nano_hologram_effect_entity" }
+	attach = { ring_1 = "interstellar_assembly_effect_2_entity" }
+	attach = { ring_3 = "interstellar_light_shaft_entity" }
+	
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}	
+}
+
+###############################################
+
+entity = {
+	name = "great_archailect_eye_effect_entity"
+	pdxmesh = "interstellar_assembly_effect_mesh"
+	
+	game_data = {
+		uv_animation_speed 		= 0.25
+		uv_animation_direction 	= { 0.0 1.0 }
+	}
+}
+
+animation = {
+	name = "interstellar_assembly_01_stage_4_idle_animation"
+	file = "interstellar_assembly_01_stage_4_idle.anim"
+}

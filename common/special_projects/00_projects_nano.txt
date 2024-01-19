@@ -1,0 +1,131 @@
+# Synthetic Nanoform Project
+special_project = {
+	key = "SYNTHETIC_NANITE_PROJECT"
+	cost = {
+		base = 500
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 150
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_machine_sapience
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		# use event target so a capital-conquering country is not affected
+		event_target:synth_nano_owner = {
+			country_event = { id = nano.1311 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Machine Nanite Software Project
+special_project = {
+	key = "MACHINE_NANITE_PROJECT"
+	cost = {
+		base = 500
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 250
+			calc = pop_count
+		}
+	}
+	tech_department = physics_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		# use event target so a capital-conquering country is not affected
+		event_target:machine_nano_owner = {
+			country_event = { id = nano.1321 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Organic Nanite Immune System Project
+special_project = {
+	key = "ORGANIC_NANITE_PROJECT"
+	cost = {
+		base = 500
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 250
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_circuitry_modification
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		# use event target so a capital-conquering country is not affected
+		event_target:organic_nano_owner = {
+			country_event = { id = nano.1331 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Cybernetic Nanite Augmentation Project
+special_project = {
+	key = "CYBORG_NANITE_PROJECT"
+	cost = {
+		base = 500
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 250
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_cybernetics
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		# use event target so a capital-conquering country is not affected
+		event_target:cyborg_nano_owner = {
+			country_event = { id = nano.1333 }
+		}
+	}
+
+	on_fail = {
+	}
+}

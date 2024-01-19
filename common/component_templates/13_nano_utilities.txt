@@ -1,0 +1,117 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#############
+# UTILITIES #
+#############
+
+# Self-Healing Armor
+utility_component_template = {
+	key = "SMALL_NANO_ARMOR"
+	size = small
+	icon = "GFX_ship_part_nano_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_S7
+		ship_hull_regen_add_static = 3
+		ship_armor_regen_add_static = 4
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.2
+	}
+
+	prerequisites = { "tech_self_healing_armor" }
+	component_set = "NANO_ARMOR"
+	upgrades_to = "SMALL_TEMPORAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			nanites = 0.25
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_NANO_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_nano_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_M7
+		ship_hull_regen_add_static = 4
+		ship_armor_regen_add_static = 5
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.2
+	}
+
+	prerequisites = { "tech_self_healing_armor" }
+	component_set = "NANO_ARMOR"
+	upgrades_to = "MEDIUM_TEMPORAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t6_cost
+			nanites = 0.50
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_NANO_ARMOR"
+	size = large
+	icon = "GFX_ship_part_nano_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_L7
+		ship_hull_regen_add_static = 5
+		ship_armor_regen_add_static = 6
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.2
+	}
+
+	prerequisites = { "tech_self_healing_armor" }
+	component_set = "NANO_ARMOR"
+	upgrades_to = "LARGE_TEMPORAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+			nanites = 1.00
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			is_country_type = fallen_empire
+		}
+	}
+}

@@ -1,0 +1,1838 @@
+###position = { 0<-[+Left,-Right] | 0<-[+Up,-Down] | 0<-[+Back,-Forward] }
+
+#############################
+### Orbital Hyperfog Base ###
+#############################
+
+entity = {
+
+	###General Information
+	
+	name = "nano_hyperfog_phase_01_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}}
+}
+
+entity = {
+
+	###General Information
+	
+	name = "nano_hyperfog_phase_02_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+
+###################
+### Attachments ###
+###################
+
+entity = {
+
+	###General Information
+	
+	name = "nano_kilostructure_01_hyperfog_extension_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.35
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+entity = {
+
+	###General Information
+	
+	name = "nano_kilostructure_03_hyperfog_extension_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.35
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+#############################
+### Construction Entities ###
+#############################
+
+entity = {
+
+	###General Information
+	
+	name = "nano_hyperfog_phase_01_core_construction_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+}
+
+entity = {
+
+	###General Information
+	
+	name = "nano_hyperfog_phase_02_construction_entity"
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	scale = 0.7
+}
+
+
+
+########################################
+
+#####################################################
+#####											#####
+#####				Arthropoid					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "arthropoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "arthropoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "arthropoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "arthropoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "arthropoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "arthropoid_01_matter_decompressor_normal.dds"
+			texture_specular = "arthropoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Avian					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "avian_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "avian_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "avian_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "avian_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "avian_01_matter_decompressor_diffuse.dds"
+			texture_normal = "avian_01_matter_decompressor_normal.dds"
+			texture_specular = "avian_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Humanoid				#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "humanoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "humanoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "humanoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "humanoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "humanoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "humanoid_01_matter_decompressor_normal.dds"
+			texture_specular = "humanoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Fungoid					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "fungoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "fungoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "fungoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "fungoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "fungoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "fungoid_01_matter_decompressor_normal.dds"
+			texture_specular = "fungoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Molluscoid				#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "molluscoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "molluscoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "molluscoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "molluscoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "molluscoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "molluscoid_01_matter_decompressor_normal.dds"
+			texture_specular = "molluscoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Mammalian				#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "mammalian_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "mammalian_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "mammalian_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "mammalian_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "mammalian_01_matter_decompressor_diffuse.dds"
+			texture_normal = "mammalian_01_matter_decompressor_normal.dds"
+			texture_specular = "mammalian_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Plantoid				#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "plantoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "plantoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "plantoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "plantoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "plantoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "plantoid_01_matter_decompressor_normal.dds"
+			texture_specular = "plantoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Reptilian				#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "reptilian_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "reptilian_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "reptilian_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "reptilian_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "reptilian_01_matter_decompressor_diffuse.dds"
+			texture_normal = "reptilian_01_matter_decompressor_normal.dds"
+			texture_specular = "reptilian_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Lithoid					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "lithoid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "lithoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "lithoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "lithoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "lithoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "lithoid_01_matter_decompressor_normal.dds"
+			texture_specular = "lithoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Necroid					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "necroid_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "necroid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "necroid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "necroid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "necroid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "necroid_01_matter_decompressor_normal.dds"
+			texture_specular = "necroid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Nemesis					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "nemesis_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "nemesis_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "nemesis_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "nemesis_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "nemesis_01_matter_decompressor_diffuse.dds"
+			texture_normal = "nemesis_01_matter_decompressor_normal.dds"
+			texture_specular = "nemesis_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+#####################################################
+#####											#####
+#####					Aquatic					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "aquatic_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "aquatic_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "aquatic_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "aquatic_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "aquatic_01_matter_decompressor_diffuse.dds"
+			texture_normal = "aquatic_01_matter_decompressor_normal.dds"
+			texture_specular = "aquatic_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}
+
+
+#####################################################
+#####											#####
+#####					Toxoid					#####
+#####											#####
+#####################################################
+
+entity = {
+
+	###General Information
+	
+	name = "aquatic_01_nano_hyperfog_phase_03_entity"
+	pdxmesh = "ai_01_core_mesh"
+	scale = 0.7
+	game_data = {
+		size = 18
+		shader_type = ship 
+		emissive_recolor_crunch = 10.0
+	}
+	locator = {
+		name = "extension_attachment_01"
+		position = { 45 0 0 }
+		rotation = {  0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_02"
+		position = { -45 0 0 }
+		rotation = {   0 0 0 }
+	}
+	locator = {
+		name = "extension_attachment_03"
+		position = { 0 0 45 }
+		rotation = { 0 0  0 }
+	}
+	locator = {
+		name = "extension_attachment_04"
+		position = { 0 0 -45 }
+		rotation = { 0 0   0 }
+	}
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_01 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_02 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_03 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_04 = "nano_kilostructure_01_hyperfog_extension_entity" }
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	
+	###Animations
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_ai_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_energy" }}
+	}
+}
+
+### Construction Entity ###
+
+entity = {
+
+	###General Information
+	
+	name = "toxoid_01_nano_hyperfog_phase_03_construction_entity"
+	locator = { 
+		name = "extension_attachment_05" 
+		position = { 0 -85 0 } 
+		rotation = { 0 0 0 } 
+	}
+	locator = { 
+		name = "extension_attachment_06" 
+		position = { 0 -100 0 } 
+		rotation = { 0 -90 0 } 
+	}
+	attach = { extension_attachment_05 = "nano_kilostructure_03_hyperfog_extension_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	attach = { extension_attachment_06 = "toxoid_01_orbital_hyperfog_beam_entity" }
+	scale = 0.7
+}
+
+### Attachment Entitty ###
+
+entity = {
+	name = "toxoid_01_orbital_hyperfog_beam_entity"
+	pdxmesh = "matter_decompressor_01_stage_1_mesh"
+
+		meshsettings = {
+			name = "g_body1Shape"
+			index = 0
+			texture_diffuse = "toxoid_01_matter_decompressor_diffuse.dds"
+			texture_normal = "toxoid_01_matter_decompressor_normal.dds"
+			texture_specular = "toxoid_01_matter_decompressor_normal.dds"
+			shader = "PdxMeshShip"
+		}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { node = "effect_1" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "inner_beam_1" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_2" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "inner_beam_3" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { node = "core" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_matter_decompressor_hum_treble" } }
+	}
+	scale = 0.80
+}

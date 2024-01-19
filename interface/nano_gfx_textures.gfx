@@ -1,0 +1,4 @@
+spriteTypes = {
+	spriteType = { name = "GFX_megastructure_gray_goo_world"					textureFile = "gfx/interface/planetview/nano_gray_goo.dds" }
+	spriteType = { name = "GFX_megastructure_sentient_AI"					textureFile = "gfx/interface/planetview/nano_sentient_AI.dds" }
+}
