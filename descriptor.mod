@@ -1,4 +1,4 @@
-version="1.38"
+version="1.40"
 tags={
 	"Military"
 	"Technologies"
