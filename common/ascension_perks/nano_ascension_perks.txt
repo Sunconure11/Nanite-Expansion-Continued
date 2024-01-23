@@ -12,7 +12,7 @@ ap_nanotech = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
+			num_ascension_perks >= 2
 		}
 		custom_tooltip = {
 			fail_text = "requires_technology_nanite_transmutation"
