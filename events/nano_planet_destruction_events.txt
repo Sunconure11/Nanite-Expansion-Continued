@@ -85,7 +85,7 @@ planet_event = {
 				}
 			}
 			from.owner = {
-				set_timed_country_flag = { flag = resolution_breached_fired_cracker days = 3600 }
+				set_timed_country_flag = { flag = resolution_breached_fired_cracker years = 10 }
 			}
 		}
 
@@ -94,10 +94,7 @@ planet_event = {
 				exists = owner
 				owner = {
 					NOT = { is_same_empire = from.owner }
-					OR = {
-						is_country_type = default
-						is_fallen_empire = yes
-					}
+					is_default_or_fallen = yes
 				}
 			}
 			# Generate threat
@@ -180,7 +177,7 @@ planet_event = {
 			if = {
 				limit = {
 					exists = owner
-					owner = { is_country_type = primitive }
+					owner = { is_primitive = yes }
 				}
 				# modifier for allies + those upset by genocide
 				every_country = {

@@ -1,5 +1,6 @@
 @cost1 = 5
-@cost4 = 35 
+@cost3 = 20
+@cost4 = 35
 
 @power3 = -25
 

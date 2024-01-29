@@ -13,9 +13,9 @@ building_nanite_fabricator_1 = {
 			has_modifier = slave_colony
 			AND = {
 				exists = owner
-				buildings_no_motes = yes
-				buildings_no_crystals = yes
-				buildings_no_exotic_gases = yes
+				# buildings_no_motes = yes
+				# buildings_no_crystals = yes
+				# buildings_no_exotic_gases = yes
 			}
 		}
 	}
@@ -84,9 +84,9 @@ building_nanite_fabricator_2 = {
 			has_modifier = slave_colony
 			AND = {
 				exists = owner
-				buildings_no_motes = yes
-				buildings_no_crystals = yes
-				buildings_no_exotic_gases = yes
+				# buildings_no_motes = yes
+				# buildings_no_crystals = yes
+				# buildings_no_exotic_gases = yes
 			}
 		}
 	}
@@ -155,9 +155,9 @@ building_nanite_fabricator_3 = {
 			has_modifier = slave_colony
 			AND = {
 				exists = owner
-				buildings_no_motes = yes
-				buildings_no_crystals = yes
-				buildings_no_exotic_gases = yes
+				# buildings_no_motes = yes
+				# buildings_no_crystals = yes
+				# buildings_no_exotic_gases = yes
 			}
 		}
 	}

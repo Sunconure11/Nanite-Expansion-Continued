@@ -21,10 +21,7 @@ planet_event = {
 	trigger = {
 		has_orbital_bombardment_stance = subsumption
 		from = {
-			OR = {
-				is_country_type = default
-				is_fallen_empire = yes
-			}
+			is_default_or_fallen = yes
 		}
 		habitable_planet = yes
 	}
@@ -157,10 +154,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					OR = {
-						is_country_type = default
-						is_fallen_empire = yes
-					}
+					is_default_or_fallen = yes
 				}
 				every_owned_leader = {
 					limit = {
@@ -273,10 +267,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					OR = {
-						is_country_type = default
-						is_fallen_empire = yes
-					}
+					is_default_or_fallen = yes
 				}
 				every_owned_leader = {
 					limit = {

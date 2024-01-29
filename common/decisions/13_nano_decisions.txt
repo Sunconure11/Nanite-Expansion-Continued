@@ -20,8 +20,8 @@ decision_planetary_utility_fog = {
 
 	potential = {
 		exists = owner
-		owner = { 
-			is_regular_empire = yes 
+		owner = {
+			is_regular_empire = yes
 			is_gestalt = no
 			has_technology = tech_ubiquitous_smartdust
 		}
@@ -60,8 +60,8 @@ decision_planetary_autonomous_fog = {
 
 	potential = {
 		has_modifier = utility_fog
-		owner = { 
-			is_regular_empire = yes 
+		owner = {
+			is_regular_empire = yes
 			is_gestalt = no
 		}
 		NOT = { has_modifier = angelnet }
@@ -96,7 +96,7 @@ decision_planetary_sophont_fog = {
 
 	potential = {
 		has_modifier = angelnet
-		owner = { 
+		owner = {
 			is_regular_empire = yes
 			is_gestalt = no
 		}
@@ -130,7 +130,7 @@ decision_planetary_toposophont_fog = {
 
 	potential = {
 		has_modifier = sophont_angelnet
-		owner = { 
+		owner = {
 			is_regular_empire = yes
 			is_gestalt = no
 			has_technology = tech_toposophont_fogs
@@ -204,7 +204,7 @@ decision_dismantle_fog = {
 			limit = { has_modifier = sophont_angelnet_hive }
 			remove_modifier = sophont_angelnet_hive
 		}
-		else = {
+		else_if = {
 			limit = { has_modifier = toposophont_angelnet_hive }
 			remove_modifier = toposophont_angelnet_hive
 		}
@@ -236,7 +236,7 @@ decision_planetary_utility_fog_hive = {
 
 	potential = {
 		exists = owner
-		owner = { 
+		owner = {
 			is_gestalt = yes
 			has_technology = tech_ubiquitous_smartdust
 		}
@@ -272,7 +272,7 @@ decision_planetary_autonomous_fog_hive = {
 
 	potential = {
 		has_modifier = utility_fog_hive
-		owner = { 
+		owner = {
 			is_gestalt = yes
 		}
 	}
@@ -305,7 +305,7 @@ decision_planetary_sophont_fog_hive = {
 
 	potential = {
 		has_modifier = angelnet_hive
-		owner = { 
+		owner = {
 			is_gestalt = yes
 		}
 	}
@@ -337,7 +337,7 @@ decision_planetary_toposophont_fog_hive = {
 
 	potential = {
 		has_modifier = sophont_angelnet_hive
-		owner = { 
+		owner = {
 			is_gestalt = yes
 		}
 	}

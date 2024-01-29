@@ -14,7 +14,7 @@ leader_trait_nanite_entity = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = admiral
+			leader_class = commander
 		}
 		ship_fire_rate_mult = 0.05
 		ship_evasion_mult = 0.05
@@ -30,14 +30,14 @@ leader_trait_nanite_entity = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = general
+			leader_class = commander
 		}
 		armies_upkeep_mult = -0.15
 	}
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = governor
+			leader_class = official
 		}
 		planet_building_build_speed_mult = 0.10
 	}
@@ -55,7 +55,7 @@ leader_trait_nanite_entity = {
 	initial = no
 	randomized = no
 
-	leader_class = { admiral governor scientist general }
+	leader_class = { commander official scientist }
 
 	ai_weight = {
 		weight = 0
@@ -78,7 +78,7 @@ leader_trait_terminal_nanites = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = admiral
+			leader_class = commander
 		}
 		ship_fire_rate_mult = 0.05
 		ship_evasion_mult = 0.05
@@ -94,14 +94,14 @@ leader_trait_terminal_nanites = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = general
+			leader_class = commander
 		}
 		armies_upkeep_mult = -0.15
 	}
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = governor
+			leader_class = official
 		}
 		planet_building_build_speed_mult = 0.10
 	}
@@ -119,7 +119,7 @@ leader_trait_terminal_nanites = {
 	initial = no
 	randomized = no
 
-	leader_class = { admiral governor scientist general }
+	leader_class = { commander official scientist }
 
 	ai_weight = {
 		weight = 0

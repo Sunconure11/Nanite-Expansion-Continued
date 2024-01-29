@@ -53,7 +53,7 @@ nanoroboticist = {
 		modifier = {
 			factor = 2
 			species = {
-				has_species_flag = racket_species_flag
+				exists = event_target:racket_species is_same_species = event_target:racket_species
 			}
 		}
 		modifier = {

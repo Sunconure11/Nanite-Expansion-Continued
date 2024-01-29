@@ -35,7 +35,6 @@
  requires_robots_allowed:0 "$TRIGGER_FAIL$Requires the Robotic Workers §Y$robot_pops_allowed$§! Policy."
  requires_mechanical:0 "$TRIGGER_FAIL$Requires §Y$trait_mechanical$§! on founder species."
 
-
 ### Bombardment
  bombardment_subsumption:0 "Subsumption"
  bombardment_subsumption_desc:3 "$bombardment_subsumption$ Bombardment utilizes self-replicating nanobots to rapidly consume a planet via orbital bombardment and extinguish all life on the planet.\n- §RMassive§! damage to §HArmies§!\n- §RMassive§! damage to §HPlanet§!\n- §RMassive§! damage to §HPops§!\n- Will bombard undefended planets\n- Can reduce planets to uninhabitable, but terraformable Nanite Worlds"

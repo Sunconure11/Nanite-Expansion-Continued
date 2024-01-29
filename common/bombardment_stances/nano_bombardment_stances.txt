@@ -4,8 +4,6 @@ subsumption = {
 			has_technology = tech_subsumption_bombardment
 		}
 	}
-
-	icon_frame = 6
 	default = no
 
 	stop_when_armies_dead = no
@@ -26,10 +24,11 @@ subsumption = {
 		modifier = {
 			factor = 0.01
 			exists = from
+			exists = from.owner
+			exists = root.owner
 			from = {
 				owner = { NOT = { is_hostile = root.owner } }
 			}
-			exists = owner
 			#owner = { is_crisis_faction = no }
 		}
 	}

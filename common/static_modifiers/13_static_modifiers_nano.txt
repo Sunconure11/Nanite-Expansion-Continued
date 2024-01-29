@@ -95,7 +95,7 @@ toposophont_angelnet_hive = {
 ### Archailect Modifiers
 
 archailect_calculated_strategist = {
-	country_command_limit_add = 120
+	command_limit_add = 120
 	country_naval_cap_mult = 0.25
 	country_alloys_produces_mult = 0.15
 }
