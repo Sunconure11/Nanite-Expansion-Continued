@@ -1,0 +1,107 @@
+# Overriddes the Merger of Rules.
+# v.3.7.2 snyc
+# is_homicidal = {
+# 	OR = {
+# 		has_valid_civic = civic_fanatic_purifiers
+# 		has_valid_civic = civic_machine_terminator
+# 		has_valid_civic = civic_hive_devouring_swarm
+# 		# has_origin = origin_void_reavers
+# 	}
+# }
+
+# is_unfriendly = {
+# 	OR = {
+# 		is_homicidal = yes
+# 		has_valid_civic = civic_barbaric_despoilers
+# 	}
+# }
+
+# Expanded version of country_type = default
+merg_is_default_empire = {
+	OR = {
+		is_country_type = default
+		# Darkspace
+		# is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		# is_country_type = uo_une_member_active
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
+		# The Empty Vagrant
+		# is_country_type = default_ev
+		# ZOFE
+		is_zofe_country = yes
+		# Nomads: The wondering Void Farers.
+		# is_void_farer = yes
+	}
+}
+
+# Merger of Rules scripted triggers, very similar to vanilla is_country_type_with_subjects
+# Extended Merger of Rules with Nomads: The wondering Void Farers
+# These triggers are also meant as a library for modders who want to reuse them in their own mods.
+is_default_or_fallen = {
+	OR = {
+		# is_country_type_with_subjects = yes
+		merg_is_default_empire = yes # is_country_type = default
+		is_fallen_empire = yes
+		# # is_country_type = awakened_fallen_empire
+		# # is_country_type = fallen_empire
+		# # Scripted Triggers Undercoat
+		# has_country_flag = is_playable
+		has_country_flag = is_empire
+		# # ZOFE
+		# is_zofe_country = yes
+		# # The Empty Vagrant
+		# is_country_type = default_ev
+		# is_country_type = fallen_empire_ev
+		# is_country_type = awakened_fallen_empire_ev
+		# # Human Fallen Empire
+		# # is_country_type = hfe_fallen
+		# # is_country_type = hfe_pirate
+		# hfe_trigger_is_human_fallen = yes
+		# hfe_trigger_insane_admiral_trait = yes
+		# # Nomads: The wondering Void Farers.
+		# # is_void_farer = yes
+	}
+}
+
+# List of dormant/standard Fallen Empires
+merg_is_fallen_empire = {
+	OR = {
+		is_country_type = fallen_empire
+		# History of the Lost Empire
+		# is_country_type = LsE_fallen_empire
+		# ZOFE
+		# is_country_type = lost_empire
+		# Human Fallen Empire
+		hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen
+		# AND = { # Goes the other way?
+		# 	hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen
+		# 	NOT = { has_civic = hfe_civic_egypt_fury }
+		# }
+		# SW:KUAT ANCIENT EMPIRE
+		# is_country_type = kuat_fallen_empire
+		# The Empty Vagrant
+		# is_country_type = fallen_empire_ev
+	}
+}
+
+# List of awakened Fallen Empires.
+merg_is_awakened_fe = {
+	OR = {
+		is_country_type = awakened_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		# is_country_type = kuat_awakened_fallen_empire
+		# is_country_type = awakened_return_kuat_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+		# ZOFE With its last submod, ZOFE's fallen and awakened empires work differently and should not be here.
+		# is_country_type = ascended_empire
+		# The Empty Vagrant
+		# is_country_type = awakened_fallen_empire_ev
+		# # Human Fallen Empire
+		# AND = { goes the other way
+		# 	hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen
+		# 	has_civic = hfe_civic_egypt_fury
+		# }
+	}
+}

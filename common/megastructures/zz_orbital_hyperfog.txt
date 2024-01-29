@@ -32,7 +32,7 @@ orbital_hyperfog_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_surveyed_planet"
-				is_surveyed = {			# prevent leaking habitability information
+				is_surveyed = {			# Prevent leaking habitability information
 					who = prev.from
 					status = yes
 				}
@@ -43,24 +43,24 @@ orbital_hyperfog_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				#can_build_megastructure_on_planet = yes
+				# can_build_megastructure_on_planet = yes
 				NOR = {
 					has_planet_flag = megastructure
 					has_planet_flag = has_megastructure
 					solar_system = {
 						has_star_flag = ring_world_built
 					}
-					is_planet_class = pc_ringworld_habitable
+					has_ringworld_output_boost = yes
 					is_planet_class = pc_ringworld_habitable_damaged
 					is_planet_class = pc_ringworld_tech
 					is_planet_class = pc_ringworld_tech_damaged
 					is_planet_class = pc_ringworld_seam
 					is_planet_class = pc_ringworld_seam_damaged
-					is_planet_class = pc_habitat
+					merg_is_habitat = yes
 				}
 			}
 
- 			# balance for habitats
+ 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_minor_planetary_body"
 				NOR = {
@@ -71,9 +71,8 @@ orbital_hyperfog_0 = {
 				fail_text = "requires_not_star"
 				is_star = no
 			}
-		} # use these for all non-star megastructures
+		} # Use these for all non-star megastructures
 	}
-
 
 	ai_weight = {
 		weight = 10	# Default = 100

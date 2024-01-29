@@ -56,13 +56,13 @@ weapon_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			is_country_type = fallen_empire
+			merg_is_fallen_empire = yes
 		}
 	}
 }
 
 # ## Phased Ion Beam
-#weapon_component_template = {
+# weapon_component_template = {
 #	key = "NANO_BEAM_ION"
 #	size = titanic
 #	type = instant
@@ -114,7 +114,7 @@ weapon_component_template = {
 #		weight = 6
 #		modifier = {
 #			factor = 0.0
-#			is_country_type = fallen_empire
+#			merg_is_fallen_empire = yes
 #		}
 #	}
 #}

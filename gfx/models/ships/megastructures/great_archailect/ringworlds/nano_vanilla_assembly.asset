@@ -50,7 +50,7 @@ entity = {
 
 	attach = { locator1 = "vanilla_tech_entity" }
 	attach = { locator2 = "vanilla_seam_entity" }
-	attach = { locator3 = "vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -127,7 +127,7 @@ entity = {
 
 	attach = { locator1 = "arthropoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "arthropoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "arthropoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "arthropoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -204,7 +204,7 @@ entity = {
 
 	attach = { locator1 = "avian_01_vanilla_tech_entity" }
 	attach = { locator2 = "avian_01_vanilla_seam_entity" }
-	attach = { locator3 = "avian_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "avian_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -281,7 +281,7 @@ entity = {
 
 	attach = { locator1 = "fungoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "fungoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "fungoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "fungoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -358,7 +358,7 @@ entity = {
 
 	attach = { locator1 = "humanoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "humanoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "humanoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "humanoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -435,7 +435,7 @@ entity = {
 
 	attach = { locator1 = "mammalian_01_vanilla_tech_entity" }
 	attach = { locator2 = "mammalian_01_vanilla_seam_entity" }
-	attach = { locator3 = "mammalian_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "mammalian_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -512,7 +512,7 @@ entity = {
 
 	attach = { locator1 = "molluscoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "molluscoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "molluscoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "molluscoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -589,7 +589,7 @@ entity = {
 
 	attach = { locator1 = "plantoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "plantoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "plantoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "plantoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -666,7 +666,7 @@ entity = {
 
 	attach = { locator1 = "reptilian_01_vanilla_tech_entity" }
 	attach = { locator2 = "reptilian_01_vanilla_seam_entity" }
-	attach = { locator3 = "reptilian_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "reptilian_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -743,7 +743,7 @@ entity = {
 
 	attach = { locator1 = "lithoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "lithoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "lithoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "lithoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -820,7 +820,7 @@ entity = {
 
 	attach = { locator1 = "necroid_01_vanilla_tech_entity" }
 	attach = { locator2 = "necroid_01_vanilla_seam_entity" }
-	attach = { locator3 = "necroid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "necroid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -897,7 +897,7 @@ entity = {
 
 	attach = { locator1 = "nemesis_01_vanilla_tech_entity" }
 	attach = { locator2 = "nemesis_01_vanilla_seam_entity" }
-	attach = { locator3 = "nemesis_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "nemesis_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -974,7 +974,7 @@ entity = {
 
 	attach = { locator1 = "aquatic_01_vanilla_tech_entity" }
 	attach = { locator2 = "aquatic_01_vanilla_seam_entity" }
-	attach = { locator3 = "aquatic_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "aquatic_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {
@@ -1051,7 +1051,7 @@ entity = {
 
 	attach = { locator1 = "toxoid_01_vanilla_tech_entity" }
 	attach = { locator2 = "toxoid_01_vanilla_seam_entity" }
-	attach = { locator3 = "toxoid_01_vanilla_gaia_habitable_entity" }
+	# attach = { locator3 = "toxoid_01_vanilla_gaia_habitable_entity" } TODO
 }
 
 entity = {

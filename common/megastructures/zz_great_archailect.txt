@@ -54,8 +54,8 @@ great_archailect_0 = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
-			#will be changed to type-specific string with next translation pass
-			#fail_text = "requires_no_existing_matter_decompressor"
+			# will be changed to type-specific string with next translation pass
+			# fail_text = "requires_no_existing_matter_decompressor"
 			from = {
 				NOT = {
 					any_owned_megastructure = {
@@ -69,7 +69,7 @@ great_archailect_0 = {
 							is_megastructure_type = great_archailect_6
 							is_megastructure_type = great_archailect_7
 							is_megastructure_type = great_archailect_8
-							# used from script only
+							# Used from script only
 							# is_megastructure_type = great_archailect_9
 							# is_megastructure_type = great_archailect_10
 							# is_megastructure_type = great_archailect_11
@@ -511,7 +511,7 @@ great_archailect_8 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -543,7 +543,7 @@ great_archailect_9 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -575,7 +575,7 @@ great_archailect_10 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -607,7 +607,7 @@ great_archailect_11 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -639,7 +639,7 @@ great_archailect_12 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -671,7 +671,7 @@ great_archailect_13 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -703,7 +703,7 @@ great_archailect_14 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -735,7 +735,7 @@ great_archailect_15 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -767,7 +767,7 @@ great_archailect_16 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no
@@ -799,7 +799,7 @@ great_archailect_17 = {
 			energy = 500
 		}
 	}
-	# used from script only
+	# Used from script only
 	upgrade_desc = hide
 	potential = {
 		always = no

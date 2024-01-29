@@ -25,18 +25,22 @@ decision_planetary_utility_fog = {
 			is_gestalt = no
 			has_technology = tech_ubiquitous_smartdust
 		}
-		NOT = { has_modifier = utility_fog }
-		NOT = { has_modifier = angelnet }
-		NOT = { has_modifier = sophont_angelnet }
-		NOT = { has_modifier = toposophont_angelnet }
+		NOR = {
+			has_modifier = utility_fog
+			has_modifier = angelnet
+			has_modifier = sophont_angelnet
+			has_modifier = toposophont_angelnet
+		}
 	}
 
 	allow = {
 		owner = { has_technology = tech_ubiquitous_smartdust }
-		NOT = { has_modifier = utility_fog }
-		NOT = { has_modifier = angelnet }
-		NOT = { has_modifier = sophont_angelnet }
-		NOT = { has_modifier = toposophont_angelnet }
+		NOR = {
+			has_modifier = utility_fog
+			has_modifier = angelnet
+			has_modifier = sophont_angelnet
+			has_modifier = toposophont_angelnet
+		}
 	}
 
 	effect = {
@@ -64,14 +68,18 @@ decision_planetary_autonomous_fog = {
 			is_regular_empire = yes
 			is_gestalt = no
 		}
-		NOT = { has_modifier = angelnet }
-		NOT = { has_modifier = sophont_angelnet }
+		NOR = {
+			has_modifier = angelnet
+			has_modifier = sophont_angelnet
+		}
 	}
 
 	allow = {
 		owner = { has_technology = tech_autonomous_fogs }
-		NOT = { has_modifier = angelnet }
-		NOT = { has_modifier = sophont_angelnet }
+		NOR = {
+			has_modifier = angelnet
+			has_modifier = sophont_angelnet
+		}
 	}
 
 	effect = {
@@ -245,10 +253,12 @@ decision_planetary_utility_fog_hive = {
 
 	allow = {
 		owner = { has_technology = tech_ubiquitous_smartdust }
-		NOT = { has_modifier = utility_fog_hive }
-		NOT = { has_modifier = angelnet_hive }
-		NOT = { has_modifier = sophont_angelnet_hive }
-		NOT = { has_modifier = toposophont_angelnet_hive }
+		NOR = {
+			has_modifier = utility_fog_hive
+			has_modifier = angelnet_hive
+			has_modifier = sophont_angelnet_hive
+			has_modifier = toposophont_angelnet_hive
+		}
 	}
 
 	effect = {
@@ -279,8 +289,10 @@ decision_planetary_autonomous_fog_hive = {
 
 	allow = {
 		owner = { has_technology = tech_autonomous_fogs }
-		NOT = { has_modifier = angelnet }
-		NOT = { has_modifier = utility_fog }
+		NOR = {
+			has_modifier = angelnet
+			has_modifier = utility_fog
+		}
 	}
 
 	effect = {

@@ -21,9 +21,9 @@ ap_nanotech = {
 	}
 
 	potential = {
-		host_has_dlc = "Distant Stars Story Pack"
-		host_has_dlc = "Utopia"
-		#is_ai = no
+		has_distar = yes
+		has_utopia = yes
+		# is_ai = no
 	}
 
 	ai_weight = {

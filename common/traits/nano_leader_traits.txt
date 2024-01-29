@@ -3,7 +3,7 @@
 ####################
 
 leader_trait_nanite_entity = {
-	is_councilor_trait_for_ruler = yes
+	force_councilor_trait = yes
 	inline_script = {
 		script = trait/icon
 		ICON = "GFX_leader_trait_nanite_entity"
@@ -11,7 +11,7 @@ leader_trait_nanite_entity = {
 		COUNCIL = triggered
 		TIER = none
 	}
-	triggered_modifier = {
+	triggered_fleet_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
@@ -27,21 +27,28 @@ leader_trait_nanite_entity = {
 		science_ship_survey_speed = 0.10
 		ship_anomaly_research_speed_mult = 0.10
 	}
-	triggered_modifier = {
+	triggered_army_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
 		}
 		armies_upkeep_mult = -0.15
 	}
-	triggered_modifier = {
+	triggered_planet_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = official
 		}
 		planet_building_build_speed_mult = 0.10
 	}
-	triggered_modifier = {
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_building_build_speed_mult = 0.05
+	}
+	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = yes
 		}
@@ -67,7 +74,7 @@ leader_trait_nanite_entity = {
 ####################
 
 leader_trait_terminal_nanites = {
-	is_councilor_trait_for_ruler = yes
+	force_councilor_trait = yes
 	inline_script = {
 		script = trait/icon
 		ICON = "GFX_leader_trait_nanite_entity"
@@ -75,7 +82,7 @@ leader_trait_terminal_nanites = {
 		COUNCIL = triggered
 		TIER = none
 	}
-	triggered_modifier = {
+	triggered_fleet_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
@@ -91,21 +98,28 @@ leader_trait_terminal_nanites = {
 		science_ship_survey_speed = 0.10
 		ship_anomaly_research_speed_mult = 0.10
 	}
-	triggered_modifier = {
+	triggered_army_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
 		}
 		armies_upkeep_mult = -0.15
 	}
-	triggered_modifier = {
+	triggered_planet_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = official
 		}
 		planet_building_build_speed_mult = 0.10
 	}
-	triggered_modifier = {
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_building_build_speed_mult = 0.05
+	}
+	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = yes
 		}

@@ -24,7 +24,7 @@ weapon_component_template = { # Mass Deconstructor
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			is_country_type = fallen_empire
+			merg_is_fallen_empire = yes
 		}
 	}
 }

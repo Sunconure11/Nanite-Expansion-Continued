@@ -469,7 +469,7 @@ tech_identity_subsumption = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -513,7 +513,7 @@ tech_identity_subsumption = {
 	}
 
 	ai_weight = {
-		factor = 3 #rare tech
+		factor = 3 # Rare tech
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -761,7 +761,7 @@ tech_smart_immune_systems = {
 		factor = 1.5
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1365,7 +1365,7 @@ tech_miniaturized_autowars = {
 		has_ascension_perk = ap_nanotech
 	}
 
-	## unlock strike craft 4
+	## Unlock strike craft 4
 
 	weight_modifier = {
 		modifier = {
@@ -1440,7 +1440,7 @@ tech_optical_phased_arrays = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
+		factor = 2		# Weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -1724,7 +1724,7 @@ tech_nano_torpedoes = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
+		factor = 2		# Weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -1740,7 +1740,7 @@ tech_nano_torpedoes = {
 	}
 }
 
-#Whirlwind Missiles
+# Whirlwind Missiles
 tech_nano_swarmer_missile = {
 	area = engineering
 	tier = 5
@@ -1770,7 +1770,7 @@ tech_nano_swarmer_missile = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
+		factor = 2		# Weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -1885,13 +1885,12 @@ tech_toposophont_combat_computers = {
 		has_ascension_perk = ap_nanotech
 	}
 
-	# unlocks toposophont combat computers
+	# Unlocks toposophont combat computers
 
 	weight_modifier = {
 		factor = 0
 	}
 }
-
 
 # Nano Hulls
 tech_repeatable_nano_hulls = {

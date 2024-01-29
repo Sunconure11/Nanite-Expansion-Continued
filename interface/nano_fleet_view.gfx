@@ -1,9 +1,9 @@
 spriteTypes = {
-	
+
 	spriteType = {
 		name = "GFX_fleet_order_button_ground_support_subsumption"
 		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_subsumption_action.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
+		effectFile = "gfx/FX/buttonstate.shader"
 		noOfFrames = 3
 		animation = {
 			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
@@ -18,12 +18,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 			animationframes = { 1 2 3 }
 		}
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_fleet_order_button_ground_support_subsumption_selected"
 		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_subsumption_selected.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
+		effectFile = "gfx/FX/buttonstate.shader"
 		noOfFrames = 3
 		animation = {
 			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"

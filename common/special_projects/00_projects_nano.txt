@@ -21,7 +21,7 @@ special_project = {
 	}
 
 	on_success = {
-		# use event target so a capital-conquering country is not affected
+		# Use event target so a capital-conquering country is not affected
 		event_target:synth_nano_owner = {
 			country_event = { id = nano.1311 }
 		}
@@ -54,7 +54,7 @@ special_project = {
 	}
 
 	on_success = {
-		# use event target so a capital-conquering country is not affected
+		# Use event target so a capital-conquering country is not affected
 		event_target:machine_nano_owner = {
 			country_event = { id = nano.1321 }
 		}
@@ -87,7 +87,7 @@ special_project = {
 	}
 
 	on_success = {
-		# use event target so a capital-conquering country is not affected
+		# Use event target so a capital-conquering country is not affected
 		event_target:organic_nano_owner = {
 			country_event = { id = nano.1331 }
 		}
@@ -120,7 +120,7 @@ special_project = {
 	}
 
 	on_success = {
-		# use event target so a capital-conquering country is not affected
+		# Use event target so a capital-conquering country is not affected
 		event_target:cyborg_nano_owner = {
 			country_event = { id = nano.1333 }
 		}

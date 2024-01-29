@@ -1,0 +1,155 @@
+# For compatibility: Dummy triggers - to be overwritten by their respective mods.
+
+# List of all habitable ringworld sections.
+merg_is_hab_ringworld = {
+	habitable_structure = yes # Exlcude some ringworld entities is_artificial = yes
+	has_ringworld_output_boost = yes
+	NOR = {
+		uses_district_set = habitat
+		# has_planet_flag = has_megastructure
+		has_planet_flag = habitat
+		has_planet_flag = advanced_habitat
+		has_planet_flag = advanced_habitat_2
+		has_planet_flag = payback_habitat
+	}
+	OR = {
+		uses_district_set = ring_world
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		is_planetary_diversity_ringworld = yes
+		# # Gigastructural Engineering & More
+		# is_planet_class = pc_gigaorbital_ring
+		# is_planet_class = pc_interstellar_ringworld_habitable
+		# is_planet_class = pc_ringworld_city
+		# is_planet_class = pc_squareworld_habitable
+		# is_planet_class = pc_giga_penrose_habitable
+		# is_planet_class = pc_ringworld_machine
+		# is_planet_class = pc_ringworld_hive
+		# # Ancient Empire
+		# # Listed planet types are for colors only, they're all ideal
+		# is_planet_class = pc_ag_ringworld_desert
+		# is_planet_class = pc_ag_ringworld_arid
+		# is_planet_class = pc_ag_ringworld_savannah
+		# is_planet_class = pc_ag_ringworld_ocean
+		# is_planet_class = pc_ag_ringworld_continental
+		# is_planet_class = pc_ag_ringworld_tropical
+		# is_planet_class = pc_ag_ringworld_tundra
+		# is_planet_class = pc_ag_ringworld_arctic
+		# is_planet_class = pc_ag_ringworld_alpine
+		# is_planet_class = pc_ag_ringworld_machine
+		# is_planet_class = pc_ag_ringworld_city
+		# is_planet_class = pc_ag_ringworld_gaia
+		# # Warship Girls and MIST species.
+		# is_planet_class = pc_ringworld_habitable_sh
+		# is_planet_class = pc_ringworld_habitable_wsg
+	}
+}
+
+# Listing habitats (upd v3.4.3)
+merg_is_habitat = {
+	habitable_structure = yes # Exlcude some entities is_artificial = yes
+	OR = {
+		is_planet_class = pc_habitat
+		# has_ringworld_output_boost = no # There are mods which trigger habitats as ringworlds like Giga
+		is_pd_habitat = yes # Planetary Diversity
+		# uses_district_set = pdplanethab # Planetary Diversity
+		is_planet_class = pc_interstellar_habitat ### (Mod) Gigastructural Engineering & More - compatibility
+		is_planet_class = pc_gigaorbital_ring ### (Mod) Gigastructural Engineering & More - compatibility
+		is_planet_class = pc_mem_vazuran_habitat # More Events Mod
+		is_planet_class = pc_dm_habitat # Acquisition of Technology
+		is_planet_class = pc_ae_habitat # Acquisition of Technology
+		is_planet_class = pc_sigma_habitat # Acquisition of Technology
+		is_planet_class = pc_sigma_deepspace_habitat # Acquisition of Technology
+		is_planet_class = pc_habitat_robot # Plentiful Traditions
+		#
+		# uses_district_set = habitat # As some mods use both as hack like Giga.
+		uses_district_set = starborn_start # Starborn: Improved Voidtouched
+		uses_district_set = skypalace # Twinks Atlantean
+		is_planet_class = pc_gigaorbital_ring ### (Mod) Gigastructural Engineering & More - compatibility
+		#
+		is_planet_class = pc_pd_toxic_hab # Giga Diversity
+		is_planet_class = pc_GFnytp_habitis # Nyto Species Pack
+		#
+		# has_planet_flag = has_megastructure
+		# has_planet_flag = megastructure # Vanilla uses to check if a megastrucure can be built here.
+		# has_planet_flag = habitat
+		# has_planet_flag = advanced_habitat
+		# has_planet_flag = advanced_habitat_2
+	}
+}
+
+is_pd_hive_world = {
+	always = no
+	# OR = {
+	# 	is_planet_class = pc_pdhive1
+	# 	is_planet_class = pc_pdhive2
+	# 	is_planet_class = pc_hivetidallylocked
+	# 	is_planet_class = pc_necrohive
+	# }
+}
+
+# (upd v3.4.3)
+merg_is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+		is_planet_class = pc_ringworld_hive # Gigastructural Engineering & More
+		is_pd_hive_world = yes # Planetary Diversity
+		is_pd_hive_arcology = yes # Planetary Diversity
+		uses_district_set = hive_world
+	}
+}
+
+# merg_has_hive_trait = {
+# 	OR = {
+# 		has_trait = trait_hive_mind
+# 		# Ethics and Civics - Bug Branch
+# 		has_trait = trait_bugged_happy_hive
+# 		# Trait Diversity
+# 		has_trait = trait_td_multi_hiveminded
+# 		# Diagraphers Trait Mod
+# 		has_trait = trait_multihive_drone
+# 	}
+# }
+
+# (upd v3.4.3)
+merg_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_cold_gas_giant
+	}
+}
+
+merg_is_machine_world = {
+	OR = {
+		is_pd_machine = yes # Planetary Diversity
+		is_pd_robot_arcology = yes # Planetary Diversity
+	}
+}
+
+merg_is_arcology = {
+	OR = {
+		is_pd_arcology = yes # is_planet_class = pc_ecocity ### (Mod) Planetary Diversity - compatibility
+		is_pd_hive_arcology = yes # is_planet_class = pc_bioforge ### (Mod) Planetary Diversity - More Arcologies - compatibility
+		is_pd_robot_arcology = yes # is_planet_class = pc_machine_factory ### (Mod) Planetary Diversity - More Arcologies - compatibility
+	}
+}
+
+merg_is_relic_world = {
+	is_planet_class = pc_relic
+	# OR = {
+	# 	is_planet_class = pc_relic
+	# 	# is_planet_class = pc_midas_relic # Midas
+	# }
+}
+
+gpm_is_planet_class_city = {
+	OR = {
+		merg_is_arcology = yes
+		merg_is_relic_world = yes
+		# is_planet_class = pc_matryoshka ### (Mod) Additional Mega Planets merged into Forgotten Queens - compatibility
+		# is_planet_class = pc_hollow ### (Mod) Additional Mega Planets merged into Forgotten Queens - compatibility
+	}
+}

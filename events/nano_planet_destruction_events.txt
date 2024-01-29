@@ -20,7 +20,7 @@ planet_event = {
 			from.owner = { country_event = { id = nano_colossus.1301 } }
 		}
 
-		#Dismantle observation post
+		# Dismantle observation post
 		if = {
 			limit = {
 				has_observation_outpost = yes
@@ -103,7 +103,7 @@ planet_event = {
 					is_colony = yes
 				}
 				add_threat = { who = from.owner amount = 3 }
-				# modifier for allies + those upset by genocide
+				# Modifier for allies + those upset by genocide
 				every_country = {
 					limit = {
 						NOR = {
@@ -125,7 +125,7 @@ planet_event = {
 							}
 							has_ai_personality = awakened_fallen_empire_xenophile
 							AND = {
-								is_country_type = default
+								merg_is_default_empire = yes
 								OR = {
 									is_egalitarian = yes
 									is_xenophile = yes
@@ -151,7 +151,7 @@ planet_event = {
 			else = {
 				add_threat = { who = from.owner amount = 1 }
 			}
-			# modifiers for victim
+			# Modifiers for victim
 			owner = {
 				if = {
 					limit = { root = { is_colony = no } }
@@ -167,7 +167,7 @@ planet_event = {
 					}
 				}
 				if = {
-					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					limit = { is_gestalt = no }
 					add_modifier = {
 						modifier = colossus_victim
 						days = 10800 # 30 years
@@ -179,7 +179,7 @@ planet_event = {
 					exists = owner
 					owner = { is_primitive = yes }
 				}
-				# modifier for allies + those upset by genocide
+				# Modifier for allies + those upset by genocide
 				every_country = {
 					limit = {
 						NOT = { is_same_empire = from.owner }
@@ -190,7 +190,7 @@ planet_event = {
 						OR = {
 							has_ai_personality = awakened_fallen_empire_xenophile
 							AND = {
-								is_country_type = default
+								merg_is_default_empire = yes
 								NOR = {
 									is_xenophobe = yes
 									is_homicidal = yes
@@ -214,7 +214,7 @@ planet_event = {
 						OR = {
 							has_ai_personality = awakened_fallen_empire_xenophile
 							AND = {
-								is_country_type = default
+								merg_is_default_empire = yes
 								is_xenophile = yes
 							}
 						}
@@ -243,17 +243,17 @@ planet_event = {
 			kill_pop = yes
 		}
 		remove_all_buildings = yes
-		# destroy habitats and ringworlds
+		# Destroy habitats and ringworlds
 		if = {
 			limit = {
-				is_planet_class = pc_habitat
+				merg_is_habitat = yes
 			}
 			spawn_habitat_cracker_effect = yes
 			remove_planet = yes
 		}
 		else_if = {
 			limit = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 			spawn_ringworld_cracker_effect = yes
 			change_pc = pc_ringworld_habitable_damaged
@@ -327,12 +327,11 @@ country_event = {
 	show_sound = event_mystic_reveal
 	location = from
 
-
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = { has_country_flag = fired_deconstructor }
-		FROM = {
+		from = {
 			is_artificial = no
 		}
 	}

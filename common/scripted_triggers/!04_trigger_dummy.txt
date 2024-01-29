@@ -1,0 +1,48 @@
+# For compatibility: Dummy triggers - to be overwritten by their respective mods.
+# HFE
+hfe_trigger_insane_admiral_trait = {
+	always = no
+	# OR = {
+	# 	is_country_type = hfe_pirate
+	# 	has_valid_civic = hfe_civic_features_aggressive_diplomacy
+	# }
+}
+# HFE
+hfe_trigger_is_human_fallen = {
+	always = no
+	# OR = {
+	# 	has_country_flag = hfe_egypt
+	# 	has_country_flag = hfe_future
+	# 	is_country_type = hfe_fallen
+	# }
+}
+# ZOFE
+is_zofe_country = {
+	always = no # is_ai = no
+	# OR = {
+	# 	is_country_type = ascended_empire
+	# 	is_country_type = lost_empire
+	# }
+}
+# PD
+is_planetary_diversity_ringworld = { always = no }
+is_pd_habitat = { always = no }
+is_pd_hive_arcology = { always = no }
+is_pd_robot_arcology = { always = no }
+is_pd_machine = { is_planet_class = pc_machine }
+
+# Planetary Diversity
+is_pd_arcology = { is_planet_class = pc_city }
+# Not used (Planetary Diversity)
+# pd_is_ideal = {
+# 	OR = {
+# 		is_planet_class = pc_gaia
+# 		is_planet_class = pc_city
+# 		# is_pd_gaia = yes
+# 		is_pd_arcology = yes
+# 		is_pd_hive_arcology = yes
+# 		is_pd_robot_arcology = yes
+# 	}
+# }
+
+is_progenitor_empires = { always = no } # ACOT

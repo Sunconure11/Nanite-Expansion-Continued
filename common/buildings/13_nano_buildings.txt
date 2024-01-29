@@ -238,7 +238,7 @@ building_universal_constructor_1 = {
 		category = planet_buildings
 
 		# Normal Planets Tier 1
-        produces = {
+		produces = {
 			alloys = 2
 			consumer_goods = 2
 			nanites = -1
@@ -279,7 +279,7 @@ building_universal_constructor_1 = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_1_modifier_desc
@@ -290,7 +290,7 @@ building_universal_constructor_1 = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_1_atto_modifier_desc
@@ -300,7 +300,7 @@ building_universal_constructor_1 = {
 		trigger = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_1_ring_modifier_desc
 	}
@@ -309,7 +309,7 @@ building_universal_constructor_1 = {
 		trigger = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_1_ring_atto_modifier_desc
 	}
@@ -335,7 +335,7 @@ building_universal_constructor_2 = {
 		category = planet_buildings
 
 		# Normal Planets Tier 1
-        produces = {
+		produces = {
 			exotic_gases = 1
 			rare_crystals = 1
 			volatile_motes = 1
@@ -378,7 +378,7 @@ building_universal_constructor_2 = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_2_modifier_desc
@@ -389,7 +389,7 @@ building_universal_constructor_2 = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_2_atto_modifier_desc
@@ -399,7 +399,7 @@ building_universal_constructor_2 = {
 		trigger = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_2_ring_modifier_desc
 	}
@@ -408,7 +408,7 @@ building_universal_constructor_2 = {
 		trigger = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_2_ring_atto_modifier_desc
 	}
@@ -435,14 +435,14 @@ building_universal_constructor_3 = {
 		category = planet_buildings
 
 		# Normal Planets Tier 1
-        produces = { 
+		produces = { 
 			sr_dark_matter = 1
 			sr_living_metal = 1
 			sr_zro = 1
 			nanites = -1
 			mult = planet.value:toxic_attendant_growth
 		}
-        produces = { 
+		produces = { 
 			trigger = { 
 				owner = {
 					has_technology = tech_atto_optimizations
@@ -473,7 +473,7 @@ building_universal_constructor_3 = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_3_modifier_desc
@@ -484,7 +484,7 @@ building_universal_constructor_3 = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
 			NOT = {
-				is_planet_class = pc_ringworld_habitable
+				has_ringworld_output_boost = yes
 			}
 		}
 		text = building_universal_constructor_3_atto_modifier_desc
@@ -494,7 +494,7 @@ building_universal_constructor_3 = {
 		trigger = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_atto_optimizations } }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_3_ring_modifier_desc
 	}
@@ -503,7 +503,7 @@ building_universal_constructor_3 = {
 		trigger = {
 			exists = owner
 			owner = { has_technology = tech_atto_optimizations }
-			is_planet_class = pc_ringworld_habitable
+			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_3_ring_atto_modifier_desc
 	}

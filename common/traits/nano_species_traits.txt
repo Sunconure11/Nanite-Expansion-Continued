@@ -22,7 +22,6 @@ trait_nanite_enhanced = {
 	immortal_leaders = yes
 	prerequisites = { tech_perpetual_herd_immunity }
 
-
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
@@ -48,7 +47,6 @@ trait_nanite_augments = {
 		always = yes
 	}
 	prerequisites = { tech_nanite_augmentation }
-
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 

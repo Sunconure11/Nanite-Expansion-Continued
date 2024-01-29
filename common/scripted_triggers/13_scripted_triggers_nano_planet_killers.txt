@@ -3,6 +3,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
 		# Gigastructures
+		has_global_flag = gigastructures_enabled
 		NOT = { is_planet_class = pc_birch }
 	}
 	custom_tooltip = {
@@ -13,8 +14,8 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 			is_planet_class = pc_habitat_shielded
 		}
 	}
-	#custom_tooltip = {
-		#fail_text = is_not_hostile
+	# custom_tooltip = {
+		# fail_text = is_not_hostile
 		OR = {
 			custom_tooltip = {
 				text = is_not_hostile_cracker
@@ -91,31 +92,40 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 		}
 	#}
 }
+has_planetary_diversity = { always = no }
 
 nano_is_crackable_planet = {
 	OR = {
-		# Planetary Diversity
-		is_planet_class = pc_acid
-		is_planet_class = pc_ammonia
-		is_planet_class = pc_ash
-		is_planet_class = pc_carbon
-		is_planet_class = pc_chthonian
-		is_planet_class = pc_crystal
-		is_planet_class = pc_diamond
-		is_planet_class = pc_ethane_ocean
-		is_planet_class = pc_floating
-		is_planet_class = pc_graveyard
-		is_planet_class = pc_hydrocarbon
-		is_planet_class = pc_iron
-		is_planet_class = pc_irradiated
-		is_planet_class = pc_methane
-		is_planet_class = pc_subglacial
-		is_planet_class = pc_sulfur
-		is_planet_class = pc_technoorganic
-		is_planet_class = pc_volcanic
-		# Gigastructures
-		is_planet_class = pc_ll_torrid
-		is_planet_class = pc_ll_temperate
-		is_planet_class = pc_ll_foggy
+		AND = { # Planetary Diversity
+			has_planetary_diversity = yes
+			OR = {
+				is_planet_class = pc_acid
+				is_planet_class = pc_ammonia
+				is_planet_class = pc_ash
+				is_planet_class = pc_carbon
+				is_planet_class = pc_chthonian
+				is_planet_class = pc_crystal
+				is_planet_class = pc_diamond
+				is_planet_class = pc_ethane_ocean
+				is_planet_class = pc_floating
+				is_planet_class = pc_graveyard
+				is_planet_class = pc_hydrocarbon
+				is_planet_class = pc_iron
+				is_planet_class = pc_irradiated
+				is_planet_class = pc_methane
+				is_planet_class = pc_subglacial
+				is_planet_class = pc_sulfur
+				is_planet_class = pc_technoorganic
+				is_planet_class = pc_volcanic
+			}
+		}
+		AND = { # Gigastructures
+			has_global_flag = gigastructures_enabled
+			OR = {
+				is_planet_class = pc_ll_torrid
+				is_planet_class = pc_ll_temperate
+				is_planet_class = pc_ll_foggy
+			}
+		}
 	}
 }
