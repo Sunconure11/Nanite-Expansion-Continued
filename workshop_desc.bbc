@@ -1,0 +1,32 @@
+Ever felt like the Nanites in Stellaris were pretty useless? I did, and I made this mod to correct that. Exploring hypothetical technologies in scales from the Micro to the Atto and everything between, the mod offers a plethora of new options for empires, many of which are derived from the sci-fi encyclopedia at Orion's Arm. All heavily integrate Nanites and make them an essential component of cutting edge empires. Three variations of the ascension perk to start your nanotechnology journey have been included; one for Organic Empires, one for Synths, and one for Machine empires.
+
+[HR]
+NOTICE: UNSUBSCRIBE FROM THE [url=//steamcommunity.com/sharedfiles/filedetails/2498990660]OLD MOD[/url] BEFORE REPORTING BUGS!
+
+[HR]
+The mod adds 40+ new technologies; 5 new ship components, including a Colossus Planet Killer that turns worlds into Nanite worlds and access to the unique model of Strike Craft from the Grey Tempest; two new buildings; two new megastructures, one of which is a giant AI entity who’s “personality” you get to influence; a series of upgradable planet modifiers; a new planet bombardment stance; three new armies with a unique icon; and a set of traits for Synths and Machines equivalent to the Brain Slug for Organics.
+
+The full mod documentation can be found [url=//docs.google.com/document/d/e/2PACX-1vT3nr03aAEjxLBPIIKEdtvgF1tSk9VwqCy2SZcBPrWedbQy6oQ1nlwCKKy546lKKaqQOmaOP5p_IZlH/pub]here.[/url]
+
+[h3][b]C[/b][i]ompatibility[/i][/h3]
+The mod has a few overwrites, so some graphical issues may occur with other mods.
+The mod has graphical changes to the orbital_bombardment_effects entity, and the GFX_planet_view_bombarded sprite; and the event syndaw.11 has been altered.
+Compatibility for Gigastructural Engineering has been included by default; Nanite Expansion should go after Gigas in the load order for all graphical effects to work.
+The Merger of Rules is supported.
+
+[h3][b]R[/b][i]ecommendations[/i][/h3]
+• [url=//steamcommunity.com/workshop/filedetails/2807759164]The Merger of Rules[/url] (load order should rather be below)
+• Gigastructural Engineering
+
+[h3][b]S[/b][i]pecial thanks to:[/i][/h3]
+• [url=//steamcommunity.com/id/thomasstone]Tom Stone[/url] for the many icons and graphics provided
+• [url=//steamcommunity.com/profiles/76561198073880617]Elowiny[/url] for the use of the Matryoshka Model
+• [url=//steamcommunity.com/id/oldent]OldEnt[/url] for frequently helping me out with troubleshooting the mod
+• [url=//steamcommunity.com/id/wcnnndll]zerg[/url] for providing a Simplified Chinese Translation; I was requested to include this message from him: 因本人的不专业性，对于翻译有意见的专业人士可重新译制
+• [url=//steamcommunity.com/id/Fabien0712]Fabien[/url] for providing a French Translation
+• Haly for providing a Russian Translation
+
+[HR]REPO CAN BE FOUND [url=//github.com/Sunconure11/Nanite-Revolution]HERE.[/url]
+[HR]LEGACY BUILD CAN BE FOUND [url=//steamcommunity.com/sharedfiles/filedetails/2498990660]HERE.[/url]
+
+[url=//discord.gg/bHVez2C][img]//i.imgur.com/4Und3QN.png[/img][/url]

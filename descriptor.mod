@@ -2,7 +2,6 @@ version="1.41"
 tags={
 	"Military"
 	"Technologies"
-	"Translation"
 	"Gameplay"
 	"Economy"
 	"Events"
