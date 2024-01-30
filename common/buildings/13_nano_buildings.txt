@@ -11,11 +11,8 @@ building_nanite_fabricator_1 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			AND = {
+			NOT = {
 				exists = owner
-				# buildings_no_motes = yes
-				# buildings_no_crystals = yes
-				# buildings_no_exotic_gases = yes
 			}
 		}
 	}
@@ -82,11 +79,8 @@ building_nanite_fabricator_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			AND = {
+			NOT = {
 				exists = owner
-				# buildings_no_motes = yes
-				# buildings_no_crystals = yes
-				# buildings_no_exotic_gases = yes
 			}
 		}
 	}
@@ -153,11 +147,8 @@ building_nanite_fabricator_3 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			AND = {
+			NOT = {
 				exists = owner
-				# buildings_no_motes = yes
-				# buildings_no_crystals = yes
-				# buildings_no_exotic_gases = yes
 			}
 		}
 	}
