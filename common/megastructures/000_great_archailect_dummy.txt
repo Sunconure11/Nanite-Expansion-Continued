@@ -1,3 +1,0 @@
-great_archailect_0 = {
-	entity = ""
-}
