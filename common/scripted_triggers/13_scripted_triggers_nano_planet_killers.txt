@@ -1,18 +1,37 @@
+## Compat. Placholder Dummy
+merg_is_shielded = {
+	OR = {
+		is_planet_class = pc_shielded
+		is_planet_class = pc_ringworld_shielded
+		is_planet_class = pc_habitat_shielded
+	}
+}
+giga_is_birch_world = { always = no }
+giga_is_lifeless = { always = no }
+# PD
+has_planetary_diversity = { always = no }
+is_pd_exotic = { always = no }
+is_pd_toxic = { always = no }
+is_pd_barren = { always = no }
+is_pd_barren_cold = { always = no }
+is_pd_unique = { always = no }
+is_pd_molten = { always = no }
+
 can_destroy_planet_with_PLANET_KILLER_NANO = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		# Gigastructures
-		has_global_flag = gigastructures_enabled
-		NOT = { is_planet_class = pc_birch }
+		# Gigastructures has_global_flag = gigastructures_enabled
+		giga_is_birch_world = no # NOT = { is_planet_class = pc_birch }
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
-		NOR = {
-			is_planet_class = pc_shielded
-			is_planet_class = pc_ringworld_shielded
-			is_planet_class = pc_habitat_shielded
-		}
+		merg_is_shielded = no
+		# NOR = {
+		# 	is_planet_class = pc_shielded
+		# 	is_planet_class = pc_ringworld_shielded
+		# 	is_planet_class = pc_habitat_shielded
+		# }
 	}
 	# custom_tooltip = {
 		# fail_text = is_not_hostile
@@ -25,11 +44,12 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_endgame_crisis = yes
+								# is_country_type = swarm
+								# is_country_type = extradimensional
+								# is_country_type = extradimensional_2
+								# is_country_type = extradimensional_3
+								# is_country_type = ai_empire
 							}
 						}
 					}
@@ -38,11 +58,12 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_endgame_crisis = yes
+								# is_country_type = swarm
+								# is_country_type = extradimensional
+								# is_country_type = extradimensional_2
+								# is_country_type = extradimensional_3
+								# is_country_type = ai_empire
 								from.owner = {
 									is_hostile = prev				# Fix for empires which cannot be at war (crises).
 									OR = {
@@ -56,17 +77,16 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 					AND = { # primitive
 						exists = space_owner
 						exists = owner
-						owner = {
-							is_primitive = yes
-						}
+						owner = { is_primitive = yes }
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_endgame_crisis = yes
+								# is_country_type = swarm
+								# is_country_type = extradimensional
+								# is_country_type = extradimensional_2
+								# is_country_type = extradimensional_3
+								# is_country_type = ai_empire
 							}
 						}
 					}
@@ -77,10 +97,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 				NOT = { exists = owner }
 				OR = {
 					NOT = { exists = space_owner }
-					AND = {
-						exists = space_owner
-						space_owner = { is_same_empire = from.owner }
-					}
+					space_owner = { is_same_empire = from.owner }
 				}
 				OR = {
 					habitable_planet = yes
@@ -92,40 +109,60 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 		}
 	#}
 }
-has_planetary_diversity = { always = no }
 
 nano_is_crackable_planet = {
 	OR = {
 		AND = { # Planetary Diversity
 			has_planetary_diversity = yes
+			# Commenting out for clean error.log
 			OR = {
-				is_planet_class = pc_acid
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_ash
-				is_planet_class = pc_carbon
-				is_planet_class = pc_chthonian
-				is_planet_class = pc_crystal
-				is_planet_class = pc_diamond
-				is_planet_class = pc_ethane_ocean
-				is_planet_class = pc_floating
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_hydrocarbon
-				is_planet_class = pc_iron
-				is_planet_class = pc_irradiated
-				is_planet_class = pc_methane
+				is_pd_exotic = yes
+				# is_planet_class = pc_irradiated
+				# is_planet_class = pc_ammonia
+				# is_planet_class = pc_sulfur
+				# is_planet_class = pc_acid
+				# is_planet_class = pc_methane
+				# is_planet_class = pc_ash
+					# is_planet_class = pc_pd_hycean #
+					# is_planet_class = pc_rogue #
+				is_pd_toxic = yes
+					# is_planet_class = pc_hothouse #
+				# is_planet_class = pc_ethane_ocean
+				# is_planet_class = pc_hydrocarbon
+				is_pd_barren = yes
+					# is_planet_class = pc_karst
+					# is_planet_class = pc_barren_cave
+					# is_planet_class = pc_tidallylocked_barren
+					# is_planet_class = pc_barren_superhab
+				# is_planet_class = pc_carbon
+				# is_planet_class = pc_chthonian
+				# is_planet_class = pc_iron
+				is_pd_barren_cold = yes # is_planet_class = pc_diamond
+				is_pd_unique = yes
+				# is_planet_class = pc_floating # is_pd_unique
+				# is_planet_class = pc_graveyard # is_pd_unique
+				# is_planet_class = pc_crystal # is_pd_unique
+				# is_planet_class = pc_technoorganic # is_pd_unique
+					# is_planet_class = pc_pd_zro
+					# is_planet_class = pc_technoorganic
+					# is_planet_class = pc_pd_techno_arc
+					# is_planet_class = pc_crucible
+					# is_planet_class = pc_shroud_crucible
+					# is_planet_class = pc_clean_crucible
+					# is_planet_class = pc_pd_scrapyard
+					# is_pd_unique_hab = yes
+				is_pd_molten = yes # is_planet_class = pc_volcanic
 				is_planet_class = pc_subglacial
-				is_planet_class = pc_sulfur
-				is_planet_class = pc_technoorganic
-				is_planet_class = pc_volcanic
 			}
 		}
-		AND = { # Gigastructures
-			has_global_flag = gigastructures_enabled
-			OR = {
-				is_planet_class = pc_ll_torrid
-				is_planet_class = pc_ll_temperate
-				is_planet_class = pc_ll_foggy
-			}
-		}
+		# AND = { # Gigastructures
+		# 	has_global_flag = gigastructures_enabled
+		# 	OR = {
+		# 		is_planet_class = pc_ll_torrid
+		# 		is_planet_class = pc_ll_temperate
+		# 		is_planet_class = pc_ll_foggy
+		# 	}
+		# }
+		giga_is_lifeless = yes
 	}
 }

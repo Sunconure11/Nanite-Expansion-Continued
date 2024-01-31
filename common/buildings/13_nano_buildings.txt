@@ -11,8 +11,12 @@ building_nanite_fabricator_1 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			NOT = {
+			AND = {
 				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
 			}
 		}
 	}
@@ -79,8 +83,12 @@ building_nanite_fabricator_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			NOT = {
+			AND = {
 				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
 			}
 		}
 	}
@@ -147,8 +155,12 @@ building_nanite_fabricator_3 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			NOT = {
+			AND = {
 				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
 			}
 		}
 	}
@@ -235,12 +247,12 @@ building_universal_constructor_1 = {
 			nanites = -1
 			mult = planet.value:toxic_attendant_growth
 		}
-		produces = { 
-			trigger = { 
+		produces = {
+			trigger = {
 				owner = {
 					has_technology = tech_atto_optimizations
 				}
-			} 
+			}
 			alloys = 2
 			consumer_goods = 2
 			nanites = -1
@@ -333,12 +345,12 @@ building_universal_constructor_2 = {
 			nanites = -1
 			mult = planet.value:toxic_attendant_growth
 		}
-		produces = { 
-			trigger = { 
+		produces = {
+			trigger = {
 				owner = {
 					has_technology = tech_atto_optimizations
 				}
-			} 
+			}
 			exotic_gases = 1
 			rare_crystals = 1
 			volatile_motes = 1
@@ -426,19 +438,19 @@ building_universal_constructor_3 = {
 		category = planet_buildings
 
 		# Normal Planets Tier 1
-		produces = { 
+		produces = {
 			sr_dark_matter = 1
 			sr_living_metal = 1
 			sr_zro = 1
 			nanites = -1
 			mult = planet.value:toxic_attendant_growth
 		}
-		produces = { 
-			trigger = { 
+		produces = {
+			trigger = {
 				owner = {
 					has_technology = tech_atto_optimizations
 				}
-			} 
+			}
 			sr_dark_matter = 1
 			sr_living_metal = 1
 			sr_zro = 1
