@@ -1,4 +1,4 @@
-## Compat. Placholder Dummy
+## Compat. Placeholder Dummy
 merg_is_shielded = {
 	OR = {
 		is_planet_class = pc_shielded

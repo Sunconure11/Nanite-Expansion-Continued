@@ -1,0 +1,4 @@
+nano_giga_cost_mult = {
+	base = 1
+	modifier = { add = 1 has_global_flag = gigastructures_enabled }
+}
