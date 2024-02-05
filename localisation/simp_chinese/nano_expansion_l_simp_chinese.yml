@@ -301,6 +301,8 @@
  requires_ap_synthetic_age: "$TRIGGER_FAIL$需要§Y$ap_synthetic_age$§!飞升"
  requires_ap_synthetic_evolution: "$TRIGGER_FAIL$需要§Y$ap_synthetic_evolution$§!飞升"
  requires_mechanical: "$TRIGGER_FAIL$Requires §Y$trait_mechanical$§! on founder species."
+ requires_no_existing_archailect: "$TRIGGER_FAIL$Cannot build more than one $name_great_archailect$."
+ requires_no_existing_archailect_two: "$TRIGGER_FAIL$Cannot build more than two $name_great_archailect$."
  requires_robots_allowed: "$TRIGGER_FAIL$需要机器人 §Y$robot_pops_allowed$§!政策"
  requires_technology_nanite_transmutation: "$TRIGGER_FAIL$需要§Y$tech_nanite_transmutation$§!科技"
  sophont_angelnet: "知性天使网络"

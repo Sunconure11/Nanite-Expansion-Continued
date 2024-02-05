@@ -301,6 +301,8 @@
  requires_ap_synthetic_age: "$TRIGGER_FAIL$ Требуется бонус возвышения §Y$ap_synthetic_age$§! !"
  requires_ap_synthetic_evolution: "$TRIGGER_FAIL$Требуется бонус возвышения §Y$synthetic_evolution$§! ! "
  requires_mechanical: "$TRIGGER_FAIL$Requires §Y$trait_mechanical$§! on founder species."
+ requires_no_existing_archailect: "$TRIGGER_FAIL$Cannot build more than one $name_great_archailect$."
+ requires_no_existing_archailect_two: "$TRIGGER_FAIL$Cannot build more than two $name_great_archailect$."
  requires_robots_allowed: "$TRIGGER_FAIL$Требуется политика рабочих роботов §Y$robot_pops_allowed$§! !"
  requires_technology_nanite_transmutation: "$TRIGGER_FAIL$ Требуется технология §Y$tech_nanite_transmutation$§! !"
  sophont_angelnet: "Софонтовый Ангелнет"

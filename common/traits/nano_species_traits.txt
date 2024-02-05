@@ -60,7 +60,7 @@ trait_nanite_augments = {
 trait_robot_nanite_entity = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/trait_robot_nanite_entity_species.dds"
-
+	immortal_leaders = yes
 	improves_leaders = yes
 	initial = no
 	randomized = no

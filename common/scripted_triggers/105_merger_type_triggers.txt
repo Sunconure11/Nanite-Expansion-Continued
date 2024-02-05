@@ -22,7 +22,7 @@ merg_is_default_empire = {
 		is_country_type = default
 		# is_country_type = ds_nomads # Darkspace
 		# is_country_type = uo_une_member_active # Ethics & Civics Infinity
-		has_country_flag = is_playable # Scripted Triggers Undercoat
+		# has_country_flag = is_playable # Scripted Triggers Undercoat
 		# is_country_type = default_ev # The Empty Vagrant
 		is_zofe_country = yes # ZOFE
 		# is_void_farer = yes # Nomads: The wondering Void Farers.
@@ -37,7 +37,7 @@ is_default_or_fallen = {
 		# is_country_type_with_subjects = yes
 		merg_is_default_empire = yes # is_country_type = default
 		is_fallen_empire = yes
-		has_country_flag = is_empire # Scripted Triggers Undercoat
+		# has_country_flag = is_empire # Scripted Triggers Undercoat
 		# is_zofe_country = yes ## ZOFE
 		# is_country_type = default_ev ## The Empty Vagrant
 		# is_country_type = fallen_empire_ev  ## The Empty Vagrant

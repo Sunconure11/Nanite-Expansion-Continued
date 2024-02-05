@@ -1,9 +1,7 @@
 namespace = nano_dialog
-
 ####################################################
 ### Orbital Hyperfog ###############################
 ####################################################
-
 country_event = {
 	id = nano_dialog.1310
 	title = "nano_dialog.1310.name"
@@ -51,7 +49,6 @@ country_event = {
 ####################################################
 ### Great Archailect ###############################
 ####################################################
-
 country_event = {
 	id = nano_dialog.1320
 	title = "nano_dialog.1320.name"
@@ -137,35 +134,22 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-
 	immediate = {
 		random_playable_country = {
 			limit = {
-				any_owned_megastructure = {
-					is_megastructure_type = great_archailect_7
-				}
-				NOT = { 
-					has_country_flag = great_archailect_event
-				}
+				any_owned_megastructure = { is_megastructure_type = great_archailect_7 }
+				NOT = { has_country_flag = great_archailect_event }
 			}
 			random_owned_megastructure = {
-				limit = {
-					is_megastructure_type = great_archailect_7
-				}
+				limit = { is_megastructure_type = great_archailect_7 }
 				save_event_target_as = nano_personality_decision
 			}
 		}
 	}
-
 	after = {
 		owner = {
-			country_event = { 
-				id = nano.1340
-			}
+			country_event = { id = nano.1340 }
 		}
 	}
-
-	option = { 
-		name = "nano_dialog.1327.a" 
-	}
+	option = { name = "nano_dialog.1327.a" }
 }

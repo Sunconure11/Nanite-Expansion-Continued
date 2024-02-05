@@ -34,6 +34,8 @@
  requires_technology_nanite_transmutation:0 "$TRIGGER_FAIL$Requires the §Y$tech_nanite_transmutation$§! Technology."
  requires_robots_allowed:0 "$TRIGGER_FAIL$Requires the Robotic Workers §Y$robot_pops_allowed$§! Policy."
  requires_mechanical:0 "$TRIGGER_FAIL$Requires §Y$trait_mechanical$§! on founder species."
+ requires_no_existing_archailect:0 "$TRIGGER_FAIL$Cannot build more than one $name_great_archailect$."
+ requires_no_existing_archailect_two:0 "$TRIGGER_FAIL$Cannot build more than two $name_great_archailect$."
 
 ### Bombardment
  bombardment_subsumption:0 "Subsumption"

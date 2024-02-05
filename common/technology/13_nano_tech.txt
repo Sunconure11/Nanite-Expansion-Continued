@@ -1,9 +1,9 @@
 ### Tier 3 Micro-scale ###
 # Micromechanic Constructs - Nanite Fabricator 1
 tech_micromechanic_constructs = {
+	cost = @tier3cost1
 	area = engineering
 	tier = 3
-	cost = @tier3cost1
 	is_rare = yes
 	category = { industry }
 	prerequisites = { "tech_nanite_transmutation" }
@@ -14,9 +14,9 @@ tech_micromechanic_constructs = {
 
 # Swarm Logic - Nanite AIs 1
 tech_swarm_logic = {
+	cost = @tier3cost2
 	area = physics
 	tier = 3
-	cost = @tier3cost2
 	category = { computing }
 	prerequisites = { "tech_micromechanic_constructs" }
 	weight = @tier3weight2
@@ -38,9 +38,9 @@ tech_swarm_logic = {
 
 # Self-Reconfiguring Micromatter - Universal Constructor 1
 tech_self_reconfiguring_micromatter = {
+	cost = @tier3cost2
 	area = engineering
 	tier = 3
-	cost = @tier3cost2
 	category = { materials }
 	prerequisites = { "tech_swarm_logic" }
 	weight = @tier3weight2
@@ -68,7 +68,7 @@ tech_ubiquitous_smartdust = {
 	category = { industry }
 	prerequisites = { "tech_self_reconfiguring_micromatter" }
 	weight = @tier3weight3
-	potential = { has_ascension_perk = ap_nanotech }
+	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_utility_fogs_modifier_desc }
 	weight_modifier = {
 		modifier = { factor = 0 has_policy_flag = robots_outlawed }
@@ -130,7 +130,7 @@ tech_military_micromachines = {
 	category = { industry }
 	prerequisites = { "tech_self_reconfiguring_micromatter" }
 	weight = @tier3weight3
-	potential = { has_ascension_perk = ap_nanotech }
+	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	weight_modifier = {
 		modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
@@ -380,10 +380,11 @@ tech_nanoform_workers = {
 	potential = { has_ascension_perk = ap_nanotech is_mechanical_empire = yes }
 	weight_modifier = {
 		factor = 0.5
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
-		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
+		# modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
+		modifier = { factor = 1.5 has_ascension_perk = ap_technological_ascendancy }
 		modifier = { factor = 2 has_origin = origin_mechanists }
 		modifier = { factor = 4 has_ascension_perk = ap_synthetic_evolution }
 		modifier = { factor = 4 has_ascension_perk = ap_synthetic_age }
@@ -438,7 +439,7 @@ tech_nanoform_gestalt = {
 	potential = { has_ascension_perk = ap_nanotech is_machine_empire = yes }
 	weight_modifier = {
 		factor = 0.5
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
@@ -527,7 +528,7 @@ tech_perpetual_herd_immunity = {
 	tier = 4
 	cost = @tier4cost3
 	is_rare = yes
-	ai_update_type = all
+	# ai_update_type = all
 	weight = 0
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
@@ -574,7 +575,7 @@ tech_nanite_augmentation = {
 	tier = 4
 	cost = @tier4cost3
 	is_rare = yes
-	ai_update_type = all
+	# ai_update_type = all
 	weight = 0
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
@@ -589,7 +590,7 @@ tech_orbital_hyperfogs = {
 	tier = 4
 	cost = @tier4cost3
 	category = { voidcraft }
-	ai_update_type = all
+	# ai_update_type = all
 	prerequisites = { "tech_self_replicating_nanites" }
 	weight = @tier4weight3
 	is_rare = yes
@@ -649,7 +650,7 @@ tech_autonomous_fogs = {
 	category = { industry }
 	prerequisites = { "tech_self_replicating_nanites" }
 	weight = @tier4weight3
-	potential = { has_ascension_perk = ap_nanotech }
+	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_autonomous_fogs_modifier_desc }
 	weight_modifier = {
 		modifier = { factor = 0 has_policy_flag = robots_outlawed }
@@ -877,7 +878,7 @@ tech_sophont_fogs = {
 	category = { industry }
 	prerequisites = { "tech_universal_programmable_matter" }
 	weight = @tier5weight3
-	potential = { has_ascension_perk = ap_nanotech }
+	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_sophont_fogs_modifier_desc }
 	weight_modifier = {
 		modifier = { factor = 0 has_policy_flag = robots_outlawed }
@@ -910,7 +911,7 @@ tech_self_healing_armor = {
 	tier = 5
 	cost = @tier5cost3
 	category = { materials }
-	ai_update_type = all
+	# ai_update_type = all
 	prerequisites = { "tech_ship_armor_5" "tech_universal_programmable_matter" }
 	weight = @tier5weight3
 	is_rare = yes
@@ -1035,12 +1036,11 @@ tech_femto_optimizations = {
 }
 
 ### Tier 6 Atto-Scale ###
-
 # Attoscale Mechanics - Nanite Fabricator Base Improvement
 tech_attoscale_mechanics = {
+	cost = @nanotier6cost1
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost1
 	is_rare = yes
 	category = { materials }
 	prerequisites = { "tech_sophont_fogs" }
@@ -1164,9 +1164,9 @@ tech_nano_decryption = {
 
 # Atto-Manufacturing Optimization - Omniwright Production Boost
 tech_atto_optimizations = {
+	cost = @nanotier6cost2
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost2
 	category = { materials }
 	prerequisites = { "tech_toposophont_systems" "tech_femto_optimizations" }
 	weight = @tier5weight3
@@ -1174,7 +1174,8 @@ tech_atto_optimizations = {
 	modifier = { description = tech_atto_optimizations_modifier_desc }
 	weight_modifier = {
 		factor = 0.5
-		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
+		# modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
+		modifier = { factor = 1.5 has_ascension_perk = ap_technological_ascendancy }
 		modifier = {
 			factor = 1.25
 			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
@@ -1190,9 +1191,9 @@ tech_atto_optimizations = {
 
 # Transmuter Torpedoes Ship Component
 tech_nano_torpedoes = {
+	cost = @nanotier6cost3
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost3
 	category = { propulsion }
 	ai_update_type = military
 	prerequisites = { "tech_torpedoes_3" "tech_atto_optimizations" }
@@ -1251,7 +1252,7 @@ tech_great_archailect = {
 	tier = 5
 	cost = @nanotier6cost3
 	category = { voidcraft }
-	ai_update_type = all
+	# ai_update_type = all
 	prerequisites = {
 		"tech_nano_encryption"
 		"tech_nano_decryption"
