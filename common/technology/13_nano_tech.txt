@@ -23,16 +23,10 @@ tech_swarm_logic = {
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { num_tech_alternatives_add = 1 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
@@ -47,16 +41,10 @@ tech_self_reconfiguring_micromatter = {
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -71,7 +59,7 @@ tech_ubiquitous_smartdust = {
 	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_utility_fogs_modifier_desc }
 	weight_modifier = {
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
@@ -88,10 +76,7 @@ tech_ubiquitous_smartdust = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -109,30 +94,24 @@ tech_micro_optimizations = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
 # Military Micromachines - Military Tree 1
 tech_military_micromachines = {
+	cost = @tier3cost3
 	area = engineering
 	tier = 3
-	cost = @tier3cost3
 	category = { industry }
 	prerequisites = { "tech_self_reconfiguring_micromatter" }
 	weight = @tier3weight3
 	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	weight_modifier = {
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
@@ -149,10 +128,7 @@ tech_military_micromachines = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -170,17 +146,11 @@ tech_nanoscale_automatons = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -196,17 +166,11 @@ tech_adaptive_housing = {
 	modifier = { pop_housing_usage_mult = -0.05 }
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 	ai_weight = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -222,17 +186,11 @@ tech_self_assembling_infrastructure = {
 	modifier = { planet_max_buildings_add = 1 planet_colony_development_speed_mult = 0.25 }
 	weight_modifier = {
 		factor = 4
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds } }
 	}
 	ai_weight = {
 		factor = 5		# Important tech
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds } }
 	}
 }
 
@@ -247,16 +205,10 @@ tech_emergent_intelligences = {
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { all_technology_research_speed = 0.05 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
@@ -271,16 +223,10 @@ tech_self_replicating_nanites = {
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -298,19 +244,13 @@ tech_subsumption_bombardment = {
 	weight_modifier = {
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 	ai_weight = {
 		factor = 2
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 }
 
@@ -335,10 +275,7 @@ tech_identity_subsumption = {
 			}
 		}
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_spark_of_genius } }
 		# modifier = {   removed in v.3.8
 		# 	factor = 1.5
 		# 	research_leader = {
@@ -360,24 +297,21 @@ tech_identity_subsumption = {
 		factor = 3		# Rare tech
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_biology } }
 	}
 }
 
 # Nanoform Workers - Traits 1a - Synth
 tech_nanoform_workers = {
+	cost = @tier4cost3
 	area = engineering
 	tier = 4
-	cost = @tier4cost3
 	category = { industry }
 	prerequisites = { "tech_synthetic_workers" "tech_self_replicating_nanites" }
 	is_rare = yes
 	weight = @tier4weight3
 	modifier = { ROBOT_species_trait_points_add = 1 }
-	potential = { has_ascension_perk = ap_nanotech is_mechanical_empire = yes }
+	potential = { has_ascension_perk = ap_nanotech is_mechanical_empire = yes NOT = { has_policy_flag = robots_outlawed } }
 	weight_modifier = {
 		factor = 0.5
 		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
@@ -402,10 +336,7 @@ tech_nanoform_workers = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -439,7 +370,6 @@ tech_nanoform_gestalt = {
 	potential = { has_ascension_perk = ap_nanotech is_machine_empire = yes }
 	weight_modifier = {
 		factor = 0.5
-		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
@@ -460,10 +390,7 @@ tech_nanoform_gestalt = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -508,16 +435,10 @@ tech_smart_immune_systems = {
 		factor = 1.5
 		modifier = { factor = 1.25 is_hive_empire = yes }
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_biology } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_biology } }
 	}
 }
 
@@ -555,16 +476,10 @@ tech_post_mechanical_cybernetics = {
 		factor = 1.5
 		modifier = { factor = 4 is_cyborg_empire = yes }
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -609,10 +524,7 @@ tech_orbital_hyperfogs = {
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft } }
 	}
 }
 
@@ -628,32 +540,26 @@ tech_photosynthetic_fogs = {
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { country_energy_produces_mult = 0.2 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_biology } }
 	}
 	ai_weight = {
 		weight = 10
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_biology } }
 	}
 }
 
 # Autonomous Fogs - Planetary Modifier 2
 tech_autonomous_fogs = {
+	cost = @tier4cost3
 	area = engineering
 	tier = 4
-	cost = @tier4cost3
 	category = { industry }
 	prerequisites = { "tech_self_replicating_nanites" }
 	weight = @tier4weight3
 	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_autonomous_fogs_modifier_desc }
 	weight_modifier = {
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
@@ -670,10 +576,7 @@ tech_autonomous_fogs = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -691,16 +594,10 @@ tech_nano_optimizations = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -718,17 +615,11 @@ tech_femtoscale_robotics = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -743,16 +634,10 @@ tech_sophont_networks = {
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { all_technology_research_speed = 0.1 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
@@ -767,16 +652,10 @@ tech_universal_programmable_matter = {
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -830,17 +709,11 @@ tech_sapient_housing = {
 	modifier = { pop_housing_usage_mult = -0.1 }
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 	ai_weight = {
 		factor = 2
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -856,32 +729,26 @@ tech_sophont_infrastructure = {
 	modifier = { planet_max_buildings_add = 1 planet_colony_development_speed_mult = 0.25 }
 	weight_modifier = {
 		factor = 4
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds } }
 	}
 	ai_weight = {
 		factor = 5		# Important tech
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds } }
 	}
 }
 
 # Sophont Fogs - Planetary Modifier 3
 tech_sophont_fogs = {
+	cost = @tier5cost3
 	area = engineering
 	tier = 5
-	cost = @tier5cost3
 	category = { industry }
 	prerequisites = { "tech_universal_programmable_matter" }
 	weight = @tier5weight3
 	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_sophont_fogs_modifier_desc }
 	weight_modifier = {
-		modifier = { factor = 0 has_policy_flag = robots_outlawed }
+		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
@@ -898,10 +765,7 @@ tech_sophont_fogs = {
 		weight = 2
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
 }
 
@@ -918,24 +782,18 @@ tech_self_healing_armor = {
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
 		factor = 1.25
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
 # Refabricating Materials - Military Tree 3a
 tech_miniaturized_autowars = {
+	cost = @tier5cost3
 	area = engineering
 	tier = 5
-	cost = @tier5cost3
 	ai_update_type = military
 	category = { voidcraft }
 	prerequisites = { "tech_strike_craft_3" "tech_self_healing_armor" }
@@ -943,47 +801,35 @@ tech_miniaturized_autowars = {
 	potential = { has_ascension_perk = ap_nanotech }
 	## Unlock strike craft 4
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft } }
 	}
 }
 
 # Refabricating Materials - Military Tree 3b
 tech_megamachine_strategies = {
+	cost = @tier5cost3
 	area = society
 	tier = 5
-	cost = @tier5cost3
 	category = { military_theory }
 	prerequisites = { "tech_self_healing_armor" }
 	weight = @tier5weight3
 	potential = { has_ascension_perk = ap_nanotech }
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory } }
 	}
 }
 
 tech_optical_phased_arrays = {
+	cost = @tier5cost3
 	area = physics
 	tier = 5
-	cost = @tier5cost3
 	category = { particles }
 	ai_update_type = military
 	prerequisites = { "tech_titans" "tech_self_healing_armor" }
@@ -992,27 +838,21 @@ tech_optical_phased_arrays = {
 	weight_modifier = {
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_particles } }
 	}
 	ai_weight = {
 		factor = 2		# Weapons are good
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_particles } }
 	}
 }
 
 # Femto-Manufacturing Optimization - Nanite Production Boost 3
 tech_femto_optimizations = {
+	cost = @tier5cost3
 	area = engineering
 	tier = 5
-	cost = @tier5cost3
 	is_rare = yes
 	category = { materials }
 	prerequisites = { "tech_universal_programmable_matter" "tech_nano_optimizations" }
@@ -1022,16 +862,10 @@ tech_femto_optimizations = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -1058,25 +892,19 @@ tech_attoscale_mechanics = {
 			}
 		}
 		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 2.5
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 2.5 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
 # Toposophont Systems - Nanite AIs 4
 tech_toposophont_systems = {
+	cost = @nanotier6cost1
 	area = physics
 	tier = 5
-	cost = @nanotier6cost1
 	category = { computing }
 	prerequisites = { "tech_attoscale_mechanics" }
 	weight = @tier5weight3
@@ -1084,35 +912,26 @@ tech_toposophont_systems = {
 	modifier = { all_technology_research_speed = 0.15 }
 	weight_modifier = {
 		factor = 0.15
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 	ai_weight = {
 		factor = 0.15
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
 # Nano Encryption
 tech_nano_encryption = {
+	cost = @nanotier6cost2
 	area = physics
 	tier = 5
-	cost = @nanotier6cost2
 	category = { computing }
 	prerequisites = { "tech_encryption_3" "tech_toposophont_systems" }
 	weight = @tier5weight3
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { intel_encryption_add = 2 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1123,28 +942,22 @@ tech_nano_encryption = {
 	}
 	ai_weight = {
 		weight = 3
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
 # Nano Decryption
 tech_nano_decryption = {
+	cost = @nanotier6cost2
 	area = physics
 	tier = 5
-	cost = @nanotier6cost2
 	category = { computing }
 	prerequisites = { "tech_decryption_3" "tech_toposophont_systems" }
 	weight = @tier5weight3
 	potential = { has_ascension_perk = ap_nanotech }
 	modifier = { intel_decryption_add = 2 }
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1155,14 +968,11 @@ tech_nano_decryption = {
 	}
 	ai_weight = {
 		weight = 3
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_computing } }
 	}
 }
 
-# Atto-Manufacturing Optimization - Omniwright Production Boost
+# # Atto-Manufacturing Optimization - Omniwright Production Boost
 tech_atto_optimizations = {
 	cost = @nanotier6cost2
 	area = engineering
@@ -1176,16 +986,10 @@ tech_atto_optimizations = {
 		factor = 0.5
 		# modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
 		modifier = { factor = 1.5 has_ascension_perk = ap_technological_ascendancy }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 }
 
@@ -1202,19 +1006,13 @@ tech_nano_torpedoes = {
 	weight_modifier = {
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 	ai_weight = {
 		factor = 2		# Weapons are good
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 }
 
@@ -1231,19 +1029,13 @@ tech_nano_swarmer_missile = {
 	weight_modifier = {
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 	ai_weight = {
 		factor = 2		# Weapons are good
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
 		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
 	}
 }
 
@@ -1264,18 +1056,9 @@ tech_great_archailect = {
 	modifier = { description = tech_orbital_great_archailect_modifier_desc }
 	weight_modifier = {
 		factor = 0.25
-		modifier = {
-			factor = 2
-			has_trait_in_council = { TRAIT = leader_trait_maniacal }
-		}
-		modifier = {
-			factor = 2
-			has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
-		}
-		modifier = {
-			factor = 2
-			OR = { has_ascension_perk = ap_galactic_wonders_utopia has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
-		}
+		modifier = { factor = 2 has_trait_in_council = { TRAIT = leader_trait_maniacal } }
+		modifier = { factor = 2 has_trait_in_council = { TRAIT = leader_trait_spark_of_genius } }
+		modifier = { factor = 2 OR = { has_ascension_perk = ap_galactic_wonders_utopia has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp } }
 		modifier = { factor = 6 has_ascension_perk = ap_master_builders }
 		modifier = { factor = 9 has_ascension_perk = ap_technological_ascendancy }
 		modifier = {
@@ -1289,10 +1072,7 @@ tech_great_archailect = {
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 1.25
-			has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft }
-		}
+		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft } }
 	}
 }
 
