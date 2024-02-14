@@ -49,7 +49,7 @@ orbital_hyperfog_0 = {
 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_minor_planetary_body"
-				NOR = { is_asteroid = yes }
+				is_asteroid = no
 			}
 			custom_tooltip = { fail_text = "requires_not_star" is_star = no }
 		}

@@ -20,12 +20,18 @@
 merg_is_default_empire = {
 	OR = {
 		is_country_type = default
-		# is_country_type = ds_nomads # Darkspace
-		# is_country_type = uo_une_member_active # Ethics & Civics Infinity
-		# has_country_flag = is_playable # Scripted Triggers Undercoat
-		# is_country_type = default_ev # The Empty Vagrant
-		is_zofe_country = yes # ZOFE
-		# is_void_farer = yes # Nomads: The wondering Void Farers.
+		# Darkspace
+		# is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		# is_country_type = uo_une_member_active
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
+		# The Empty Vagrant
+		# is_country_type = default_ev
+		# ZOFE
+		is_zofe_country = yes
+		# Nomads: The wondering Void Farers.
+		# is_void_farer = yes
 	}
 }
 
@@ -37,11 +43,17 @@ is_default_or_fallen = {
 		# is_country_type_with_subjects = yes
 		merg_is_default_empire = yes # is_country_type = default
 		is_fallen_empire = yes
-		# has_country_flag = is_empire # Scripted Triggers Undercoat
-		# is_zofe_country = yes ## ZOFE
-		# is_country_type = default_ev ## The Empty Vagrant
-		# is_country_type = fallen_empire_ev  ## The Empty Vagrant
-		# is_country_type = awakened_fallen_empire_ev  ## The Empty Vagrant
+		# # is_country_type = awakened_fallen_empire
+		# # is_country_type = fallen_empire
+		# # Scripted Triggers Undercoat
+		# has_country_flag = is_playable
+		has_country_flag = is_empire
+		# # ZOFE
+		# is_zofe_country = yes
+		# # The Empty Vagrant
+		# is_country_type = default_ev
+		# is_country_type = fallen_empire_ev
+		# is_country_type = awakened_fallen_empire_ev
 		# # Human Fallen Empire
 		# # is_country_type = hfe_fallen
 		# # is_country_type = hfe_pirate
@@ -56,11 +68,20 @@ is_default_or_fallen = {
 merg_is_fallen_empire = {
 	OR = {
 		is_country_type = fallen_empire
-		# is_country_type = LsE_fallen_empire # History of the Lost Empire
-		# is_country_type = lost_empire # ZOFE
-		hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen # Human Fallen Empire
-		# is_country_type = kuat_fallen_empire # SW:KUAT ANCIENT EMPIRE
-		# is_country_type = fallen_empire_ev # The Empty Vagrant
+		# History of the Lost Empire
+		# is_country_type = LsE_fallen_empire
+		# ZOFE
+		# is_country_type = lost_empire
+		# Human Fallen Empire
+		hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen
+		# AND = { # Goes the other way?
+		# 	hfe_trigger_is_human_fallen = yes # is_country_type = hfe_fallen
+		# 	NOT = { has_civic = hfe_civic_egypt_fury }
+		# }
+		# SW:KUAT ANCIENT EMPIRE
+		# is_country_type = kuat_fallen_empire
+		# The Empty Vagrant
+		# is_country_type = fallen_empire_ev
 		is_country_type = the_sleeper_fallen # The Sleeper
 	}
 }

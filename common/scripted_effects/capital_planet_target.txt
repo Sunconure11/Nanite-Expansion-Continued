@@ -1,0 +1,72 @@
+# Returns fallback capital_planet
+# This = country
+get_capital_planet = {
+	if = {
+		limit = { NOT = { exists = event_target:capital_planet } }
+		if = {
+			limit = { exists = capital_scope }
+			capital_scope = { save_event_target_as = capital_planet }
+		}
+		else_if = {
+			limit = { num_owned_planets > 0 any_owned_planet = { is_colony = yes } }
+			if = {
+				limit = {
+					num_sectors > 0
+					any_owned_sector = { exists = sector_capital }
+				}
+				ordered_owned_sector = {
+					limit = { exists = sector_capital }
+					position = 0
+					order_by = trigger:num_sapient_pops
+					sector_capital = { save_event_target_as = capital_planet }
+				}
+			}
+			else = {
+				ordered_owned_planet = {
+					limit = {
+						is_colony = yes
+						is_colonizable = no
+						exists = space_owner
+						solar_system = { exists = starbase }
+					}
+					position = 0
+					order_by = trigger:num_sapient_pops
+					# weights = {
+					# 	base = 1
+					#	modifier = { add = 3 solar_system = { is_capital_system = yes } }
+					# 	modifier = { add = 3 num_sapient_pops > 30 }
+					# }
+					save_event_target_as = capital_planet
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:capital_planet } }
+				ordered_planet_within_border = {
+					limit = {
+						has_owner = yes
+						is_colony = yes
+						OR = {
+							AND = {
+								exists = owner
+								is_owned_by = prev
+							}
+							AND = {
+								exists = controller
+								controller = { is_same_empire = prev }
+							}
+						}
+					}
+					position = 0
+					order_by = trigger:num_sapient_pops
+					# weights = {
+					# 	base = 1
+					# 	modifier = { add = 1 exists = owner is_owned_by = prev }
+					# 	modifier = { add = 1 num_sapient_pops > 5 }
+					# }
+					save_event_target_as = capital_planet
+				}
+			}
+			else = { log = "Failed: no own planet found for \\[This.GetName]?!" }
+		}
+	}
+}

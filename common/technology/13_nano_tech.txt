@@ -317,8 +317,7 @@ tech_nanoform_workers = {
 		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
-		# modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = { factor = 1.5 has_ascension_perk = ap_technological_ascendancy }
+		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
 		modifier = { factor = 2 has_origin = origin_mechanists }
 		modifier = { factor = 4 has_ascension_perk = ap_synthetic_evolution }
 		modifier = { factor = 4 has_ascension_perk = ap_synthetic_age }
@@ -984,8 +983,7 @@ tech_atto_optimizations = {
 	modifier = { description = tech_atto_optimizations_modifier_desc }
 	weight_modifier = {
 		factor = 0.5
-		# modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
-		modifier = { factor = 1.5 has_ascension_perk = ap_technological_ascendancy }
+		modifier = { factor = @ap_technological_ascendancy_rare_tech has_ascension_perk = ap_technological_ascendancy }
 		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_materials } }
 	}
 	ai_weight = {
@@ -1018,9 +1016,9 @@ tech_nano_torpedoes = {
 
 # Whirlwind Missiles
 tech_nano_swarmer_missile = {
+	cost = @nanotier6cost3
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost3
 	category = { propulsion }
 	ai_update_type = military
 	prerequisites = { "tech_swarmer_missiles_2" "tech_atto_optimizations" }
@@ -1040,9 +1038,9 @@ tech_nano_swarmer_missile = {
 }
 
 tech_great_archailect = {
+	cost = @nanotier6cost3
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost3
 	category = { voidcraft }
 	# ai_update_type = all
 	prerequisites = {
@@ -1078,9 +1076,9 @@ tech_great_archailect = {
 
 # Sophont Fogs - Planetary Modifier 3
 tech_toposophont_fogs = {
+	cost = @nanotier6cost3
 	area = engineering
 	tier = 5
-	cost = @nanotier6cost3
 	category = { industry }
 	prerequisites = { "tech_great_archailect" }
 	weight = @tier5weight3
@@ -1091,9 +1089,9 @@ tech_toposophont_fogs = {
 }
 
 tech_toposophont_combat_computers = {
+	cost = @nanotier6cost3
 	area = physics
 	tier = 5
-	cost = @nanotier6cost3
 	category = { computing }
 	ai_update_type = military
 	is_rare = yes
@@ -1106,10 +1104,10 @@ tech_toposophont_combat_computers = {
 
 # Nano Hulls
 tech_repeatable_nano_hulls = {
+	cost = @repeatableTechBaseCost
 	area = engineering
 	cost_per_level = @repeatableTechLevelCost
 	tier = @repeatableTechTier
-	cost = @repeatableTechBaseCost
 	category = { materials }
 	levels = 10
 	prerequisites = { "tech_attoscale_mechanics" "tech_self_healing_armor" }

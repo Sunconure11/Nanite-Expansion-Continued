@@ -1,20 +1,22 @@
-[h3]This is a continuation of [b]Machina Mystica's [url=https://steamcommunity.com/sharedfiles/filedetails/2498990660]Nanite Expansion[/url][/b].[/h3]
-NOTICE: UNSUBSCRIBE FROM THE OLD MOD BEFORE REPORTING BUGS!
+[h3]Ever felt like the Nanites in Stellaris were pretty useless? Then this mod is just right for you to correct that. This is a continuation of Machina Mystica's [url=https://steamcommunity.com/sharedfiles/filedetails/2498990660]Nanite Expansion[/url].[/h3]
 
 [HR]
-Ever felt like the Nanites in Stellaris were pretty useless? I did, and I made this mod to correct that. Exploring hypothetical technologies in scales from the Micro to the Atto and everything between, the mod offers a plethora of new options for empires, many of which are derived from the sci-fi encyclopedia at Orion's Arm. All heavily integrate Nanites and make them an essential component of cutting edge empires. Three variations of the ascension perk to start your nanotechnology journey have been included; one for Organic Empires, one for Synths, and one for Machine empires.
+[h2][b]F[/b][i]eatures[/i][/h2]
+Exploring hypothetical technologies in scales from the Micro to the Atto and everything between, the mod offers a plethora of new options for empires, many of which are derived from the sci-fi encyclopedia at Orion's Arm. All heavily integrate Nanites and make them an essential component of cutting edge empires. Three variations of the ascension perk to start your nanotechnology journey have been included; one for Organic Empires, one for Synths, and one for Machine empires.
 
 [HR]
 The mod adds 40+ new technologies; 5 new ship components, including a Colossus Planet Killer that turns worlds into Nanite worlds and access to the unique model of Strike Craft from the Grey Tempest; two new buildings; two new megastructures, one of which is a giant AI entity who’s “personality” you get to influence; a series of upgradable planet modifiers; a new planet bombardment stance; three new armies with a unique icon; and a set of traits for Synths and Machines equivalent to the Brain Slug for Organics.
 
 The full mod documentation can be found [url=//docs.google.com/document/d/e/2PACX-1vT3nr03aAEjxLBPIIKEdtvgF1tSk9VwqCy2SZcBPrWedbQy6oQ1nlwCKKy546lKKaqQOmaOP5p_IZlH/pub]here.[/url]
 
+[HR]
 [h3][b]C[/b][i]ompatibility[/i][/h3]
 The mod has a few overwrites, so some graphical issues may occur with other mods.
 The mod has graphical changes to the orbital_bombardment_effects entity, and the GFX_planet_view_bombarded sprite; and the event syndaw.11 has been altered.
 Compatibility for Gigastructural Engineering has been included by default; Nanite Expansion should go after Gigas in the load order for all graphical effects to work.
 For more compat. [url=//steamcommunity.com/workshop/filedetails/2807759164]The Merger of Rules[/url] is supported.
 
+NOTICE: UNSUBSCRIBE FROM THE OLD MOD BEFORE REPORTING BUGS!
 
 [h3][b]C[/b][i]redit and [b]S[/b]pecial thanks to:[/i][/h3]
 • [url=//steamcommunity.com/id/machinamystica][b]Machina Mystica[/b][/url] for initiating and releasing the mod free

@@ -75,13 +75,15 @@ country_event = {
 	desc = "nano.1310.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_laboratory_sound
+	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
 	trigger = { last_increased_tech = tech_nanoform_workers }
+	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1310.a"
 		hidden_effect = { save_event_target_as = synth_nano_owner }
-		enable_special_project = { name = "SYNTHETIC_NANITE_PROJECT" location = capital_scope }
+		event_target:capital_planet = { enable_special_project = { name = "SYNTHETIC_NANITE_PROJECT" } }
 	}
 }
 
@@ -113,10 +115,10 @@ country_event = {
 				every_owned_leader = {
 					limit = {
 						is_same_species = root
-						#species = {
+						# species = {
 						#	has_trait = trait_nanite_entity
 						#	is_same_value = event_target:nanoform_species
-						#}
+						# }
 						NOT = { has_trait = leader_trait_nanite_entity }
 					}
 					add_trait = leader_trait_nanite_entity
@@ -124,10 +126,10 @@ country_event = {
 				every_pool_leader = {
 					limit = {
 						is_same_species = root
-						#species = {
+						# species = {
 						#	has_trait = trait_nanite_entity
 						#	is_same_value = event_target:nanoform_species
-						#}
+						# }
 						NOT = { has_trait = leader_trait_nanite_entity }
 					}
 					add_trait = leader_trait_nanite_entity
@@ -159,13 +161,15 @@ country_event = {
 	desc = "nano.1320.desc"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_laboratory_sound
+	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
 	trigger = { last_increased_tech = tech_nanoform_gestalt }
+	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1320.a"
 		hidden_effect = { save_event_target_as = machine_nano_owner }
-		enable_special_project = { name = "MACHINE_NANITE_PROJECT" location = capital_scope }
+		event_target:capital_planet = { enable_special_project = { name = "MACHINE_NANITE_PROJECT" } }
 	}
 }
 
@@ -197,10 +201,10 @@ country_event = {
 				every_owned_leader = {
 					limit = {
 						is_same_species = root
-						#species = {
+						# species = {
 						#	has_trait = trait_terminal_nanites
 						#	is_same_value = event_target:naniteterminal_species
-						#}
+						# }
 						NOT = { has_trait = leader_trait_terminal_nanites }
 					}
 					add_trait = leader_trait_terminal_nanites
@@ -208,10 +212,10 @@ country_event = {
 				every_pool_leader = {
 					limit = {
 						is_same_species = root
-						#species = {
+						# species = {
 						#	has_trait = trait_terminal_nanites
 						#	is_same_value = event_target:naniteterminal_species
-						#}
+						# }
 						NOT = { has_trait = leader_trait_terminal_nanites }
 					}
 					add_trait = leader_trait_terminal_nanites
@@ -243,13 +247,15 @@ country_event = {
 	desc = "nano.1330.desc"
 	picture = GFX_evt_circuitry_modification
 	show_sound = event_laboratory_sound
+	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
 	trigger = { last_increased_tech = tech_smart_immune_systems }
+	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1330.a"
 		hidden_effect = { save_event_target_as = organic_nano_owner }
-		enable_special_project = { name = "ORGANIC_NANITE_PROJECT" location = capital_scope }
+		event_target:capital_planet = { enable_special_project = { name = "ORGANIC_NANITE_PROJECT" } }
 	}
 }
 
@@ -286,13 +292,15 @@ country_event = {
 	desc = "nano.1332.desc"
 	picture = GFX_evt_cybernetics
 	show_sound = event_laboratory_sound
+	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
 	trigger = { last_increased_tech = tech_post_mechanical_cybernetics }
+	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1332.a"
 		hidden_effect = { save_event_target_as = cyborg_nano_owner }
-		enable_special_project = { name = "CYBORG_NANITE_PROJECT" location = capital_scope }
+		event_target:capital_planet = { enable_special_project = { name = "CYBORG_NANITE_PROJECT" } }
 	}
 }
 
@@ -459,12 +467,12 @@ country_event = {
 	}
 }
 
-#Subsumed Armies: Subsuming the enemy's army as your own
-#An army has been killed in ground combat
+# Subsumed Armies: Subsuming the enemy's army as your own
+# An army has been killed in ground combat
 # This = owner
 # From = army
-# FromFrom = opponent
-# FromFromFrom = planet
+# fromfrom = opponent
+# fromfromfrom = planet
 country_event = {
 	id = nano.1350
 	hide_window = yes
