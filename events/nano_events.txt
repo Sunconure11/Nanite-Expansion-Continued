@@ -78,7 +78,7 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { last_increased_tech = tech_nanoform_workers }
+	trigger = { merg_is_default_empire = yes last_increased_tech = tech_nanoform_workers }
 	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1310.a"
@@ -164,7 +164,7 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { last_increased_tech = tech_nanoform_gestalt }
+	trigger = { merg_is_default_empire = yes last_increased_tech = tech_nanoform_gestalt }
 	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1320.a"
@@ -250,7 +250,7 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { last_increased_tech = tech_smart_immune_systems }
+	trigger = { merg_is_default_empire = yes last_increased_tech = tech_smart_immune_systems }
 	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1330.a"
@@ -295,7 +295,7 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { last_increased_tech = tech_post_mechanical_cybernetics }
+	trigger = { merg_is_default_empire = yes last_increased_tech = tech_post_mechanical_cybernetics }
 	immediate = { get_capital_planet = yes }
 	option = {
 		name = "nano.1332.a"

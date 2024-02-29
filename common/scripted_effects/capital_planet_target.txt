@@ -17,7 +17,7 @@ get_capital_planet = {
 				ordered_owned_sector = {
 					limit = { exists = sector_capital }
 					position = 0
-					order_by = trigger:num_sapient_pops
+					order_by = trigger:num_pops
 					sector_capital = { save_event_target_as = capital_planet }
 				}
 			}
@@ -34,7 +34,7 @@ get_capital_planet = {
 					# weights = {
 					# 	base = 1
 					#	modifier = { add = 3 solar_system = { is_capital_system = yes } }
-					# 	modifier = { add = 3 num_sapient_pops > 30 }
+					# 	modifier = { add = 3 num_pops > 30 }
 					# }
 					save_event_target_as = capital_planet
 				}
@@ -61,7 +61,7 @@ get_capital_planet = {
 					# weights = {
 					# 	base = 1
 					# 	modifier = { add = 1 exists = owner is_owned_by = prev }
-					# 	modifier = { add = 1 num_sapient_pops > 5 }
+					# 	modifier = { add = 1 num_pops > 5 }
 					# }
 					save_event_target_as = capital_planet
 				}
