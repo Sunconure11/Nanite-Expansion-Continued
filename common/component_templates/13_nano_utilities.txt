@@ -13,8 +13,8 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_S7
-		ship_hull_regen_add_static = 3
-		ship_armor_regen_add_static = 4
+		ship_hull_regen_add_static = 2
+		ship_armor_regen_add_static = 3
 		ship_hull_regen_add_perc = 0.1
 		ship_armor_regen_add_perc = 0.2
 	}
@@ -26,11 +26,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t6_cost
-			nanites = 0.25
+			nanites = 0.35
 		}		
 		upkeep = {
-			energy = @s_t6_upkeep_energy
-			alloys = @s_t6_upkeep_alloys
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -50,8 +50,8 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_M7
-		ship_hull_regen_add_static = 4
-		ship_armor_regen_add_static = 5
+		ship_hull_regen_add_static = 3
+		ship_armor_regen_add_static = 4
 		ship_hull_regen_add_perc = 0.1
 		ship_armor_regen_add_perc = 0.2
 	}
@@ -63,11 +63,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t6_cost
-			nanites = 0.50
+			nanites = 0.75
 		}		
 		upkeep = {
-			energy = @m_t6_upkeep_energy
-			alloys = @m_t6_upkeep_alloys
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -87,8 +87,8 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L7
-		ship_hull_regen_add_static = 5
-		ship_armor_regen_add_static = 6
+		ship_hull_regen_add_static = 4
+		ship_armor_regen_add_static = 5
 		ship_hull_regen_add_perc = 0.1
 		ship_armor_regen_add_perc = 0.2
 	}
@@ -100,11 +100,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t6_cost
-			nanites = 1.00
+			nanites = 1.15
 		}		
 		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
 		}
 	}
 	ai_weight = {
