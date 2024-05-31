@@ -29,7 +29,7 @@ subsumption = {
 			from = {
 				owner = { NOT = { is_hostile = root.owner } }
 			}
-			#owner = { is_crisis_faction = no }
+			# owner = { is_crisis_faction = no }
 		}
 	}
 }

@@ -35,6 +35,7 @@ trait_nanite_augments = {
 	icon = "gfx/interface/icons/traits/trait_nanite_enhanced_species.dds"
 
 	improves_leaders = no
+
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -60,8 +61,8 @@ trait_nanite_augments = {
 trait_robot_nanite_entity = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/trait_robot_nanite_entity_species.dds"
-	immortal_leaders = yes
 	improves_leaders = yes
+	immortal_leaders = yes
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -89,6 +90,7 @@ trait_robot_terminal_nanites = {
 	icon = "gfx/interface/icons/traits/trait_robot_nanite_entity_species.dds"
 
 	improves_leaders = yes
+	immortal_leaders = yes
 	initial = no
 	randomized = no
 	species_potential_add = {

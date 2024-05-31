@@ -20,7 +20,13 @@ orbital_hyperfog_0 = {
 	}
 	placement_rules = {
 		planet_possible = {
-			custom_tooltip = { fail_text = "must_build_around_gray_goo" is_planet_class = pc_gray_goo }
+			custom_tooltip = {
+				fail_text = "must_build_around_gray_goo"
+				OR = {
+					is_planet_class = pc_gray_goo
+					is_planet_class = pc_nanotech
+				}
+			}
 			custom_tooltip = {
 				fail_text = "requires_surveyed_planet"
 				is_surveyed = {

@@ -414,7 +414,7 @@ lylat_system_initializer = {
 	}
 }
 
-#Muliphein Waste System
+# Muliphein Waste System
 muliphein_waste_system_initializer = {
 	name = "NAME_Muliphein_Waste"
 	class = "sc_f"

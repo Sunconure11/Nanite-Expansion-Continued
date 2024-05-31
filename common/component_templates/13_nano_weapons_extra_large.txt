@@ -8,10 +8,10 @@ weapon_component_template = {
 	size = titanic
 	type = instant
 	prio_projectile = yes
-		
+
 	icon = "GFX_ship_part_phased_beam"
 	icon_frame = 1
-	
+
 	firing_arc = 10.0
 	use_ship_kill_target = no
 
@@ -29,18 +29,18 @@ weapon_component_template = {
 	shield_penetration = 0
 	armor_damage = 1.5
 	armor_penetration = 0
-	
+
 	prerequisites = { "tech_optical_phased_arrays" }
 	component_set = "NANO_BEAM"
 	upgrades_to = "ENERGY_LANCE_TEMPORAL"
 	projectile_gfx = "nemesis_01_ion_cannon"
-	size_restriction = { titan ion_cannon }
+	size_restriction = { titan cosmo_crisis_titan ion_cannon }
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @titanic_t6_cost
 			nanites = @titanic_t6_rare
-		}		
+		}
 		upkeep = {
 			energy = @titanic_t6_upkeep_energy
 			alloys = @titanic_t6_upkeep_alloys
@@ -67,10 +67,10 @@ weapon_component_template = {
 #	size = titanic
 #	type = instant
 #	prio_projectile = yes
-#		
+#
 #	icon = "GFX_ship_part_phased_beam"
 #	icon_frame = 1
-#	
+#
 #	firing_arc = 10.0
 #	min_range = 30.0
 #	use_ship_kill_target = no
@@ -88,7 +88,7 @@ weapon_component_template = {
 #	shield_penetration = 0
 #	armor_damage = 1.5
 #	armor_penetration = 0
-#	
+#
 #	prerequisites = { "tech_optical_phased_arrays" }
 #	component_set = "NANO_BEAM"
 #	projectile_gfx = "nemesis_01_ion_cannon"
@@ -98,7 +98,7 @@ weapon_component_template = {
 #		cost = {
 #			alloys = @titanic_t6_cost
 #			nanites = @titanic_t6_rare
-#		}		
+#		}
 #		upkeep = {
 #			energy = @titanic_t6_upkeep_energy
 #			alloys = @titanic_t6_upkeep_alloys

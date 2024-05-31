@@ -1,0 +1,161 @@
+## For compatibility: Dummy triggers - to be overwritten by their respective mods.
+## Gigastructural Engineering & More
+is_giga_habitat = { always = no }
+is_pc_ringworld_hive = { always = no }
+is_pc_ringworld_machine = { always = no }
+## Planetary Diversity
+pd_is_planet_class_hive = { always = no }
+pd_is_planet_class_machine = { always = no }
+is_planetary_diversity_ringworld = { always = no }
+## Nanite Machine and Distant Stars Overhaul has_global_flag = distar_overhaul_mod_active
+# is_nanite_gaia =				{ always = no }
+# is_nanite_habitat_shielded =	{ always = no }
+# is_nanite_gas_giant =			{ always = no }
+# is_dessanu_relic =				{ always = no }
+
+# Listing habitats
+merg_is_habitat = {
+	habitable_structure = yes  # Exlcude some entities is_artificial = yes
+	OR = {
+		is_planet_class = pc_habitat
+		has_planet_flag = habitat
+		# has_planet_flag = advanced_habitat
+		# has_planet_flag = advanced_habitat_2
+		# has_ringworld_output_boost = no # There are mods which trigger habitats as ringworlds like Giga
+		# is_aot_habitat = yes ## Acquisition of Technology
+		# uses_district_set = BA_auto_habitat ## Blue Archive
+		# is_ds_skycatcher = yes ## DarkSpace
+		is_giga_habitat = yes ## Gigastructural Engineering & More
+		# has_planet_flag = hab_init # Habitation
+		# has_planet_flag = stpg_planetary_habitat # # Living Space
+		# is_pc_mem_vazuran_habitat = yes ## More Events Mod
+		# uses_district_set = GF_nyto_devil_furnace_world ## Nyto Species Pack
+		uses_district_set = nsc_freebooter_habitat ## NSC2 Modjam Freebooters Origin
+		# uses_district_set = SRA_city_world ## StellarRegulator Array
+		# uses_district_set = skypalace ## Twinks Atlantean
+		# uses_district_set = fe_rogue_trader_habitat ## Wula Fallen Empire
+		uses_district_set = utopian_habitat ## ZOFE
+		# is_planet_class = pc_interstellar_habitat ### (Mod) Gigastructural Engineering & More
+		# is_planet_class = pc_gigaorbital_ring ### (Mod) Gigastructural Engineering & More
+		# is_planet_class = pc_mem_vazuran_habitat # More Events Mod
+		# is_planet_class = pc_dm_habitat # Acquisition of Technology
+		# is_planet_class = pc_ae_habitat # Acquisition of Technology
+		# is_planet_class = pc_sigma_habitat # Acquisition of Technology
+		# is_planet_class = pc_sigma_deepspace_habitat # Acquisition of Technology
+		# is_planet_class = pc_habitat_robot # Plentiful Traditions
+		# uses_district_set = habitat # As some mods use both as hack like Giga.
+		# uses_district_set = starborn_start # Starborn: Improved Voidtouched
+		# uses_district_set = skypalace # Twinks Atlantean
+		# is_planet_class = pc_gigaorbital_ring ### (Mod) Gigastructural Engineering & More
+		# is_planet_class = pc_pd_toxic_hab # Giga Diversity
+		# is_planet_class = pc_GFnytp_habitis # Nyto Species Pack
+	}
+}
+
+# List of all habitable ringworld sections.
+merg_is_hab_ringworld = {
+	habitable_structure = yes  # Exlcude some ringworld entities is_artificial = yes
+	has_ringworld_output_boost = yes
+	merg_is_habitat = no
+	# OR = {
+	# 	uses_district_set = ring_world
+	# 	is_planet_class = pc_ringworld_habitable
+	# 	is_planet_class = pc_shattered_ring_habitable
+	# 	is_planetary_diversity_ringworld = yes
+	# 	# # Gigastructural Engineering & More
+	# 	# is_planet_class = pc_gigaorbital_ring
+	# 	# is_planet_class = pc_interstellar_ringworld_habitable
+	# 	# is_planet_class = pc_ringworld_city
+	# 	# is_planet_class = pc_squareworld_habitable
+	# 	# is_planet_class = pc_giga_penrose_habitable
+	# 	# is_planet_class = pc_ringworld_machine
+	# 	# is_planet_class = pc_ringworld_hive
+	# 	# # Ancient Empire
+	# 	# # Listed planet types are for colors only, they're all ideal
+	# 	# is_planet_class = pc_ag_ringworld_desert
+	# 	# is_planet_class = pc_ag_ringworld_arid
+	# 	# is_planet_class = pc_ag_ringworld_savannah
+	# 	# is_planet_class = pc_ag_ringworld_ocean
+	# 	# is_planet_class = pc_ag_ringworld_continental
+	# 	# is_planet_class = pc_ag_ringworld_tropical
+	# 	# is_planet_class = pc_ag_ringworld_tundra
+	# 	# is_planet_class = pc_ag_ringworld_arctic
+	# 	# is_planet_class = pc_ag_ringworld_alpine
+	# 	# is_planet_class = pc_ag_ringworld_machine
+	# 	# is_planet_class = pc_ag_ringworld_city
+	# 	# is_planet_class = pc_ag_ringworld_gaia
+	# 	# # Warship Girls and MIST species.
+	# 	# is_planet_class = pc_ringworld_habitable_sh
+	# 	# is_planet_class = pc_ringworld_habitable_wsg
+	# }
+}
+
+# (upd v.3.4.3)
+merg_is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+		is_pc_ringworld_hive = yes # is_planet_class = pc_ringworld_hive # Gigastructural Engineering & More
+		pd_is_planet_class_hive = yes # Planetary Diversity
+		uses_district_set = hive_world
+	}
+}
+
+merg_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# is_nanite_gas_giant = yes # Nanite Machine and Distant Stars Overhaul
+		# Planetary Diversity
+		# is_planet_class = pc_hot_gas_giant
+		# is_planet_class = pc_cloudless_gas_giant
+		# is_planet_class = pc_cold_gas_giant
+	}
+}
+
+merg_is_machine_world = {
+	OR = {
+		is_planet_class = pc_machine
+		pd_is_planet_class_machine = yes # Planetary Diversity
+		is_pc_ringworld_machine = yes # Gigastructural Engineering & More
+	}
+}
+
+merg_is_arcology = { is_planet_class = pc_city }
+
+merg_is_relic_world = {
+	OR = {
+		is_planet_class = pc_relic
+		# is_dessanu_relic = yes # Nanite Machine and Distant Stars Overhaul
+		# is_planet_class = pc_midas_relic # Midas
+	}
+}
+
+gpm_is_planet_class_city = {
+	optimize_memory
+	OR = {
+		merg_is_arcology = yes
+		merg_is_relic_world = yes
+		# is_planet_class = pc_matryoshka ### (Mod) Additional Mega Planets merged into Forgotten Queens
+		# is_planet_class = pc_hollow ### (Mod) Additional Mega Planets merged into Forgotten Queens
+	}
+}
+
+merg_is_molten = { is_planet_class = pc_molten }
+merg_is_toxic = { is_planet_class = pc_toxic }
+merg_is_frozen = { is_planet_class = pc_frozen }
+merg_is_barren = { is_planet_class = pc_barren }
+merg_is_barren_cold = { is_planet_class = pc_barren_cold }
+merg_is_gaia_basic = {
+	OR = {
+		is_planet_class = pc_gaia
+		# atw_is_gaia = yes # All These Worlds
+		# is_nanite_gaia = yes # Nanite Machine and Distant Stars Overhaul
+	}
+}
+merg_is_shielded_world = {
+	OR = {
+		is_planet_class = pc_habitat_shielded
+		is_planet_class = pc_ringworld_shielded
+		is_planet_class = pc_shielded
+		# is_nanite_habitat_shielded = yes # Nanite Machine and Distant Stars Overhaul
+	}
+}

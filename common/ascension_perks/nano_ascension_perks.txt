@@ -46,7 +46,7 @@ ap_nanotech = {
 		}
 		modifier = {
 			factor = 2
-			has_ascension_perk = ap_engineered_evolution
+			has_genetic_ascension = yes
 		}
 		modifier = {
 			factor = 2

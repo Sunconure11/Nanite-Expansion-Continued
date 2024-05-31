@@ -1,0 +1,58 @@
+# For compatibility: Dummy triggers - to be overwritten by their respective mods.
+# HFE
+hfe_trigger_insane_admiral_trait = {
+	always = no
+	# OR = {
+	# 	is_country_type = hfe_pirate
+	# 	has_valid_civic = hfe_civic_features_aggressive_diplomacy
+	# }
+}
+# HFE
+hfe_trigger_is_human_fallen = {
+	always = no
+	# OR = {
+	# 	has_country_flag = hfe_egypt
+	# 	has_country_flag = hfe_future
+	# 	is_country_type = hfe_fallen
+	# }
+}
+
+# ZOFE
+is_zofe_fe = {
+	is_country_type = fallen_empire
+	# always = no
+	# OR = {
+	# 	is_country_type = fallen_empire
+	# 	is_country_type = lost_empire
+	# }
+}
+is_zofe_ae = {
+	is_country_type = awakened_fallen_empire
+	# always = no
+	# OR = {
+	# 	is_country_type = awakened_fallen_empire
+	# 	is_country_type = ascended_empire
+	# }
+}
+is_zofe_country = {
+	always = no
+	# OR = {
+	# 	is_country_type = ascended_empire
+	# 	is_country_type = lost_empire
+	# }
+}
+
+is_progenitor_empires =			{ always = no } # ACOT has_sofe = { has_global_flag = sofe_activated }
+has_acot =						{ always = no } # ACOT has_global_flag = acot_live_version & has_global_flag = acot_activated
+# Cultural Overhaul
+is_imperial = { always = no }
+is_socialist = { always = no }
+is_capitalism = { always = no }
+# Realistic Pirates
+is_pirate_waves_player = { always = no }
+
+has_bug_branch = { always = no } # E&C Bug Branch
+has_life_engineering_installed = { always = no }
+
+merg_has_shroud_rising = { always = no } # has_global_flag = shroud_rising_active
+is_giga_crisis_faction = { always = no } # Gigastructural Engineering & More

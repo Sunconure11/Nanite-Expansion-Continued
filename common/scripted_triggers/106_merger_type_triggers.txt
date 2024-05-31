@@ -25,7 +25,7 @@ merg_is_default_empire = {
 		# Ethics & Civics Infinity
 		# is_country_type = uo_une_member_active
 		# Scripted Triggers Undercoat
-		has_country_flag = is_playable
+		# has_country_flag = is_playable
 		# The Empty Vagrant
 		# is_country_type = default_ev
 		# ZOFE
@@ -47,7 +47,7 @@ is_default_or_fallen = {
 		# # is_country_type = fallen_empire
 		# # Scripted Triggers Undercoat
 		# has_country_flag = is_playable
-		has_country_flag = is_empire
+		# has_country_flag = is_empire # Underscore
 		# # ZOFE
 		# is_zofe_country = yes
 		# # The Empty Vagrant
@@ -57,8 +57,8 @@ is_default_or_fallen = {
 		# # Human Fallen Empire
 		# # is_country_type = hfe_fallen
 		# # is_country_type = hfe_pirate
-		# hfe_trigger_is_human_fallen = yes
-		# hfe_trigger_insane_admiral_trait = yes
+		hfe_trigger_is_human_fallen = yes
+		hfe_trigger_insane_admiral_trait = yes
 		# # Nomads: The wondering Void Farers.
 		# # is_void_farer = yes
 	}
@@ -118,7 +118,7 @@ is_marauder = {
 		is_country_type = marauder_raiders
 	}
 }
-
+# Scripted undercoat
 is_endgame_crisis = {
 	OR = {
 		is_country_type = extradimensional
@@ -126,8 +126,31 @@ is_endgame_crisis = {
 		is_country_type = extradimensional_3
 		is_country_type = swarm
 		is_country_type = ai_empire
-		# # ACOT
-		# is_country_type = sbtg_stellarborne_empire
-		# # Gigastructural Engineering & More
+		is_country_type = synth_queen
+		is_country_type = awakened_synth_queen
+		is_country_type = synth_queen_storm
+		is_country_type = sbtg_stellarborne_empire ## ACOT
+		is_giga_crisis_faction = yes ## Gigastructural Engineering & More
+	}
+}
+
+# FOR CUSTODIAN
+is_crisis_faction = {
+	OR = {
+		is_endgame_crisis = yes
+		is_country_type = gray_goo
+		is_country_type = awakened_marauders
+		# is_country_type = formless removed in v.3.12.3
+		# is_cruel_abomination_country_type = yes # Cruel Conquerers
+		# is_country_type = darkness_country # Destiny: The Darkness Crisis
+		# Shroud Rising
+		is_country_type = shroud_cult
+		is_country_type = shroud_entities
+		is_country_type = shroud_horrors
+		# Solar Storm
+		# is_country_type = abyssal_host_invaders_type
+		# is_country_type = SSAB_ab_country_v2
+		# is_country_type = SSAB_ab_remnant
+		# is_country_type = berserker_awoken_hive # The Sleeper
 	}
 }
