@@ -1,4 +1,4 @@
-# effect (UN)HIDE_HYPERFOG = yes
+# effect = { (UN)HIDE_HYPERFOG = yes }
 
 HIDE_HYPERFOG ={
 	set_global_flag = flag_hide_complete_hyperfog
