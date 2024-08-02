@@ -208,4 +208,11 @@ orbital_hyperfog_3 = {
 			country_event = { id = nano_dialog.1313 }			# Notification
 		}
 	}
+	outliner_trigger = { 
+		this = { 
+			NOT = {
+				has_global_flag = flag_hide_complete_hyperfog
+			}
+		}
+	}
 }
