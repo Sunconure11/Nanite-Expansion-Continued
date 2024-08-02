@@ -41,7 +41,7 @@ country_event = {
 	picture = GFX_evt_gray_gooed_planet
 	location = from
 	is_triggered_only = yes
-	option = { name = nano.1301.a custom_tooltip = "bombed_to_gray_goo_world" }
+	option = { name = "arcsite.2040.revelation" custom_tooltip = "bombed_to_gray_goo_world" }
 }
 
 # Planet is turned into gray goo world by Subsumption bombing stance (bombarder)
@@ -157,7 +157,7 @@ country_event = {
 ### Machine Trait Project Event Chain ###
 country_event = {
 	id = nano.1320
-	title = "nano.1320.name"
+	title = "nano.1310.name"
 	desc = "nano.1320.desc"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_laboratory_sound
@@ -243,7 +243,7 @@ country_event = {
 ### Organic Trait Project Event Chain ###
 country_event = {
 	id = nano.1330
-	title = "nano.1330.name"
+	title = "nano.1310.name"
 	desc = "nano.1330.desc"
 	picture = GFX_evt_circuitry_modification
 	show_sound = event_laboratory_sound
@@ -288,7 +288,7 @@ country_event = {
 ### Cyborg Trait Project Event Chain ###
 country_event = {
 	id = nano.1332
-	title = "nano.1332.name"
+	title = "nano.1310.name"
 	desc = "nano.1332.desc"
 	picture = GFX_evt_cybernetics
 	show_sound = event_laboratory_sound

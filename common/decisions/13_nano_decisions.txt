@@ -248,7 +248,6 @@ decision_planetary_utility_fog_hive = {
 			is_gestalt = yes
 			has_technology = tech_ubiquitous_smartdust
 		}
-
 	}
 
 	allow = {

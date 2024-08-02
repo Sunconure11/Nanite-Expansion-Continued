@@ -1,0 +1,26 @@
+#################
+# Toggle Edicts
+#################
+# effect (UN)HIDE_HYPERFOG
+nano_settings = {
+	length = -1
+	icon = "GFX_edict_type_time"
+	resources = { category = edicts upkeep = { } }
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = flag_hide_complete_hyperfog }
+				remove_global_flag = flag_hide_complete_hyperfog
+			}
+			else = {
+				set_global_flag = flag_hide_complete_hyperfog
+			}
+		}
+	}
+	potential = {
+		is_ai = no
+		has_global_flag = nanite_expansion_active
+	}
+	# allow = {
+	# }
+}

@@ -5,55 +5,45 @@ building_nanite_fabricator_1 = {
 	base_buildtime = @b3_time
 	category = manufacturing
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
-	}
-	destroy_trigger = {
+		has_owner = yes
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_owner = no
-			AND = {
-				exists = owner
-				owner = {
-					is_ai = yes
-				}
-				has_any_generator_district_or_building = no
-			}
+			owner = { is_ai = no }
+			has_any_generator_district_or_building = yes
 		}
 	}
 	allow = {
 		has_upgraded_capital = yes
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
+	destroy_trigger = {
+		OR = {
+			has_owner = no
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				has_owner = yes
+				owner = { is_ai = yes }
+				has_any_generator_district_or_building = no
 			}
-		}
-		modifier = {
-			job_nanoroboticist_add = 1
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
+			has_owner = yes
+			owner = { is_gestalt = no }
 		}
-		modifier = {
-			job_nanoroboticist_drone_add = 1
+		modifier = { job_nanoroboticist_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_owner = yes
+			owner = { is_gestalt = yes }
 		}
+		modifier = { job_nanoroboticist_drone_add = 1 }
 	}
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 1000
-		}
+		cost = { alloys = 1000 }
 		upkeep = {
 			rare_crystals = 2
 			volatile_motes = 2
@@ -61,17 +51,11 @@ building_nanite_fabricator_1 = {
 			energy = 5
 		}
 	}
-	upgrades = {
-		building_nanite_fabricator_2
-	}
-	prerequisites = {
-		"tech_micromechanic_constructs"
-	}
+	upgrades = { building_nanite_fabricator_2 }
+	prerequisites = { "tech_micromechanic_constructs" }
 	ai_resource_production = {
 		nanites = 2
-		trigger = {
-			always = yes
-		}
+		trigger = { always = yes }
 	}
 }
 
@@ -80,10 +64,7 @@ building_nanite_fabricator_2 = {
 	can_build = no
 	category = manufacturing
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
 	destroy_trigger = {
 		OR = {
@@ -91,44 +72,30 @@ building_nanite_fabricator_2 = {
 			has_modifier = slave_colony
 			has_owner = no
 			AND = {
-				exists = owner
-				owner = {
-					is_ai = yes
-				}
+				has_owner = yes
+				owner = { is_ai = yes }
 				has_any_generator_district_or_building = no
 			}
 		}
 	}
-	allow = {
-		has_upgraded_capital = yes
+	allow = { has_upgraded_capital = yes }
+	triggered_planet_modifier = {
+		potential = {
+			has_owner = yes
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_nanoroboticist_add = 3 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
+			has_owner = yes
+			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			job_nanoroboticist_add = 3
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_nanoroboticist_drone_add = 3
-		}
+		modifier = { job_nanoroboticist_drone_add = 3 }
 	}
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 1000
-		}
+		cost = { alloys = 1000 }
 		upkeep = {
 			rare_crystals = 3
 			volatile_motes = 3
@@ -136,17 +103,11 @@ building_nanite_fabricator_2 = {
 			energy = 10
 		}
 	}
-	upgrades = {
-		building_nanite_fabricator_3
-	}
-	prerequisites = {
-		"tech_nanoscale_automatons"
-	}
+	upgrades = { building_nanite_fabricator_3 }
+	prerequisites = { "tech_nanoscale_automatons" }
 	ai_resource_production = {
 		nanites = 6
-		trigger = {
-			always = yes
-		}
+		trigger = { always = yes }
 	}
 }
 
@@ -155,10 +116,7 @@ building_nanite_fabricator_3 = {
 	category = manufacturing
 	can_build = no
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
 	destroy_trigger = {
 		OR = {
@@ -166,44 +124,30 @@ building_nanite_fabricator_3 = {
 			has_modifier = slave_colony
 			has_owner = no
 			AND = {
-				exists = owner
-				owner = {
-					is_ai = yes
-				}
+				has_owner = yes
+				owner = { is_ai = yes }
 				has_any_generator_district_or_building = no
 			}
 		}
 	}
-	allow = {
-		has_upgraded_capital = yes
+	allow = { has_upgraded_capital = yes }
+	triggered_planet_modifier = {
+		potential = {
+			has_owner = yes
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_nanoroboticist_add = 5 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
+			has_owner = yes
+			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			job_nanoroboticist_add = 5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_nanoroboticist_drone_add = 5
-		}
+		modifier = { job_nanoroboticist_drone_add = 5 }
 	}
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 1000
-		}
+		cost = { alloys = 1000 }
 		upkeep = {
 			rare_crystals = 5
 			volatile_motes = 5
@@ -211,14 +155,10 @@ building_nanite_fabricator_3 = {
 			energy = 15
 		}
 	}
-	prerequisites = {
-		"tech_femtoscale_robotics"
-	}
+	prerequisites = { "tech_femtoscale_robotics" }
 	ai_resource_production = {
 		nanites = 10
-		trigger = {
-			always = yes
-		}
+		trigger = { always = yes }
 	}
 }
 
@@ -227,19 +167,11 @@ building_universal_constructor_1 = {
 	base_cap_amount = 1
 	category = manufacturing
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
-	allow = {
-		has_upgraded_capital = yes
-	}
+	allow = { has_upgraded_capital = yes }
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		OR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
 	resources = {
 		category = planet_buildings
@@ -251,56 +183,38 @@ building_universal_constructor_1 = {
 		}
 		produces = {
 			trigger = {
-				owner = {
-					has_technology = tech_atto_optimizations
-				}
+				owner = { has_technology = tech_atto_optimizations }
 			}
 			mult = 2
 		}
-		cost = {
-			alloys = 1000
-			nanites = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			nanites = 5
-		}
+		cost = { alloys = 1000 nanites = @b2_rare_cost }
+		upkeep = { energy = @b2_upkeep nanites = 5 }
 	}
-	upgrades = {
-		building_universal_constructor_2
-	}
-	prerequisites = {
-		tech_self_reconfiguring_micromatter
-	}
+	upgrades = { building_universal_constructor_2 }
+	prerequisites = { tech_self_reconfiguring_micromatter }
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+			has_owner = yes
+			NOR = {
+				owner = { has_technology = tech_atto_optimizations }
+				has_ringworld_output_boost = yes
 			}
-			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_1_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_1_atto_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
+			has_owner = yes
 			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+				NOT = { has_technology = tech_atto_optimizations }
 			}
 			has_ringworld_output_boost = yes
 		}
@@ -308,10 +222,8 @@ building_universal_constructor_1 = {
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_1_ring_atto_modifier_desc
@@ -323,19 +235,11 @@ building_universal_constructor_2 = {
 	can_build = no
 	category = manufacturing
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
-	allow = {
-		has_major_upgraded_capital = yes
-	}
+	allow = { has_major_upgraded_capital = yes }
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		OR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
 	resources = {
 		category = planet_buildings
@@ -348,56 +252,38 @@ building_universal_constructor_2 = {
 		}
 		produces = {
 			trigger = {
-				owner = {
-					has_technology = tech_atto_optimizations
-				}
+				owner = { has_technology = tech_atto_optimizations }
 			}
 			mult = 2
 		}
-		cost = {
-			alloys = 1500
-			nanites = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			nanites = 10
-		}
+		cost = { alloys = 1500 nanites = @b3_rare_cost }
+		upkeep = { energy = @b3_upkeep nanites = 10 }
 	}
-	upgrades = {
-		building_universal_constructor_3
-	}
-	prerequisites = {
-		tech_self_replicating_nanites
-	}
+	upgrades = { building_universal_constructor_3 }
+	prerequisites = { tech_self_replicating_nanites }
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+			has_owner = yes
+			NOR = {
+				owner = { has_technology = tech_atto_optimizations }
+				has_ringworld_output_boost = yes
 			}
-			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_2_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_2_atto_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
+			has_owner = yes
 			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+				NOT = { has_technology = tech_atto_optimizations }
 			}
 			has_ringworld_output_boost = yes
 		}
@@ -405,10 +291,8 @@ building_universal_constructor_2 = {
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_2_ring_atto_modifier_desc
@@ -420,19 +304,11 @@ building_universal_constructor_3 = {
 	can_build = no
 	category = manufacturing
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
-	allow = {
-		has_major_upgraded_capital = yes
-	}
+	allow = { has_major_upgraded_capital = yes }
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		OR = { has_modifier = resort_colony has_modifier = slave_colony }
 	}
 	resources = {
 		category = planet_buildings
@@ -445,53 +321,37 @@ building_universal_constructor_3 = {
 		}
 		produces = {
 			trigger = {
-				owner = {
-					has_technology = tech_atto_optimizations
-				}
+				owner = { has_technology = tech_atto_optimizations }
 			}
 			mult = 2
 		}
-		cost = {
-			alloys = 2000
-			nanites = 300
-		}
-		upkeep = {
-			energy = @b4_upkeep
-			nanites = 15
-		}
+		cost = { alloys = 2000 nanites = 300 }
+		upkeep = { energy = @b4_upkeep nanites = 15 }
 	}
-	prerequisites = {
-		tech_universal_programmable_matter
-	}
+	prerequisites = { tech_universal_programmable_matter }
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+			has_owner = yes
+			NOR = {
+				owner = { has_technology = tech_atto_optimizations }
+				has_ringworld_output_boost = yes
 			}
-			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_3_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = no
 		}
 		text = building_universal_constructor_3_atto_modifier_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
+			has_owner = yes
 			owner = {
-				NOT = {
-					has_technology = tech_atto_optimizations
-				}
+				NOT = { has_technology = tech_atto_optimizations }
 			}
 			has_ringworld_output_boost = yes
 		}
@@ -499,10 +359,8 @@ building_universal_constructor_3 = {
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_technology = tech_atto_optimizations
-			}
+			has_owner = yes
+			owner = { has_technology = tech_atto_optimizations }
 			has_ringworld_output_boost = yes
 		}
 		text = building_universal_constructor_3_ring_atto_modifier_desc

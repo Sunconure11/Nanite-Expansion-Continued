@@ -28,15 +28,16 @@ great_archailect_0 = {
 		custom_tooltip = { fail_text = "requires_inside_border" is_inside_border = from }
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
-			NOT = {
-				any_system_planet = {
+			count_system_planet = {
+				limit = {
 					is_surveyed = { who = prev.from status = no }
 				}
+				count = 0
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_habitable_planets"
-			NOT = { any_system_planet = { colonizable_planet = yes } }
+			count_system_planet = { limit = { colonizable_planet = yes } count = 0 }
 		}
 		custom_tooltip = { fail_text = "requires_black_hole" is_star_class = sc_black_hole }
 		custom_tooltip = {
@@ -103,7 +104,7 @@ great_archailect_0 = {
 		modifier = {
 			factor = 0.1
 			any_neighbor_system = {
-				exists = owner
+				has_owner = yes
 				NOT = { is_owned_by = from }
 			}
 		}
@@ -135,6 +136,7 @@ great_archailect_0 = {
 great_archailect_1 = {
 	entity = "great_archailect_01_entity"
 	construction_entity = "great_archailect_01_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { great_archailect_0 }
 	country_modifier = { empire_size_mult = -0.025 }
@@ -173,6 +175,7 @@ great_archailect_1 = {
 great_archailect_2 = {
 	entity = "great_archailect_02_entity"
 	construction_entity = "great_archailect_02_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { great_archailect_1 }
 	country_modifier = { empire_size_mult = -0.05 }
@@ -206,6 +209,7 @@ great_archailect_2 = {
 great_archailect_3 = {
 	entity = "great_archailect_03_entity"
 	construction_entity = "great_archailect_03_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { great_archailect_2 }
 	country_modifier = { empire_size_mult = -0.075 }
@@ -239,6 +243,7 @@ great_archailect_3 = {
 great_archailect_4 = {
 	entity = "great_archailect_04_entity"
 	construction_entity = "great_archailect_04_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
 	upgrade_from = { great_archailect_3 }
 	country_modifier = { empire_size_mult = -0.1 country_leader_cap_add = 1 }
@@ -272,6 +277,7 @@ great_archailect_4 = {
 great_archailect_5 = {
 	entity = "great_archailect_05_entity"
 	construction_entity = "great_archailect_05_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
 	upgrade_from = { great_archailect_4 }
 	country_modifier = {
@@ -310,6 +316,7 @@ great_archailect_5 = {
 great_archailect_6 = {
 	entity = "great_archailect_06_entity"
 	construction_entity = "great_archailect_06_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
 	upgrade_from = { great_archailect_5 }
 	country_modifier = {
@@ -348,6 +355,7 @@ great_archailect_6 = {
 great_archailect_7 = {
 	entity = "great_archailect_07_entity"
 	construction_entity = "great_archailect_07_construction_entity"
+	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
 	upgrade_from = { great_archailect_6 }
 	country_modifier = {

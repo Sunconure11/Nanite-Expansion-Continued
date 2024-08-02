@@ -10,7 +10,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_start
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1310.a" }
+	option = { name = "astral_rift.130.a" }
 }
 
 country_event = {
@@ -21,7 +21,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1311.a" }
+	option = { name = "nano_dialog.1321.a" }
 }
 
 country_event = {
@@ -32,7 +32,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1312.a" }
+	option = { name = "nano_dialog.1323.a" }
 }
 
 country_event = {
@@ -43,7 +43,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1313.a" }
+	option = { name = "astral_planes.100.a" }
 }
 
 ####################################################
@@ -57,7 +57,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_start
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1320.a" }
+	option = { name = "04_END_RIVALRY_ACCEPT_NEUTRAL" }
 }
 
 country_event = {
@@ -79,7 +79,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1322.a" }
+	option = { name = "astral_rift.130.a" }
 }
 
 country_event = {
@@ -101,7 +101,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1324.a" }
+	option = { name = "FANTASTIC" }
 }
 
 country_event = {
@@ -112,7 +112,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1325.a" }
+	option = { name = "astral_planes.100.a" }
 }
 
 country_event = {
@@ -123,7 +123,7 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1326.a" }
+	option = { name = "ASTOUNDING" }
 }
 
 country_event = {
@@ -151,5 +151,5 @@ country_event = {
 			country_event = { id = nano.1340 }
 		}
 	}
-	option = { name = "nano_dialog.1327.a" }
+	option = { name = "envoy_events.15.A" }
 }

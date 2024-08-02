@@ -1,5 +1,5 @@
 # Defensive armies can't transport of the planet
-# maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+# Maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
 # morale_damage = 1		# Average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
 
 # Nanoswarm Armies
@@ -91,7 +91,7 @@ nanite_subsumed_army = {
 	war_exhaustion = 0.50
 	icon = GFX_army_type_nano_puppet
 	pop_limited = no
-	disband_if_species_lacks_rights = no # I.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+	disband_if_species_lacks_rights = no # I.e. If you resurrect your enemies, you get to keep these armies, even if you are a purifier
 	prerequisites = { "tech_identity_subsumption" }
 	
 	resources = {
