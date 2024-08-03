@@ -40,8 +40,7 @@ merg_is_default_empire = {
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 is_default_or_fallen = {
 	OR = {
-		# is_country_type_with_subjects = yes
-		merg_is_default_empire = yes # is_country_type = default
+		is_country_type = default
 		is_fallen_empire = yes
 		# # is_country_type = awakened_fallen_empire
 		# # is_country_type = fallen_empire

@@ -8,10 +8,10 @@ pd_is_planet_class_hive = { always = no }
 pd_is_planet_class_machine = { always = no }
 is_planetary_diversity_ringworld = { always = no }
 ## Nanite Machine and Distant Stars Overhaul has_global_flag = distar_overhaul_mod_active
-# is_nanite_gaia =				{ always = no }
-# is_nanite_habitat_shielded =	{ always = no }
+is_nanite_gaia =				{ always = no }
+is_nanite_habitat_shielded =	{ always = no }
 # is_nanite_gas_giant =			{ always = no }
-# is_dessanu_relic =				{ always = no }
+is_dessanu_relic =				{ always = no }
 
 # Listing habitats
 merg_is_habitat = {
@@ -124,7 +124,7 @@ merg_is_arcology = { is_planet_class = pc_city }
 merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
-		# is_dessanu_relic = yes # Nanite Machine and Distant Stars Overhaul
+		is_dessanu_relic = yes # Nanite Machine and Distant Stars Overhaul
 		# is_planet_class = pc_midas_relic # Midas
 	}
 }
@@ -148,7 +148,7 @@ merg_is_gaia_basic = {
 	OR = {
 		is_planet_class = pc_gaia
 		# atw_is_gaia = yes # All These Worlds
-		# is_nanite_gaia = yes # Nanite Machine and Distant Stars Overhaul
+		is_nanite_gaia = yes # Nanite Machine and Distant Stars Overhaul
 	}
 }
 merg_is_shielded_world = {
@@ -156,6 +156,6 @@ merg_is_shielded_world = {
 		is_planet_class = pc_habitat_shielded
 		is_planet_class = pc_ringworld_shielded
 		is_planet_class = pc_shielded
-		# is_nanite_habitat_shielded = yes # Nanite Machine and Distant Stars Overhaul
+		is_nanite_habitat_shielded = yes # Nanite Machine and Distant Stars Overhaul
 	}
 }
