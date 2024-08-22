@@ -1,5 +1,5 @@
 #################
-# Toggle Edicts
+# Toggle Edict(s)
 #################
 # effect (UN)HIDE_HYPERFOG
 nano_settings = {
@@ -9,18 +9,13 @@ nano_settings = {
 	effect = {
 		hidden_effect = {
 			if = {
-				limit = { has_global_flag = flag_hide_complete_hyperfog }
-				remove_global_flag = flag_hide_complete_hyperfog
+				limit = { has_country_flag = flag_show_hyperfog }
+				remove_country_flag = flag_show_hyperfog
 			}
-			else = {
-				set_global_flag = flag_hide_complete_hyperfog
-			}
+			else = { set_country_flag = flag_show_hyperfog }
 		}
 	}
-	potential = {
-		is_ai = no
-		has_global_flag = nanite_expansion_active
-	}
+	potential = { is_ai = no has_global_flag = nanite_expansion_active }
 	# allow = {
 	# }
 }

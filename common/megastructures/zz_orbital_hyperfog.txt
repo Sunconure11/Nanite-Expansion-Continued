@@ -127,6 +127,11 @@ orbital_hyperfog_0 = {
 			country_event = { id = nano_dialog.1310 }			# Notification
 		}
 	}
+	# show_in_outliner = yes
+	outliner_trigger = {
+		exists = owner
+		owner = { has_country_flag = flag_show_hyperfog }
+	}
 }
 
 orbital_hyperfog_1 = {
@@ -153,6 +158,11 @@ orbital_hyperfog_1 = {
 		from = {
 			country_event = { id = nano_dialog.1311 }
 		}		# Notification
+	}
+	# show_in_outliner = yes
+	outliner_trigger = {
+		exists = owner
+		owner = { has_country_flag = flag_show_hyperfog }
 	}
 }
 
@@ -181,6 +191,11 @@ orbital_hyperfog_2 = {
 			country_event = { id = nano_dialog.1312 }
 		}		# Notification
 	}
+	# show_in_outliner = yes
+	outliner_trigger = {
+		exists = owner
+		owner = { has_country_flag = flag_show_hyperfog }
+	}
 }
 
 orbital_hyperfog_3 = {
@@ -208,11 +223,9 @@ orbital_hyperfog_3 = {
 			country_event = { id = nano_dialog.1313 }			# Notification
 		}
 	}
-	outliner_trigger = { 
-		this = { 
-			NOT = {
-				has_global_flag = flag_hide_complete_hyperfog
-			}
-		}
+	# show_in_outliner = yes
+	outliner_trigger = {
+		exists = owner
+		owner = { has_country_flag = flag_show_hyperfog }
 	}
 }

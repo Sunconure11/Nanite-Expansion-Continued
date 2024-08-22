@@ -135,6 +135,10 @@ country_event = {
 	location = event_target:nano_planet
 	is_triggered_only = yes
 	immediate = {
+		if = {
+			limit = { NOT = { exists = event_target:nano_planet } exists = fromfromfrom.orbit }
+			fromfromfrom.orbit = { save_event_target_as = nano_planet }
+		}
 		random_playable_country = {
 			limit = {
 				any_owned_megastructure = { is_megastructure_type = great_archailect_7 }
