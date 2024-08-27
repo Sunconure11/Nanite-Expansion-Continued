@@ -9,6 +9,7 @@ event = {
 
 ### Bombardment Events ###
 # Subsumption Bombardment
+# From = Bombarder
 planet_event = {
 	id = nano.1300
 	hide_window = yes
@@ -19,9 +20,15 @@ planet_event = {
 		habitable_planet = yes
 	}
 	immediate = {
-		owner = {
-			add_static_war_exhaustion = { attacker = from location = root value_for_planet_destruction = 0.5 }
-			country_event = { id = nano.1301 }
+		if = {
+			limit = { exists = owner }
+			owner = {
+				if = {
+					limit = { is_at_war_with = from }
+					add_static_war_exhaustion = { attacker = from location = root value_for_planet_destruction = 0.5 }
+					country_event = { id = nano.1301 }
+				}
+			}
 		}
 		from = {
 			country_event = { id = nano.1302 }
