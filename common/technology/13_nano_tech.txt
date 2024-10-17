@@ -311,7 +311,14 @@ tech_nanoform_workers = {
 	is_rare = yes
 	weight = @tier4weight3
 	modifier = { ROBOT_species_trait_points_add = 1 }
-	potential = { has_ascension_perk = ap_nanotech is_mechanical_empire = yes NOT = { has_policy_flag = robots_outlawed } }
+	potential = {
+		has_ascension_perk = ap_nanotech
+		OR = {
+			is_mechanical_empire = yes
+			is_individual_machine = yes
+		}
+		NOT = { has_policy_flag = robots_outlawed }
+	}
 	weight_modifier = {
 		factor = 0.5
 		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
@@ -337,22 +344,6 @@ tech_nanoform_workers = {
 		modifier = { factor = 2 has_origin = origin_mechanists }
 		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_industry } }
 	}
-}
-
-# Nanite Entity Trait Modification
-tech_nanoform_uplifting = {
-	area = engineering
-	tier = 4
-	cost = @tier4cost3
-	is_rare = yes
-	category = { industry }
-	ai_update_type = military
-	weight = 0
-	potential = { has_ascension_perk = ap_nanotech }
-	weight_modifier = {
-		factor = 0		# Can only be researched through project
-	}
-	modifier = { description = tech_nanoform_uplifting_modifier_desc }
 }
 
 # Nanoform Workers - Traits 1b - Gestalt
@@ -393,6 +384,22 @@ tech_nanoform_gestalt = {
 	}
 }
 
+# Nanite Entity Trait Modification
+tech_nanoform_uplifting = {
+	area = engineering
+	tier = 4
+	cost = @tier4cost3
+	is_rare = yes
+	category = { industry }
+	ai_update_type = military
+	weight = 0
+	potential = { has_ascension_perk = ap_nanotech }
+	weight_modifier = {
+		factor = 0		# Can only be researched through project
+	}
+	modifier = { description = tech_nanoform_uplifting_modifier_desc }
+}
+
 # Terminal Nanite Trait Modification
 tech_terminal_integration = {
 	area = engineering
@@ -427,6 +434,7 @@ tech_smart_immune_systems = {
 				is_cyborg_empire = yes
 				is_machine_empire = yes
 				is_mechanical_empire = yes
+				is_individual_machine = yes
 			}
 		}
 	}

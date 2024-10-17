@@ -9,7 +9,7 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				is_planet_class = pc_frozen
+				merg_is_frozen = yes
 			}
 			from.owner = { country_event = { id = nano_colossus.1301 } }
 		}

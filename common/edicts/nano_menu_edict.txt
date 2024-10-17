@@ -1,7 +1,7 @@
 #################
 # Toggle Edict(s)
 #################
-# effect (UN)HIDE_HYPERFOG
+# Effect (UN)HIDE_HYPERFOG
 nano_settings = {
 	length = -1
 	icon = "GFX_edict_type_time"

@@ -1,52 +1,50 @@
 
-###############################################################
-# SYNTHETIC DAWN events
-# By Maximilian Olbers, Miranda van den Brink, Dee Majek et al
-###############################################################
+# ###############################################################
+# # SYNTHETIC DAWN events
+# # By Maximilian Olbers, Miranda van den Brink, Dee Majek et al
+# ###############################################################
 
-# Just added factor = 0 modifier
+# # Just added factor = 0 modifier
+# # Removed in v3.12
+# namespace = syndaw
 
-namespace = syndaw
-
-# Machine & Synth Leaders malfunction (per empire)
-country_event = {
-	id = syndaw.11
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		random_list = {
-			90 = { } # Nothing happens
-			10 = {
-				modifier = { # Tradition: Self-Preservation Protocols
-					factor = 0.5
-					has_active_tradition = tr_synchronicity_self_preservation
-				}
-				modifier = { # Edict: Zro Additives (via Psionic Archive Relic)
-					factor = 0.5
-					has_edict = zro_crystal_machine
-				}
-				modifier = {
-					OR = {
-						has_technology = tech_nanoform_uplifting
-						has_technology = tech_terminal_integration
-					}
-					factor = 0
-				}
-				if = { # Machine Intelligence
-					limit = {
-						is_machine_empire = yes
-					}
-					fire_on_action = {
-						on_action = on_machine_leader_malfunction
-					}
-				}
-				else = { # Synthetic Ascension or Synth Workers Technology
-					fire_on_action = {
-						on_action = on_synth_leader_malfunction
-					}
-				}
-			}
-		}
-	}
-}
+# # Machine & Synth Leaders malfunction (per empire on_decade_pulse)
+# country_event = {
+# 	id = syndaw.11
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOR = {
+# 			has_technology = tech_nanoform_uplifting
+# 			has_technology = tech_terminal_integration
+# 		}
+# 	}
+# 	immediate = {
+# 		random_list = {
+# 			90 = { } # Nothing happens
+# 			10 = {
+# 				modifier = { # Tradition: Self-Preservation Protocols
+# 					factor = 0.5
+# 					has_active_tradition = tr_synchronicity_self_preservation
+# 				}
+# 				modifier = { # Edict: Zro Additives (via Psionic Archive Relic)
+# 					factor = 0.5
+# 					has_edict = zro_crystal_machine
+# 				}
+# 				if = { # Machine Intelligence
+# 					limit = {
+# 						is_machine_empire = yes
+# 					}
+# 					fire_on_action = {
+# 						on_action = on_machine_leader_malfunction
+# 					}
+# 				}
+# 				else = { # Synthetic Ascension or Synth Workers Technology
+# 					fire_on_action = {
+# 						on_action = on_synth_leader_malfunction
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
