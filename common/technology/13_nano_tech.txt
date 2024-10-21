@@ -307,7 +307,7 @@ tech_nanoform_workers = {
 	area = engineering
 	tier = 4
 	category = { industry }
-	prerequisites = { "tech_synthetic_workers" "tech_self_replicating_nanites" }
+	prerequisites = { "tech_advanced_metallurgy_2" "tech_self_replicating_nanites" } # "tech_synthetic_workers" removed in v3.13
 	is_rare = yes
 	weight = @tier4weight3
 	modifier = { ROBOT_species_trait_points_add = 1 }

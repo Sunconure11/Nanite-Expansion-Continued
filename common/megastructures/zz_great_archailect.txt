@@ -4,9 +4,9 @@ great_archailect_0 = {
 	construction_entity = "construction_platform_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	entity_offset = { x = 12 y = 9 }
+	entity_offset = { x = -12 y = 9 }
 	# rotate_to_center = no
-	scale_offset = yes
+	scale_offset = no
 	prerequisites = { tech_great_archailect }
 	build_time = 500
 	resources = {
