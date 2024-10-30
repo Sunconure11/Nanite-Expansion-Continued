@@ -1,0 +1,53 @@
+# controls_lcluster = {
+# 	any_system_within_border = {
+# 		has_star_flag = lcluster1
+# 	}
+# 	has_technology = tech_lcluster_access
+# 	NOT = { has_global_flag = active_gray_goo }
+# }
+
+# country
+has_lgate = {
+	any_owned_megastructure = {
+		OR = {
+			is_megastructure_type = lgate_base
+			is_megastructure_type = lgate_disabled
+		}
+	}
+}
+
+# trigger = { event_target:lcluster_factory_system = { check_fleet_count_in_system = { CHECK = CmtVarCapitalDefenceNumber } }}
+check_fleet_count_in_system = {
+	if = { limit = { is_scope_type = galactic_object }
+		[[CHECK] count_fleet_in_system = { count > $CHECK$ limit = { has_fleet_flag = nanite_mother_ship } }]
+	}
+	# else = { log = "Wrong scope in count_fleet_in_system [This.GetName]" }
+}
+
+########################
+##	For Mod Compatibility
+########################
+
+has_nhsc = {
+	has_global_flag = Extra_Ship_Components_NEXT # nhsc_v30
+	# exists = event_target:CmtGlobalVar
+	# event_target:CmtGlobalVar = {
+	# 	check_variable = { which = random_esc_value value = 300 }
+	# }
+}
+
+is_nanite_country = {
+	OR = {
+		is_country_type = gate_builders
+		is_country_type = awakened_gate_builders
+		is_country_type = gray_goo
+		AND = {
+			exists = event_target:graygoo_country
+			is_same_empire = event_target:graygoo_country
+		}
+		AND = {
+			exists = event_target:gate_builders
+			is_same_empire = event_target:gate_builders
+		}
+	}
+}

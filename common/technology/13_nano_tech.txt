@@ -59,18 +59,9 @@ tech_ubiquitous_smartdust = {
 	potential = { has_ascension_perk = ap_nanotech NOT = { has_policy_flag = robots_outlawed } }
 	modifier = { description = tech_utility_fogs_modifier_desc }
 	weight_modifier = {
-		# modifier = { factor = 0 has_policy_flag = robots_outlawed }
 		modifier = { factor = 0.5 is_spiritualist = yes }
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_origin = origin_mechanists }
-		# modifier = {  removed in v.3.8
-		# 	factor = 1.25
-		# 	research_leader = {
-		# 		area = engineering
-		# 		has_trait = "leader_trait_expertise_industry"
-		# 		has_level > 2
-		# 	}
-		# }
 	}
 	ai_weight = {
 		weight = 2
@@ -230,22 +221,46 @@ tech_self_replicating_nanites = {
 	}
 }
 
+####################
+# Nanite Bombardment
+####################
 # Subsumption Bombardment - Military Tree 2a
-tech_subsumption_bombardment = {
+# tech_subsumption_bombardment = {
+tech_nanite_bombardment = {
 	area = engineering
-	tier = 4
 	cost = @tier4cost3
-	category = { propulsion }
+	tier = 4
+	is_rare = yes
+	category = { propulsion } # voidcraft?
 	ai_update_type = military
 	prerequisites = { "tech_self_replicating_nanites" "tech_military_micromachines" }
 	weight = @tier4weight3
-	potential = { has_ascension_perk = ap_nanotech }
-	modifier = { description = tech_subsumption_bombardment_modifier_desc }
-	weight_modifier = {
-		modifier = { factor = 1.25 has_ethic = ethic_militarist }
-		modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
-		modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_NANITE_BOMBARDMENT_TITLE"
+			desc = "TECH_UNLOCK_NANITE_BOMBARDMENT_DESC"
+		}
 	}
+	potential = {
+		OR = {
+			AND = {
+				has_global_flag = l_cluster_opened
+				NOT = { has_global_flag = ESC_weapons_nanite_forbidden }
+				OR = {
+					NOT = { has_global_flag = distar_overhaul_mod_active }
+					has_country_flag = completed_nanite_technology_mastery_chain
+				}
+			}
+			has_ascension_perk = ap_nanotech
+		}
+		has_country_resource = { type = nanites amount > 0 }
+	}
+	modifier = { description = tech_nanitebombard_bombardment_modifier_desc }
+	# weight_modifier = {
+	# 	modifier = { factor = 1.25 has_ethic = ethic_militarist }
+	# 	modifier = { factor = 1.5 has_ethic = ethic_fanatic_militarist }
+	# 	modifier = { factor = 1.25 has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion } }
+	# }
 	ai_weight = {
 		factor = 2
 		modifier = { factor = 1.25 has_ethic = ethic_militarist }
@@ -674,7 +689,7 @@ tech_pk_mass_deconstructor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	category = { voidcraft }
-	prerequisites = { "tech_subsumption_bombardment" "tech_colossus" }
+	prerequisites = { "tech_nanite_bombardment" "tech_colossus" }
 	ai_update_type = military
 	weight = @tier5weight3
 	potential = {

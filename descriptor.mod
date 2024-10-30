@@ -1,4 +1,4 @@
-version="1.55"
+version="1.56"
 tags={
 	"Military"
 	"Technologies"
@@ -7,5 +7,5 @@ tags={
 	"Events"
 }
 name="Nanite Expansion Continued"
-supported_version="v3.13.*"
+supported_version="v3.14.*"
 remote_file_id="3142620942"

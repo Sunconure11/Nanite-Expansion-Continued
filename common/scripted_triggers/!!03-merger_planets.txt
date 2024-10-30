@@ -56,7 +56,7 @@ merg_is_habitat = {
 merg_is_hab_ringworld = {
 	habitable_structure = yes  # Exlcude some ringworld entities is_artificial = yes
 	has_ringworld_output_boost = yes
-	merg_is_habitat = no
+	NOT = { is_planet_class = pc_habitat }
 	# OR = {
 	# 	uses_district_set = ring_world
 	# 	is_planet_class = pc_ringworld_habitable
@@ -101,14 +101,14 @@ merg_is_hive_world = {
 }
 
 merg_is_gas_giant = {
-	OR = {
+	# OR = {
 		is_planet_class = pc_gas_giant
 		# is_nanite_gas_giant = yes # Nanite Machine and Distant Stars Overhaul
 		# Planetary Diversity
 		# is_planet_class = pc_hot_gas_giant
 		# is_planet_class = pc_cloudless_gas_giant
 		# is_planet_class = pc_cold_gas_giant
-	}
+	# }
 }
 
 merg_is_machine_world = {
@@ -132,8 +132,8 @@ merg_is_relic_world = {
 gpm_is_planet_class_city = {
 	optimize_memory
 	OR = {
-		merg_is_arcology = yes
-		merg_is_relic_world = yes
+		is_planet_class = pc_city
+		is_planet_class = pc_relic
 		# is_planet_class = pc_matryoshka ### (Mod) Additional Mega Planets merged into Forgotten Queens
 		# is_planet_class = pc_hollow ### (Mod) Additional Mega Planets merged into Forgotten Queens
 	}

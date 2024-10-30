@@ -49,6 +49,7 @@ has_acot =						{ always = no } # ACOT has_global_flag = acot_live_version & has
 is_imperial = { always = no }
 is_socialist = { always = no }
 is_capitalism = { always = no }
+
 # Realistic Pirates
 is_pirate_waves_player = { always = no }
 
@@ -57,3 +58,20 @@ has_life_engineering_installed = { always = no }
 
 merg_has_shroud_rising = { always = no } # has_global_flag = shroud_rising_active
 is_giga_crisis_faction = { always = no } # Gigastructural Engineering & More
+
+# Vanilla v3.13 trigger for backward compat. (REMOVEME in 3.14)
+is_democratic_authority = {
+	has_authority = auth_democratic
+}
+
+is_oligarchic_authority = {
+	has_authority = auth_oligarchic
+}
+
+is_imperial_authority = {
+	has_authority = auth_imperial
+}
+
+is_dictatorial_authority = {
+	has_authority = auth_dictatorial
+}

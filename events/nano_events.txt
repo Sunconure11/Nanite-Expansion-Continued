@@ -15,7 +15,7 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_orbital_bombardment_stance = subsumption
+		has_orbital_bombardment_stance = nanitebombard
 		from = { is_default_or_fallen = yes }
 		habitable_planet = yes
 	}
@@ -474,47 +474,93 @@ country_event = {
 	}
 }
 
-# Subsumed Armies: Subsuming the enemy's army as your own
-# An army has been killed in ground combat
+# Subsumed Armies: Subsuming the enemy's army as your own (on_army_killed_in_combat)
 # This = owner
 # From = army
 # fromfrom = opponent
 # fromfromfrom = planet
 country_event = {
-	id = nano.1350
+	id = nano.1350 # Compare necroids.15
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		is_country_type_with_subjects = yes # In which cases not?
 		exists = fromfrom
 		fromfrom = {
-			any_owned_army = { army_type = nanoblight_army }
-		}
-		exists = from
-		from = {
-			exists = species
-			species = { is_robotic = no }
+			has_ascension_perk = ap_nanotech
+			# any_owned_army = { army_type = nanoblight_army } wasting performance
 		}
 		NOT = { is_country_type = "gate_builders" }
+		OR = {
+			NOR = {
+				exists = from.species
+				from = {
+					NOR = {
+						army_type = nanoswarm_army
+						army_type = nanoblight_army
+						army_type = nanite_dreadnought
+						army_type = nanite_subsumed_army
+					}
+				}
+			}
+			from = { is_robotic_species = yes }
+		}
 	}
 	immediate = {
-		random = { chance = 33
-			fromfrom = {
-				if = {
-					limit = {
-						any_owned_army = { army_type = nanoblight_army }
-						from = {
-							OR = {
-								any_ground_combat_defender = { army_type = nanoblight_army }
-								any_ground_combat_attacker = { army_type = nanoblight_army }
+		random = { chance = 44
+			from = {
+				fromfrom = {
+					if = {
+						limit = {
+							any_ground_combat_defender = { army_type = nanoblight_army is_in_frontline = yes }
+						}
+						random_ground_combat_defender = {
+							limit = {
+								army_type = nanoblight_army
+								is_in_frontline = yes
+								exists = owner
+								owner = { has_ascension_perk = ap_nanotech }
 							}
+							owner = { save_event_target_as = nano_owner }
 						}
 					}
-					from = {
-						create_army = {
-							owner = root.fromfrom
-							type = nanite_subsumed_army
-							species = root.from.species
+					else_if = {
+						limit = {
+							any_ground_combat_attacker = { army_type = nanoblight_army is_in_frontline = yes }
 						}
+						random_ground_combat_attacker = {
+							limit = {
+								army_type = nanoblight_army
+								is_in_frontline = yes
+								exists = owner
+								owner = { has_ascension_perk = ap_nanotech }
+							}
+							owner = { save_event_target_as = nano_owner }
+						}
+					}
+					else = {
+						break = yes
+					}
+				}
+				if = {
+					limit = { exists = event_target:nano_owner }
+					# TODO: Actually only vanilla types supported
+					switch = { trigger = army_type
+						robotic_defense_army		 = { fromfrom = { create_army = { owner = event_target:nano_owner type = robotic_defense_army } } }
+						machine_defense				 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_defense } } }
+						machine_fanatic_guardian	 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_fanatic_guardian } } }
+						individual_machine_defense	 = { fromfrom = { create_army = { owner = event_target:nano_owner type = individual_machine_defense } } }
+						robotic_army				 = { fromfrom = { create_army = { owner = event_target:nano_owner type = robotic_army } } }
+						machine_assault_1			 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_assault_1 } } }
+						machine_assault_2			 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_assault_2 } } }
+						machine_assault_3			 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_assault_3 } } }
+						individual_machine_assault_1 = { fromfrom = { create_army = { owner = event_target:nano_owner type = individual_machine_assault_1 } } }
+						individual_machine_assault_2 = { fromfrom = { create_army = { owner = event_target:nano_owner type = individual_machine_assault_2 } } }
+						individual_machine_assault_3 = { fromfrom = { create_army = { owner = event_target:nano_owner type = individual_machine_assault_3 } } }
+						machine_occupation_army		 = { fromfrom = { create_army = { owner = event_target:nano_owner type = machine_occupation_army } } }
+						robotic_occupation_army		 = { fromfrom = { create_army = { owner = event_target:nano_owner type = robotic_occupation_army } } }
+						default						 = { fromfrom = { create_army = { owner = event_target:nano_owner type = nanite_subsumed_army } } }
+						individual_machine_occupation_army = { fromfrom = { create_army = { owner = event_target:nano_owner type = individual_machine_occupation_army } } }
 					}
 				}
 			}
