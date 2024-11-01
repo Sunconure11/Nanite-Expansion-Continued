@@ -1,12 +1,18 @@
 spriteTypes = {
-
 	# spriteType = {
 	# 	name = "GFX_planet_view_bombarded"
 	# 	texturefile = "gfx/interface/icons/planet_modifiers/pm_under_orbital_bombardment.dds"
 	# 	noOfFrames = 7
 	# }
+	# spriteType = {
+	# 	name = "GFX_planet_modifier_ground_support_subsumption"
+	# 	texturefile = "gfx/interface/icons/planet_modifiers/pm_subsumption_bombardment.dds"
+	# }
 	spriteType = {
-		name = "GFX_planet_modifier_ground_support_subsumption"
-		texturefile = "gfx/interface/icons/planet_modifiers/pm_subsumption_bombardment.dds"
+		name = "GFX_planet_modifier_ground_support_nanitebombard"
+		# sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		texturefile = "gfx/interface/icons/planet_modifiers/pm_under_orbital_bombardment3.dds"
+		default_frame = 3
+		noOfFrames = 3
 	}
 }

@@ -430,4 +430,3 @@
  utility_fog_desc: "A significant portion of this planet's biosphere has been assimilated into a Nanite network known as a Utility Fog. The Utility Fog is a semi-intelligent force protecting the inhabitants of this world from harm. "
  utility_fog_hive: "$utility_fog$"
  utility_fog_hive_desc: "$utility_fog_desc$"
- weapon_nanite: "Nanite"
