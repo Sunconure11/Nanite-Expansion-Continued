@@ -13,7 +13,7 @@ nanoroboticist = {
 	}
 
 	# clothes_texture_index = 3
-	tags = { nanites nec_job_tag_nanites }
+	tags = { nanites nectd_job_tag_nanites }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -99,7 +99,7 @@ nanoroboticist_drone = {
 		}
 	}
 
-	tags = { nanites nec_job_tag_nanites }
+	tags = { nanites nectd_job_tag_nanites }
 
 	possible_pre_triggers = {
 		has_owner = yes

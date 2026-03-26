@@ -1,6 +1,6 @@
 # Scripted triggers to help with upgrade compatibility
 
-nec_has_any_generator_district_or_building = {
+nectd_has_any_generator_district_or_building = {
 	OR = {
 		# base game
 		has_district = district_generator

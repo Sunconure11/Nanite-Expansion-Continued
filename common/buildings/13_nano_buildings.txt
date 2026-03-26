@@ -21,7 +21,7 @@ building_nanite_fabricator_1 = {
 		}
 		OR = {
 			owner = { is_ai = no }
-			nec_has_any_generator_district_or_building = yes
+			nectd_has_any_generator_district_or_building = yes
 		}
 	}
 
@@ -38,7 +38,7 @@ building_nanite_fabricator_1 = {
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
-				nec_has_any_generator_district_or_building = no
+				nectd_has_any_generator_district_or_building = no
 			}
 		}
 	}
@@ -117,7 +117,7 @@ building_nanite_fabricator_2 = {
 			has_owner = no
 			AND = {
 				owner = { is_ai = yes }
-				nec_has_any_generator_district_or_building = no
+				nectd_has_any_generator_district_or_building = no
 			}
 		}
 	}
@@ -195,7 +195,7 @@ building_nanite_fabricator_3 = {
 			has_owner = no
 			AND = {
 				owner = { is_ai = yes }
-				nec_has_any_generator_district_or_building = no
+				nectd_has_any_generator_district_or_building = no
 			}
 		}
 	}
