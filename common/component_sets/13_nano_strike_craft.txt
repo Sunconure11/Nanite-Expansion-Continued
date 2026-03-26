@@ -2,7 +2,7 @@
 
 component_set = {
 	key = "STRIKE_CRAFT_HANGAR_AUTOWAR"
-	
+
 	icon = "GFX_ship_part_strike_craft_autowar"
-	icon_frame = 1	
+	icon_frame = 1
 }

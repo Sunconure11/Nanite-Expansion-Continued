@@ -1,27 +1,26 @@
 # Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes.
-
 # Updated Range on these
-
 # DEFAULT VALUES:
 # is_missile = no
 # is_beam = no
 # is_point_defence = no
-
 @missile_speed = 5
 
 ### Transmuter Torpedoes
+
 weapon_component_template = {
 	key = "TORPEDO_NANO"
 	size = torpedo
 	entity = "turret_torpedo_entity"
-
 	icon = "GFX_ship_part_nano_torpedo"
 	icon_frame = 1
 	type = missile
-
 	firing_arc = 25.0
 
-	prerequisites = { "tech_nano_torpedoes" }
+	prerequisites = {
+		"tech_nano_torpedoes"
+	}
+
 	component_set = "TORPEDO_NANO"
 	upgrades_to = "TORPEDO_TEMPORAL"
 	projectile_gfx = "large_torpedo_03"
@@ -45,14 +44,19 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = nanites }
 		}
-		modifier = {
-			factor = 0.0
-			merg_is_fallen_empire = yes
-		}
+		modifier = { factor = 0.0 merg_is_fallen_empire = yes }
 	}
 
-	damage = { min = 220 max = 330 }
-	windup = { min = 2 max = 10 }
+	damage = {
+		min = 220
+		max = 330
+	}
+
+	windup = {
+		min = 2
+		max = 10
+	}
+
 	power = -32.00
 	total_fire_time = 200
 	range = 30
@@ -69,21 +73,26 @@ weapon_component_template = {
 }
 
 ### Nanite Swarmer Missile Launcher
+
 weapon_component_template = {
 	key = "NANO_SWARMER_MISSILE"
 	size = medium
-
 	icon = "GFX_ship_part_nano_swarmer_missile"
 	icon_frame = 1
 	type = missile
 
-	prerequisites = { "tech_nano_swarmer_missile" }
+	prerequisites = {
+		"tech_nano_swarmer_missile"
+	}
+
 	component_set = "NANO_SWARMER_MISSILE"
 	upgrades_to = "TEMPORAL_SWARMER_MISSILE"
 	projectile_gfx = "swarmer_missiles_02"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
 	ai_tag_weight = 0
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -102,14 +111,19 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = nanites }
 		}
-		modifier = {
-			factor = 0.0
-			merg_is_fallen_empire = yes
-		}
+		modifier = { factor = 0.0 merg_is_fallen_empire = yes }
 	}
 
-	damage = { min = 104 max = 145 }
-	windup = { min = 5 max = 20 }
+	damage = {
+		min = 104
+		max = 145
+	}
+
+	windup = {
+		min = 5
+		max = 20
+	}
+
 	power = -26.00
 	total_fire_time = 30
 	range = 120

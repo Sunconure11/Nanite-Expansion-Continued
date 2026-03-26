@@ -1,10 +1,15 @@
+
 namespace = nano
+
 event = {
 	id = nano.1
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
-	immediate = { set_global_flag = nanite_expansion_active }
+
+	immediate = {
+		set_global_flag = nanite_expansion_active
+	}
 }
 
 ### Bombardment Events ###
@@ -14,18 +19,24 @@ planet_event = {
 	id = nano.1300
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
 		has_orbital_bombardment_stance = nanitebombard
 		from = { is_default_or_fallen = yes }
 		habitable_planet = yes
 	}
+
 	immediate = {
 		if = {
 			limit = { exists = owner }
 			owner = {
 				if = {
 					limit = { is_at_war_with = from }
-					add_static_war_exhaustion = { attacker = from location = root value_for_planet_destruction = 0.5 }
+					add_static_war_exhaustion = {
+						attacker = from
+						location = root
+						value_for_planet_destruction = 0.5
+					}
 					country_event = { id = nano.1301 }
 				}
 			}
@@ -48,7 +59,11 @@ country_event = {
 	picture = GFX_evt_gray_gooed_planet
 	location = from
 	is_triggered_only = yes
-	option = { name = "arcsite.2040.revelation" custom_tooltip = "bombed_to_gray_goo_world" }
+
+	option = {
+		name = "arcsite.2040.revelation"
+		custom_tooltip = "bombed_to_gray_goo_world"
+	}
 }
 
 # Planet is turned into gray goo world by Subsumption bombing stance (bombarder)
@@ -59,7 +74,11 @@ country_event = {
 	picture = GFX_evt_gray_gooed_planet
 	location = from
 	is_triggered_only = yes
-	option = { name = EXCELLENT custom_tooltip = bombed_to_gray_goo_world }
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = bombed_to_gray_goo_world
+	}
 }
 
 ### Ascension Perk Events ###
@@ -71,11 +90,16 @@ country_event = {
 	picture = GFX_evt_gray_goo
 	show_sound = event_the_flesh_is_weak
 	is_triggered_only = yes
-	option = { name = "nano.1303.a" custom_tooltip = NANOTECHNOLOGY_TREE_UNLOCKED }
+
+	option = {
+		name = "nano.1303.a"
+		custom_tooltip = NANOTECHNOLOGY_TREE_UNLOCKED
+	}
 }
 
 ### Trait Events ###
 ### Synthetic Trait Project Chain ###
+
 country_event = {
 	id = nano.1310
 	title = "nano.1310.name"
@@ -85,12 +109,24 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { merg_is_default_empire = yes last_increased_tech = tech_nanoform_workers }
-	immediate = { get_capital_planet = yes }
+
+	trigger = {
+		merg_is_default_empire = yes
+		last_increased_tech = tech_nanoform_workers
+	}
+
+	immediate = {
+		get_capital_planet = yes
+	}
+
 	option = {
 		name = "nano.1310.a"
-		hidden_effect = { save_event_target_as = synth_nano_owner }
-		event_target:capital_planet = { enable_special_project = { name = "SYNTHETIC_NANITE_PROJECT" } }
+		hidden_effect = {
+			save_global_event_target_as = synth_nano_owner@root
+		}
+		event_target:capital_planet = {
+			enable_special_project = { name = "SYNTHETIC_NANITE_PROJECT" }
+		}
 	}
 }
 
@@ -102,18 +138,25 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_the_great_awakening
 	is_triggered_only = yes
+
 	immediate = {
 		give_technology = { tech = tech_nanoform_uplifting }
 		every_owned_pop = {
-			limit = { is_same_species = root has_trait = trait_mechanical }
+			limit = {
+				is_same_species = root
+				has_trait = trait_mechanical
+			}
 			modify_species = {
 				species = this
 				add_trait = trait_robot_nanite_entity
-				effect = { save_event_target_as = nanoform_species }
+				effect = {
+					save_event_target_as = nanoform_species
+				}
 			}
 		}
 		change_dominant_species = { species = event_target:nanoform_species change_all = yes }
 	}
+
 	option = {
 		name = "nano.1311.a"
 		hidden_effect = {
@@ -128,7 +171,7 @@ country_event = {
 						# }
 						NOT = { has_trait = leader_trait_nanite_entity }
 					}
-					add_trait = leader_trait_nanite_entity
+					add_trait = { trait = leader_trait_nanite_entity }
 				}
 				every_pool_leader = {
 					limit = {
@@ -139,7 +182,7 @@ country_event = {
 						# }
 						NOT = { has_trait = leader_trait_nanite_entity }
 					}
-					add_trait = leader_trait_nanite_entity
+					add_trait = { trait = leader_trait_nanite_entity }
 				}
 			}
 		}
@@ -151,17 +194,22 @@ country_event = {
 	id = nano.1312
 	is_triggered_only = yes
 	hide_window = yes
+
 	trigger = {
 		from = {
 			species = { has_trait = trait_robot_nanite_entity }
 		}
 	}
+
 	immediate = {
-		from = { add_trait = leader_trait_nanite_entity }
+		from = {
+			add_trait = { trait = leader_trait_nanite_entity }
+		}
 	}
 }
 
 ### Machine Trait Project Event Chain ###
+
 country_event = {
 	id = nano.1320
 	title = "nano.1310.name"
@@ -171,12 +219,24 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { merg_is_default_empire = yes last_increased_tech = tech_nanoform_gestalt }
-	immediate = { get_capital_planet = yes }
+
+	trigger = {
+		merg_is_default_empire = yes
+		last_increased_tech = tech_nanoform_gestalt
+	}
+
+	immediate = {
+		get_capital_planet = yes
+	}
+
 	option = {
 		name = "nano.1320.a"
-		hidden_effect = { save_event_target_as = machine_nano_owner }
-		event_target:capital_planet = { enable_special_project = { name = "MACHINE_NANITE_PROJECT" } }
+		hidden_effect = {
+			save_event_target_as = machine_nano_owner
+		}
+		event_target:capital_planet = {
+			enable_special_project = { name = "MACHINE_NANITE_PROJECT" }
+		}
 	}
 }
 
@@ -188,18 +248,25 @@ country_event = {
 	picture = GFX_evt_sapient_AI
 	show_sound = event_the_great_awakening
 	is_triggered_only = yes
+
 	immediate = {
 		give_technology = { tech = tech_terminal_integration }
 		every_owned_pop = {
-			limit = { is_same_species = root has_trait = trait_machine_unit }
+			limit = {
+				is_same_species = root
+				has_trait = trait_machine_unit
+			}
 			modify_species = {
 				species = this
 				add_trait = trait_robot_terminal_nanites
-				effect = { save_event_target_as = naniteterminal_species }
+				effect = {
+					save_event_target_as = naniteterminal_species
+				}
 			}
 		}
 		change_dominant_species = { species = event_target:naniteterminal_species change_all = yes }
 	}
+
 	option = {
 		name = "nano.1321.a"
 		hidden_effect = {
@@ -214,7 +281,7 @@ country_event = {
 						# }
 						NOT = { has_trait = leader_trait_terminal_nanites }
 					}
-					add_trait = leader_trait_terminal_nanites
+					add_trait = { trait = leader_trait_terminal_nanites }
 				}
 				every_pool_leader = {
 					limit = {
@@ -225,7 +292,7 @@ country_event = {
 						# }
 						NOT = { has_trait = leader_trait_terminal_nanites }
 					}
-					add_trait = leader_trait_terminal_nanites
+					add_trait = { trait = leader_trait_terminal_nanites }
 				}
 			}
 		}
@@ -237,17 +304,22 @@ country_event = {
 	id = nano.1322
 	is_triggered_only = yes
 	hide_window = yes
+
 	trigger = {
 		from = {
 			species = { has_trait = trait_robot_terminal_nanites }
 		}
 	}
+
 	immediate = {
-		from = { add_trait = leader_trait_terminal_nanites }
+		from = {
+			add_trait = { trait = leader_trait_terminal_nanites }
+		}
 	}
 }
 
 ### Organic Trait Project Event Chain ###
+
 country_event = {
 	id = nano.1330
 	title = "nano.1310.name"
@@ -257,12 +329,24 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { merg_is_default_empire = yes last_increased_tech = tech_smart_immune_systems }
-	immediate = { get_capital_planet = yes }
+
+	trigger = {
+		merg_is_default_empire = yes
+		last_increased_tech = tech_smart_immune_systems
+	}
+
+	immediate = {
+		get_capital_planet = yes
+	}
+
 	option = {
 		name = "nano.1330.a"
-		hidden_effect = { save_event_target_as = organic_nano_owner }
-		event_target:capital_planet = { enable_special_project = { name = "ORGANIC_NANITE_PROJECT" } }
+		hidden_effect = {
+			save_event_target_as = organic_nano_owner
+		}
+		event_target:capital_planet = {
+			enable_special_project = { name = "ORGANIC_NANITE_PROJECT" }
+		}
 	}
 }
 
@@ -274,25 +358,32 @@ country_event = {
 	picture = GFX_evt_circuitry_modification
 	show_sound = event_the_great_awakening
 	is_triggered_only = yes
+
 	immediate = {
 		give_technology = { tech = tech_perpetual_herd_immunity }
 		every_owned_pop = {
 			limit = {
 				is_same_species = root
-				NOR = { has_trait = trait_machine_unit has_trait = trait_mechanical }
+				is_robotic_species = no
 			}
 			modify_species = {
 				species = this
 				add_trait = trait_nanite_enhanced
-				effect = { save_event_target_as = naniteenhanced_species }
+				effect = {
+					save_event_target_as = naniteenhanced_species
+				}
 			}
 		}
 		change_dominant_species = { species = event_target:naniteenhanced_species change_all = yes }
 	}
-	option = { name = "nano.1331.a" }
+
+	option = {
+		name = "nano.1331.a"
+	}
 }
 
 ### Cyborg Trait Project Event Chain ###
+
 country_event = {
 	id = nano.1332
 	title = "nano.1310.name"
@@ -302,12 +393,24 @@ country_event = {
 	location = event_target:capital_planet
 	trackable = yes
 	is_triggered_only = yes
-	trigger = { merg_is_default_empire = yes last_increased_tech = tech_post_mechanical_cybernetics }
-	immediate = { get_capital_planet = yes }
+
+	trigger = {
+		merg_is_default_empire = yes
+		last_increased_tech = tech_post_mechanical_cybernetics
+	}
+
+	immediate = {
+		get_capital_planet = yes
+	}
+
 	option = {
 		name = "nano.1332.a"
-		hidden_effect = { save_event_target_as = cyborg_nano_owner }
-		event_target:capital_planet = { enable_special_project = { name = "CYBORG_NANITE_PROJECT" } }
+		hidden_effect = {
+			save_event_target_as = cyborg_nano_owner
+		}
+		event_target:capital_planet = {
+			enable_special_project = { name = "CYBORG_NANITE_PROJECT" }
+		}
 	}
 }
 
@@ -319,26 +422,33 @@ country_event = {
 	picture = GFX_evt_cybernetics
 	show_sound = event_the_great_awakening
 	is_triggered_only = yes
+
 	immediate = {
 		give_technology = { tech = tech_nanite_augmentation }
 		every_owned_pop = {
 			limit = {
 				is_same_species = root
 				has_trait = trait_cybernetic
-				NOR = { has_trait = trait_machine_unit has_trait = trait_mechanical }
+				is_robotic_species = no
 			}
 			modify_species = {
 				species = this
 				add_trait = trait_nanite_augments
-				effect = { save_event_target_as = nanitecyborg_species }
+				effect = {
+					save_event_target_as = nanitecyborg_species
+				}
 			}
 		}
 		change_dominant_species = { species = event_target:nanitecyborg_species change_all = yes }
 	}
-	option = { name = "nano.1333.a" }
+
+	option = {
+		name = "nano.1333.a"
+	}
 }
 
 ### Great Archailect Personality Event
+
 country_event = {
 	id = nano.1340
 	title = nano.1340.name
@@ -346,12 +456,18 @@ country_event = {
 	picture = GFX_evt_sapient_AI
 	location = from
 	is_triggered_only = yes
+
 	immediate = {
 		owner = { set_country_flag = great_archailect_event }
 	}
+
 	after = {
-		owner = { add_research_option = tech_toposophont_fogs add_research_option = tech_toposophont_combat_computers }
+		owner = {
+			add_research_option = tech_toposophont_fogs
+			add_research_option = tech_toposophont_combat_computers
+		}
 	}
+
 	option = {
 		trigger = {
 			OR = {
@@ -388,7 +504,10 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { is_synthetic_empire = yes is_xenophobe = yes }
+		trigger = {
+			is_synthetic_empire = yes
+			is_xenophobe = yes
+		}
 		name = nano.1340.c
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_10 }
 		owner = {
@@ -405,7 +524,10 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			OR = { is_egalitarian = yes has_valid_civic = civic_machine_servitor }
+			OR = {
+				is_egalitarian = yes
+				has_valid_civic = civic_machine_servitor
+			}
 		}
 		name = nano.1340.e
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_12 }
@@ -483,6 +605,7 @@ country_event = {
 	id = nano.1350 # Compare necroids.15
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
 		is_country_type_with_subjects = yes # In which cases not?
 		exists = fromfrom
@@ -506,8 +629,10 @@ country_event = {
 			from = { is_robotic_species = yes }
 		}
 	}
+
 	immediate = {
-		random = { chance = 44
+		random = {
+			chance = 44
 			from = {
 				fromfrom = {
 					if = {

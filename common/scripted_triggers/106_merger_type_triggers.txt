@@ -8,14 +8,12 @@
 # 		# has_origin = origin_void_reavers
 # 	}
 # }
-
 # is_unfriendly = {
 # 	OR = {
 # 		is_homicidal = yes
 # 		has_valid_civic = civic_barbaric_despoilers
 # 	}
 # }
-
 # Expanded version of country_type = default
 merg_is_default_empire = {
 	OR = {
@@ -108,6 +106,7 @@ merg_is_awakened_fe = {
 }
 
 ### Mid-Game Crises general trigger ###
+
 is_marauder = {
 	OR = {
 		is_country_type = dormant_marauders
@@ -117,6 +116,7 @@ is_marauder = {
 		is_country_type = marauder_raiders
 	}
 }
+
 # Scripted undercoat
 is_endgame_crisis = {
 	OR = {
@@ -125,9 +125,7 @@ is_endgame_crisis = {
 		is_country_type = extradimensional_3
 		is_country_type = swarm
 		is_country_type = ai_empire
-		is_country_type = synth_queen
-		is_country_type = awakened_synth_queen
-		is_country_type = synth_queen_storm
+		is_synth_queen_country_type = yes
 		is_country_type = sbtg_stellarborne_empire ## ACOT
 		is_giga_crisis_faction = yes ## Gigastructural Engineering & More
 	}

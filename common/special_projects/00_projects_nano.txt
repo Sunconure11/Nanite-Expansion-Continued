@@ -22,7 +22,7 @@ special_project = {
 
 	on_success = {
 		# Use event target so a capital-conquering country is not affected
-		event_target:synth_nano_owner = {
+		event_target:synth_nano_owner@root = {
 			country_event = { id = nano.1311 }
 		}
 	}

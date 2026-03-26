@@ -1,0 +1,20 @@
+# Scripted triggers to help with upgrade compatibility
+
+nec_has_any_generator_district_or_building = {
+	OR = {
+		# base game
+		has_district = district_generator
+		has_building = building_generator_generic
+		has_building = building_energy_grid
+		has_building = building_energy_nexus
+		# fallen empire
+		has_building = building_class_3_singularity
+		has_building = building_class_4_singularity
+		# wilderness
+		has_building = building_generator_districts_1
+		has_building = building_generator_districts_2
+		has_building = building_generator_districts_3
+		has_building = building_generator_districts_4
+	}
+}
+

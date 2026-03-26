@@ -4,15 +4,22 @@
 
 nanoroboticist = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_nanite_fabricator_1
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_nanite_fabricator_1
+		}
+	}
+
+	# clothes_texture_index = 3
+	tags = { nanites nec_job_tag_nanites }
 
 	possible_pre_triggers = {
 		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
 		is_sapient = yes
+		is_being_assimilated = no
+		is_being_purged = no
 	}
 
 	possible_precalc = can_fill_specialist_job
@@ -85,15 +92,21 @@ nanoroboticist = {
 
 nanoroboticist_drone = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_nanite_fabricator_1
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_nanite_fabricator_1
+		}
+	}
+
+	tags = { nanites nec_job_tag_nanites }
 
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
 		is_sapient = yes
+		is_being_assimilated = no
+		is_being_purged = no
+		is_enslaved = no
 	}
 
 	possible_precalc = can_fill_drone_job

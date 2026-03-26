@@ -1,24 +1,27 @@
 # ####################
 #  Titan Laser
 # ####################
-
 # ## Phased Array Beam
 weapon_component_template = {
 	key = "NANO_BEAM_TITAN"
 	size = titanic
 	type = instant
 	prio_projectile = yes
-
 	icon = "GFX_ship_part_phased_beam"
 	icon_frame = 1
-
 	firing_arc = 10.0
 	use_ship_kill_target = no
-
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	damage = {
+		min = 7000
+		max = 14000
+	}
 
-	damage = { min = 7000 max = 14000 }
-	windup = { min = 30.0 max = 45.0 }
+	windup = {
+		min = 30.0
+		max = 45.0
+	}
+
 	power = -500
 	range = 250
 	tracking = 0.00
@@ -30,11 +33,20 @@ weapon_component_template = {
 	armor_damage = 1.5
 	armor_penetration = 0
 
-	prerequisites = { "tech_optical_phased_arrays" }
+	prerequisites = {
+		"tech_optical_phased_arrays"
+	}
+
 	component_set = "NANO_BEAM"
 	upgrades_to = "ENERGY_LANCE_TEMPORAL"
 	projectile_gfx = "nemesis_01_ion_cannon"
-	size_restriction = { titan cosmo_crisis_titan ion_cannon }
+
+	size_restriction = {
+		titan
+		cosmo_crisis_titan
+		ion_cannon
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -54,10 +66,7 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 6
-		modifier = {
-			factor = 0.0
-			merg_is_fallen_empire = yes
-		}
+		modifier = { factor = 0.0 merg_is_fallen_empire = yes }
 	}
 }
 
@@ -117,4 +126,4 @@ weapon_component_template = {
 #			merg_is_fallen_empire = yes
 #		}
 #	}
-#}
+# }

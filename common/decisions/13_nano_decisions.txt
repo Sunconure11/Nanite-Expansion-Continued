@@ -1,15 +1,13 @@
 ##########################################################################
 # Decisions
 ##########################################################################
-
 # Fog Tier 1
 decision_planetary_utility_fog = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	# instant
-
 	enactment_time = 180
+
 	resources = {
 		category = decisions
 		cost = {
@@ -52,8 +50,8 @@ decision_planetary_utility_fog = {
 decision_planetary_autonomous_fog = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 360
+
 	resources = {
 		category = decisions
 		cost = {
@@ -64,10 +62,7 @@ decision_planetary_autonomous_fog = {
 
 	potential = {
 		has_modifier = utility_fog
-		owner = {
-			is_regular_empire = yes
-			is_gestalt = no
-		}
+		owner = { is_regular_empire = yes is_gestalt = no }
 		NOR = {
 			has_modifier = angelnet
 			has_modifier = sophont_angelnet
@@ -92,8 +87,8 @@ decision_planetary_autonomous_fog = {
 decision_planetary_sophont_fog = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 720
+
 	resources = {
 		category = decisions
 		cost = {
@@ -104,10 +99,7 @@ decision_planetary_sophont_fog = {
 
 	potential = {
 		has_modifier = angelnet
-		owner = {
-			is_regular_empire = yes
-			is_gestalt = no
-		}
+		owner = { is_regular_empire = yes is_gestalt = no }
 		NOT = { has_modifier = sophont_angelnet }
 	}
 
@@ -126,8 +118,8 @@ decision_planetary_sophont_fog = {
 decision_planetary_toposophont_fog = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 960
+
 	resources = {
 		category = decisions
 		cost = {
@@ -161,8 +153,8 @@ decision_planetary_toposophont_fog = {
 decision_dismantle_fog = {
 	owned_planets_only = yes
 	sound = event_life_support_fail
-
 	enactment_time = 90
+
 	resources = {
 		category = decisions
 		cost = {
@@ -225,15 +217,13 @@ decision_dismantle_fog = {
 }
 
 ### Gestalt Variants ###
-
 # Gestalt Fog Tier 1
 decision_planetary_utility_fog_hive = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	# instant
-
 	enactment_time = 180
+
 	resources = {
 		category = decisions
 		cost = {
@@ -244,10 +234,7 @@ decision_planetary_utility_fog_hive = {
 
 	potential = {
 		exists = owner
-		owner = {
-			is_gestalt = yes
-			has_technology = tech_ubiquitous_smartdust
-		}
+		owner = { is_gestalt = yes has_technology = tech_ubiquitous_smartdust }
 	}
 
 	allow = {
@@ -269,8 +256,8 @@ decision_planetary_utility_fog_hive = {
 decision_planetary_autonomous_fog_hive = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 360
+
 	resources = {
 		category = decisions
 		cost = {
@@ -281,9 +268,7 @@ decision_planetary_autonomous_fog_hive = {
 
 	potential = {
 		has_modifier = utility_fog_hive
-		owner = {
-			is_gestalt = yes
-		}
+		owner = { is_gestalt = yes }
 	}
 
 	allow = {
@@ -304,8 +289,8 @@ decision_planetary_autonomous_fog_hive = {
 decision_planetary_sophont_fog_hive = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 720
+
 	resources = {
 		category = decisions
 		cost = {
@@ -316,9 +301,7 @@ decision_planetary_sophont_fog_hive = {
 
 	potential = {
 		has_modifier = angelnet_hive
-		owner = {
-			is_gestalt = yes
-		}
+		owner = { is_gestalt = yes }
 	}
 
 	allow = {
@@ -336,8 +319,8 @@ decision_planetary_sophont_fog_hive = {
 decision_planetary_toposophont_fog_hive = {
 	owned_planets_only = yes
 	sound = event_synthetic_evolution_01
-
 	enactment_time = 960
+
 	resources = {
 		category = decisions
 		cost = {
@@ -348,9 +331,7 @@ decision_planetary_toposophont_fog_hive = {
 
 	potential = {
 		has_modifier = sophont_angelnet_hive
-		owner = {
-			is_gestalt = yes
-		}
+		owner = { is_gestalt = yes }
 	}
 
 	allow = {

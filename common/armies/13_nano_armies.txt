@@ -98,7 +98,7 @@ nanite_subsumed_army = {
 		}
 	}
 	show_tech_unlock_if = {
-		has_valid_civic = civic_reanimated_armies
+		is_reanimator = yes
 	}
 	potential_country = {
 		always = no

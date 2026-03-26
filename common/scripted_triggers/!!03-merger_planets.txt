@@ -1,17 +1,46 @@
 ## For compatibility: Dummy triggers - to be overwritten by their respective mods.
 ## Gigastructural Engineering & More
-is_giga_habitat = { always = no }
-is_pc_ringworld_hive = { always = no }
-is_pc_ringworld_machine = { always = no }
+
+is_giga_habitat = {
+	always = no
+}
+
+is_pc_ringworld_hive = {
+	always = no
+}
+
+is_pc_ringworld_machine = {
+	always = no
+}
+
 ## Planetary Diversity
-pd_is_planet_class_hive = { always = no }
-pd_is_planet_class_machine = { always = no }
-is_planetary_diversity_ringworld = { always = no }
+
+pd_is_planet_class_hive = {
+	always = no
+}
+
+pd_is_planet_class_machine = {
+	always = no
+}
+
+is_planetary_diversity_ringworld = {
+	always = no
+}
+
 ## Nanite Machine and Distant Stars Overhaul has_global_flag = distar_overhaul_mod_active
-is_nanite_gaia =				{ always = no }
-is_nanite_habitat_shielded =	{ always = no }
+
+is_nanite_gaia = {
+	always = no
+}
+
+is_nanite_habitat_shielded = {
+	always = no
+}
+
 # is_nanite_gas_giant =			{ always = no }
-is_dessanu_relic =				{ always = no }
+is_dessanu_relic = {
+	always = no
+}
 
 # Listing habitats
 merg_is_habitat = {
@@ -57,6 +86,7 @@ merg_is_hab_ringworld = {
 	habitable_structure = yes  # Exlcude some ringworld entities is_artificial = yes
 	has_ringworld_output_boost = yes
 	NOT = { is_planet_class = pc_habitat }
+
 	# OR = {
 	# 	uses_district_set = ring_world
 	# 	is_planet_class = pc_ringworld_habitable
@@ -102,12 +132,12 @@ merg_is_hive_world = {
 
 merg_is_gas_giant = {
 	# OR = {
-		is_planet_class = pc_gas_giant
-		# is_nanite_gas_giant = yes # Nanite Machine and Distant Stars Overhaul
-		# Planetary Diversity
-		# is_planet_class = pc_hot_gas_giant
-		# is_planet_class = pc_cloudless_gas_giant
-		# is_planet_class = pc_cold_gas_giant
+	is_planet_class = pc_gas_giant
+	# is_nanite_gas_giant = yes # Nanite Machine and Distant Stars Overhaul
+	# Planetary Diversity
+	# is_planet_class = pc_hot_gas_giant
+	# is_planet_class = pc_cloudless_gas_giant
+	# is_planet_class = pc_cold_gas_giant
 	# }
 }
 
@@ -119,7 +149,9 @@ merg_is_machine_world = {
 	}
 }
 
-merg_is_arcology = { is_planet_class = pc_city }
+merg_is_arcology = {
+	is_planet_class = pc_city
+}
 
 merg_is_relic_world = {
 	OR = {
@@ -139,11 +171,26 @@ gpm_is_planet_class_city = {
 	}
 }
 
-merg_is_molten = { is_planet_class = pc_molten }
-merg_is_toxic = { is_planet_class = pc_toxic }
-merg_is_frozen = { is_planet_class = pc_frozen }
-merg_is_barren = { is_planet_class = pc_barren }
-merg_is_barren_cold = { is_planet_class = pc_barren_cold }
+merg_is_molten = {
+	is_planet_class = pc_molten
+}
+
+merg_is_toxic = {
+	is_planet_class = pc_toxic
+}
+
+merg_is_frozen = {
+	is_planet_class = pc_frozen
+}
+
+merg_is_barren = {
+	is_planet_class = pc_barren
+}
+
+merg_is_barren_cold = {
+	is_planet_class = pc_barren_cold
+}
+
 merg_is_gaia_basic = {
 	OR = {
 		is_planet_class = pc_gaia
@@ -151,6 +198,7 @@ merg_is_gaia_basic = {
 		is_nanite_gaia = yes # Nanite Machine and Distant Stars Overhaul
 	}
 }
+
 merg_is_shielded_world = {
 	OR = {
 		is_planet_class = pc_habitat_shielded

@@ -5,10 +5,16 @@ great_archailect_0 = {
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
 	entity_offset = { x = -12 y = 9 }
+
 	# rotate_to_center = no
 	scale_offset = no
-	prerequisites = { tech_great_archailect }
+
+	prerequisites = {
+		tech_great_archailect
+	}
+
 	build_time = 500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -21,25 +27,37 @@ great_archailect_0 = {
 			alloys = 7500
 			nanites = 500
 		}
-		upkeep = { energy = 10 }
+		upkeep = {
+			energy = 10
+		}
 	}
+
 	possible = {
 		exists = starbase
-		custom_tooltip = { fail_text = "requires_inside_border" is_inside_border = from }
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
 			count_system_planet = {
+				count = 0
 				limit = {
 					is_surveyed = { who = prev.from status = no }
 				}
-				count = 0
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_habitable_planets"
-			count_system_planet = { limit = { colonizable_planet = yes } count = 0 }
+			count_system_planet = {
+				count = 0
+				limit = { colonizable_planet = yes }
+			}
 		}
-		custom_tooltip = { fail_text = "requires_black_hole" is_star_class = sc_black_hole }
+		custom_tooltip = {
+			fail_text = "requires_black_hole"
+			is_star_class = sc_black_hole
+		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_archailect"
 			from = {
@@ -51,7 +69,9 @@ great_archailect_0 = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_archailect_two"
-			from = { NOT = { has_country_flag = built_archailect_contingency } }
+			from = {
+				NOT = { has_country_flag = built_archailect_contingency }
+			}
 		}
 		# custom_tooltip = {
 		# 	# fail_text = "requires_no_existing_matter_decompressor"
@@ -83,15 +103,26 @@ great_archailect_0 = {
 		# 		}
 		# 	}
 		# }
-		custom_tooltip = { fail_text = "requires_no_existing_megastructure" has_no_non_gate_megastructure = yes }
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			has_no_non_gate_megastructure = yes
+		}
 	}
+
 	placement_rules = {
 		planet_possible = {
-			custom_tooltip = { fail_text = "must_build_around_star" is_star = yes }
-			custom_tooltip = { fail_text = "requires_no_anomaly" has_anomaly = no }
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				has_anomaly = no
+			}
 			is_star_class = sc_black_hole
 		}
 	}
+
 	ai_weight = {
 		factor = 15
 		# modifier = { factor = 0 has_country_flag = has_recently_built_great_archailect }
@@ -109,6 +140,7 @@ great_archailect_0 = {
 			}
 		}
 	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		remove_system_terraforming_candidates = yes
@@ -124,7 +156,10 @@ great_archailect_0 = {
 		from = {
 			# set_timed_country_flag = { flag = has_recently_built_great_archailect years = 20 }
 			if = {
-				limit = { has_relic = r_contingency_core has_country_flag = built_archailect }
+				limit = {
+					has_relic = r_contingency_core
+					has_country_flag = built_archailect
+				}
 				set_country_flag = built_archailect_contingency
 			}
 			set_country_flag = built_archailect
@@ -138,9 +173,17 @@ great_archailect_1 = {
 	construction_entity = "great_archailect_01_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
-	upgrade_from = { great_archailect_0 }
-	country_modifier = { empire_size_mult = -0.025 }
+
+	upgrade_from = {
+		great_archailect_0
+	}
+
+	country_modifier = {
+		empire_size_mult = -0.025
+	}
+
 	build_time = 3800
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -154,10 +197,19 @@ great_archailect_1 = {
 			engineering_research = 88
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 25 }
+		upkeep = {
+			alloys = 25
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -177,9 +229,17 @@ great_archailect_2 = {
 	construction_entity = "great_archailect_02_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
-	upgrade_from = { great_archailect_1 }
-	country_modifier = { empire_size_mult = -0.05 }
+
+	upgrade_from = {
+		great_archailect_1
+	}
+
+	country_modifier = {
+		empire_size_mult = -0.05
+	}
+
 	build_time = 6750
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -193,10 +253,19 @@ great_archailect_2 = {
 			engineering_research = 375
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 60 }
+		upkeep = {
+			alloys = 60
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -211,9 +280,17 @@ great_archailect_3 = {
 	construction_entity = "great_archailect_03_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
-	upgrade_from = { great_archailect_2 }
-	country_modifier = { empire_size_mult = -0.075 }
+
+	upgrade_from = {
+		great_archailect_2
+	}
+
+	country_modifier = {
+		empire_size_mult = -0.075
+	}
+
 	build_time = 13500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -227,10 +304,19 @@ great_archailect_3 = {
 			engineering_research = 1125
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 125 }
+		upkeep = {
+			alloys = 125
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -245,9 +331,18 @@ great_archailect_4 = {
 	construction_entity = "great_archailect_04_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_construction_background"
-	upgrade_from = { great_archailect_3 }
-	country_modifier = { empire_size_mult = -0.1 country_leader_cap_add = 1 }
+
+	upgrade_from = {
+		great_archailect_3
+	}
+
+	country_modifier = {
+		empire_size_mult = -0.1
+		country_leader_cap_add = 1
+	}
+
 	build_time = 13500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -261,10 +356,19 @@ great_archailect_4 = {
 			engineering_research = 3375
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 250 }
+		upkeep = {
+			alloys = 250
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -279,13 +383,19 @@ great_archailect_5 = {
 	construction_entity = "great_archailect_05_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_4 }
+
+	upgrade_from = {
+		great_archailect_4
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.25
 		empire_size_mult = -0.15
 		country_leader_cap_add = 2
 	}
+
 	build_time = 13500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -300,10 +410,19 @@ great_archailect_5 = {
 			engineering_research = 10125
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 }
+		upkeep = {
+			alloys = 500
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -318,13 +437,19 @@ great_archailect_6 = {
 	construction_entity = "great_archailect_06_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_5 }
+
+	upgrade_from = {
+		great_archailect_5
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.2
 		country_leader_cap_add = 3
 	}
+
 	build_time = 13500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -339,10 +464,20 @@ great_archailect_6 = {
 			engineering_research = 13750
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 250 }
+		upkeep = {
+			alloys = 500
+			energy = 250
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -357,14 +492,20 @@ great_archailect_7 = {
 	construction_entity = "great_archailect_07_construction_entity"
 	construction_scale = 1.02 # To avoid z-fighting of consrucion entity with the base entity
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_6 }
+
+	upgrade_from = {
+		great_archailect_6
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	build_time = 13500
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -379,10 +520,20 @@ great_archailect_7 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
-	prerequisites = { "tech_great_archailect" }
-	ai_weight = { factor = 10 }
+
+	prerequisites = {
+		"tech_great_archailect"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -395,13 +546,18 @@ great_archailect_7 = {
 great_archailect_8 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -411,23 +567,35 @@ great_archailect_8 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_9 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -437,23 +605,35 @@ great_archailect_9 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_10 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -463,23 +643,35 @@ great_archailect_10 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_11 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -489,23 +681,35 @@ great_archailect_11 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_12 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -515,23 +719,35 @@ great_archailect_12 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_13 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -541,23 +757,35 @@ great_archailect_13 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_14 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -567,23 +795,35 @@ great_archailect_14 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_15 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -593,23 +833,35 @@ great_archailect_15 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_16 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -619,23 +871,35 @@ great_archailect_16 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }
 
 great_archailect_17 = {
 	entity = "great_archailect_07_entity"
 	portrait = "GFX_megastructure_sentient_AI"
-	upgrade_from = { great_archailect_7 }
+
+	upgrade_from = {
+		great_archailect_7
+	}
+
 	country_modifier = {
 		all_technology_research_speed = 0.3
 		empire_size_mult = -0.25
 		add_base_country_intel = 10
 		country_leader_cap_add = 4
 	}
+
 	resources = {
 		category = megastructures
 		produces = {
@@ -645,9 +909,16 @@ great_archailect_17 = {
 			engineering_research = 15000
 			multiplier = value:nano_giga_cost_mult
 		}
-		upkeep = { alloys = 500 energy = 500 }
+		upkeep = {
+			alloys = 500
+			energy = 500
+		}
 	}
+
 	# Used from script only
 	upgrade_desc = hide
-	potential = { always = no }
+
+	potential = {
+		always = no
+	}
 }

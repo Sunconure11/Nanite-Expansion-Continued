@@ -5,7 +5,6 @@
 # 	has_technology = tech_lcluster_access
 # 	NOT = { has_global_flag = active_gray_goo }
 # }
-
 # country
 has_lgate = {
 	any_owned_megastructure = {
@@ -18,9 +17,16 @@ has_lgate = {
 
 # trigger = { event_target:lcluster_factory_system = { check_fleet_count_in_system = { CHECK = CmtVarCapitalDefenceNumber } }}
 check_fleet_count_in_system = {
-	if = { limit = { is_scope_type = galactic_object }
-		[[CHECK] count_fleet_in_system = { count > $CHECK$ limit = { has_fleet_flag = nanite_mother_ship } }]
+	if = {
+		limit = { is_scope_type = galactic_object }
+		[[CHECK]
+		count_fleet_in_system = {
+			count > $CHECK$
+			limit = { has_fleet_flag = nanite_mother_ship }
+		}
+		]
 	}
+
 	# else = { log = "Wrong scope in count_fleet_in_system [This.GetName]" }
 }
 
