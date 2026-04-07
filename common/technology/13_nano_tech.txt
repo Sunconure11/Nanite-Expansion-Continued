@@ -1,3 +1,18 @@
+# Was not defined in previous versions, author made use of the game engine
+# automatically creating a tech when the "add_option" command is used
+tech_micromechanic_constructs = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { industry }
+	weight = 0  # because this is awarded via AP only
+	potential = {
+		has_ascension_perk = ap_nanotech
+	}
+	ai_weight = { weight = 0 }
+}
+
+
 # attoscale was missing when I opened this file
 tech_attoscale_mechanics = {
 	cost = @nanotier6cost1

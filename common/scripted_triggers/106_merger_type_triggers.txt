@@ -126,28 +126,7 @@ is_endgame_crisis = {
 		is_country_type = swarm
 		is_country_type = ai_empire
 		is_synth_queen_country_type = yes
-		is_country_type = sbtg_stellarborne_empire ## ACOT
+		# is_country_type = sbtg_stellarborne_empire ## ACOT
 		is_giga_crisis_faction = yes ## Gigastructural Engineering & More
-	}
-}
-
-# FOR CUSTODIAN
-is_crisis_faction = {
-	OR = {
-		is_endgame_crisis = yes
-		is_country_type = gray_goo
-		is_country_type = awakened_marauders
-		# is_country_type = formless removed in v.3.12.3
-		# is_cruel_abomination_country_type = yes # Cruel Conquerers
-		# is_country_type = darkness_country # Destiny: The Darkness Crisis
-		# Shroud Rising
-		is_country_type = shroud_cult
-		is_country_type = shroud_entities
-		is_country_type = shroud_horrors
-		# Solar Storm
-		# is_country_type = abyssal_host_invaders_type
-		# is_country_type = SSAB_ab_country_v2
-		# is_country_type = SSAB_ab_remnant
-		# is_country_type = berserker_awoken_hive # The Sleeper
 	}
 }

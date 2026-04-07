@@ -1,4 +1,5 @@
 ﻿l_english:
+ # § £
  COMBAT_COMPUTER_ARTILLERY_TOPOSOPHONT: "Toposophont Combat Computer (Artillery)"
  COMBAT_COMPUTER_CARRIER_TOPOSOPHONT: "Toposophont Combat Computer (Carrier)"
  COMBAT_COMPUTER_LINE_TOPOSOPHONT: "Toposophont Combat Computer (Line)"
@@ -16,7 +17,7 @@
  MEDIUM_NANO_ARMOR: "Medium Self-Healing Armor"
  MESSAGE_DESC_FOR_PLANET_KILLER_DECONSTRUCTOR: "$MESSAGE_DESC_FOR_PLANET_KILLER_NANO$"
  MESSAGE_DESC_FOR_PLANET_KILLER_NANO: "was entirely ecophaged by"
- NANOTECHNOLOGY_TREE_UNLOCKED: "We now have access to Nanotechnology. Researching Micromechanic Constructs will begin the Tech Tree."
+ NANOTECHNOLOGY_TREE_UNLOCKED: "We now have access to Nanotechnology. Researching §Y$tech_micromechanic_constructs$§! (under §HEngineering§!) will begin the Tech Tree."
  NANO_ARMOR: "Self-Healing Armor"
  NANO_ARMOR_DESC: "This highly advanced armor is capable of redirecting energy to minimize entropy and maximize stability. The femtobots that compose the armor are capable of repairing it from otherwise catastrophic harm."
  NANO_BEAM: "Phased Array Beam"

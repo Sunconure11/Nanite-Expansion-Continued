@@ -6,7 +6,7 @@ weapon_component_template = {
 	key = "PLANET_KILLER_NANO"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = no
+	# use_ship_kill_target = no
 	power = -7500
 
 	prerequisites = {
