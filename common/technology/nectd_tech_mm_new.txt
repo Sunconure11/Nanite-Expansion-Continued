@@ -1,0 +1,40 @@
+# Nano Hulls
+tech_repeatable_nano_hulls = {
+	cost = @repeatableTechBaseCost
+	area = engineering
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+
+	category = {
+		materials
+	}
+
+	levels = 10
+
+	prerequisites = {
+		"tech_attoscale_mechanics"
+		"tech_self_healing_armor"
+	}
+
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+
+	weight_groups = {
+		repeatable
+	}
+
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		ship_hull_mult = 0.05
+	}
+}
