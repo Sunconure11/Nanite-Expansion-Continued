@@ -182,7 +182,7 @@ nano_is_crackable_planet = {
 				# is_planet_class = pc_pd_scrapyard
 				# is_pd_unique_hab = yes
 				is_pd_molten = yes # is_planet_class = pc_volcanic
-				is_planet_class = pc_subglacial
+				# is_planet_class = pc_subglacial
 			}
 		}
 		# AND = { # Gigastructures
