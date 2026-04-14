@@ -8,7 +8,7 @@ special_project = {
 			}
 			scope = this
 			add = 150
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology
@@ -41,7 +41,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = physics_technology
@@ -74,7 +74,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = society_technology
@@ -107,7 +107,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology
