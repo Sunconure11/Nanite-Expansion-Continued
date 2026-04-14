@@ -498,7 +498,7 @@ country_event = {
 	option = {
 		trigger = {
 			is_xenophobe = yes
-			NOT = { has_ascension_perk = ap_synthetic_evolution }
+			has_synthetic_ascension = no
 		}
 		name = nano.1340.c
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_10 }

@@ -121,7 +121,7 @@ tech_ubiquitous_smartdust = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -140,7 +140,7 @@ tech_ubiquitous_smartdust = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -221,7 +221,7 @@ tech_military_micromachines = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -240,7 +240,7 @@ tech_military_micromachines = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -613,15 +613,11 @@ tech_nanoform_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 4
-			has_ascension_perk = ap_synthetic_evolution
-		}
-		modifier = {
-			factor = 4
-			has_ascension_perk = ap_synthetic_age
+			has_synthetic_ascension = yes
 		}
 		modifier = {
 			factor = 0.20
@@ -650,7 +646,7 @@ tech_nanoform_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -725,15 +721,11 @@ tech_nanoform_gestalt = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 4
-			has_ascension_perk = ap_synthetic_evolution
-		}
-		modifier = {
-			factor = 4
-			has_ascension_perk = ap_synthetic_age
+			has_synthetic_ascension = yes
 		}
 		modifier = {
 			factor = 0.20
@@ -762,7 +754,7 @@ tech_nanoform_gestalt = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -1067,7 +1059,7 @@ tech_autonomous_fogs = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -1086,7 +1078,7 @@ tech_autonomous_fogs = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -1407,7 +1399,7 @@ tech_sophont_fogs = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -1426,7 +1418,7 @@ tech_sophont_fogs = {
 		}
 		modifier = {
 			factor = 2
-			has_origin = origin_mechanists
+			has_synthetic_evolution_synergy = yes
 		}
 		modifier = {
 			factor = 1.25
