@@ -141,7 +141,7 @@ country_event = {
 
 	immediate = {
 		give_technology = { tech = tech_nanoform_uplifting }
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				has_trait = trait_mechanical
@@ -154,7 +154,10 @@ country_event = {
 				}
 			}
 		}
-		change_dominant_species = { species = event_target:nanoform_species change_all = yes }
+		change_dominant_species = {
+			species = event_target:nanoform_species
+			change_all = yes
+		}
 	}
 
 	option = {
@@ -251,7 +254,7 @@ country_event = {
 
 	immediate = {
 		give_technology = { tech = tech_terminal_integration }
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				has_trait = trait_machine_unit
@@ -361,7 +364,7 @@ country_event = {
 
 	immediate = {
 		give_technology = { tech = tech_perpetual_herd_immunity }
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				is_robotic_species = no
@@ -425,7 +428,7 @@ country_event = {
 
 	immediate = {
 		give_technology = { tech = tech_nanite_augmentation }
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				has_trait = trait_cybernetic

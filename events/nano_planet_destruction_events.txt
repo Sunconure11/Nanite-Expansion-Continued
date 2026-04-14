@@ -211,7 +211,7 @@ planet_event = {
 				}
 			}
 		}
-		every_owned_pop = { kill_pop = yes }
+		every_owned_pop_group = { kill_pop = yes }
 		remove_all_buildings = yes
 		# Destroy habitats and ringworlds
 		if = {
