@@ -277,7 +277,7 @@ building_universal_constructor_1 = {
 			alloys = 2
 			consumer_goods = 2
 			nanites = -1
-			mult = planet.value:toxic_attendant_growth
+			mult = value:bath_attendant_skill
 		}
 		produces = {
 			trigger = {
@@ -381,7 +381,7 @@ building_universal_constructor_2 = {
 			rare_crystals = 1
 			volatile_motes = 1
 			nanites = -1
-			mult = planet.value:toxic_attendant_growth
+			mult = value:bath_attendant_skill
 		}
 		produces = {
 			trigger = {
@@ -485,7 +485,7 @@ building_universal_constructor_3 = {
 			sr_living_metal = 1
 			sr_zro = 1
 			nanites = -1
-			mult = planet.value:toxic_attendant_growth
+			mult = value:bath_attendant_skill
 		}
 		produces = {
 			trigger = {
