@@ -64,11 +64,15 @@ nanoroboticist = {
 		}
 		modifier = {
 			factor = 7
-			has_job = nanoroboticist
+			any_owned_pop_job = {
+				has_job_type = nanoroboticist
+			}
 		}
 		modifier = {
 			factor = 15
-			has_job = nanoroboticist
+			any_owned_pop_job = {
+				has_job_type = nanoroboticist
+			}
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
@@ -144,7 +148,9 @@ nanoroboticist_drone = {
 		}
 		modifier = {
 			factor = 5
-			has_job = nanoroboticist_drone
+			any_owned_pop_job = {
+				has_job_type = nanoroboticist_drone
+			}
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
