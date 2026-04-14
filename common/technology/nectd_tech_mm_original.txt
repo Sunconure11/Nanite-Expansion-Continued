@@ -40,8 +40,7 @@ tech_swarm_logic = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -50,8 +49,7 @@ tech_swarm_logic = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -75,8 +73,7 @@ tech_self_reconfiguring_micromatter = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -85,8 +82,7 @@ tech_self_reconfiguring_micromatter = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -129,10 +125,9 @@ tech_ubiquitous_smartdust = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
+				has_skill > 2
 			}
 		}
 	}
@@ -149,8 +144,7 @@ tech_ubiquitous_smartdust = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -183,8 +177,7 @@ tech_micro_optimizations = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -193,8 +186,7 @@ tech_micro_optimizations = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -233,10 +225,9 @@ tech_military_micromachines = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
+				has_skill > 2
 			}
 		}
 	}
@@ -253,8 +244,7 @@ tech_military_micromachines = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -285,8 +275,7 @@ tech_nanoscale_automatons = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -296,8 +285,7 @@ tech_nanoscale_automatons = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -325,8 +313,7 @@ tech_adaptive_housing = {
 		factor = 1.5
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -336,8 +323,7 @@ tech_adaptive_housing = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -366,8 +352,7 @@ tech_self_assembling_infrastructure = {
 		factor = 4
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
@@ -377,8 +362,7 @@ tech_self_assembling_infrastructure = {
 		factor = 5 # Important tech
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
@@ -405,8 +389,7 @@ tech_emergent_intelligences = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -415,8 +398,7 @@ tech_emergent_intelligences = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -440,8 +422,7 @@ tech_self_replicating_nanites = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -450,8 +431,7 @@ tech_self_replicating_nanites = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -487,8 +467,7 @@ tech_subsumption_bombardment = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}	
@@ -506,8 +485,7 @@ tech_subsumption_bombardment = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}
@@ -543,13 +521,11 @@ tech_identity_subsumption = {
 		modifier = {
 			factor = 0.10
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_biology"
+				any_owned_leader = {
+						has_trait = "leader_trait_expertise_biology"
 				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
+				any_owned_leader = {
+						has_trait = "leader_trait_curator"
 				}
 			}
 		}
@@ -559,24 +535,21 @@ tech_identity_subsumption = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_spark_of_genius"
 			}
 		}
 		modifier = {
 			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 4
+			any_owned_leader = {
+				has_skill > 4
 			}
 		}
 		modifier = {
 			factor = 0.75
 			NOT = {
-				research_leader = {
-					area = society
-					has_level > 3
+				any_owned_leader = {
+						has_skill > 3
 				}
 			}
 		}
@@ -594,8 +567,7 @@ tech_identity_subsumption = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
@@ -654,21 +626,17 @@ tech_nanoform_workers = {
 		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
+				any_owned_leader = {
+						has_trait = "leader_trait_maniacal"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_spark_of_genius"
+				any_owned_leader = {
+						has_trait = "leader_trait_spark_of_genius"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
+				any_owned_leader = {
+						has_trait = "leader_trait_curator"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_industry"
+				any_owned_leader = {
+						has_trait = "leader_trait_expertise_industry"
 				}
 			}
 		}
@@ -686,8 +654,7 @@ tech_nanoform_workers = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -771,21 +738,17 @@ tech_nanoform_gestalt = {
 		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
+				any_owned_leader = {
+						has_trait = "leader_trait_maniacal"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_spark_of_genius"
+				any_owned_leader = {
+						has_trait = "leader_trait_spark_of_genius"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
+				any_owned_leader = {
+						has_trait = "leader_trait_curator"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_industry"
+				any_owned_leader = {
+						has_trait = "leader_trait_expertise_industry"
 				}
 			}
 		}
@@ -803,8 +766,7 @@ tech_nanoform_gestalt = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -872,8 +834,7 @@ tech_smart_immune_systems = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
@@ -882,8 +843,7 @@ tech_smart_immune_systems = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
@@ -947,8 +907,7 @@ tech_post_mechanical_cybernetics = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -957,8 +916,7 @@ tech_post_mechanical_cybernetics = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -1011,17 +969,14 @@ tech_orbital_hyperfogs = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_voidcraft"
+				any_owned_leader = {
+						has_trait = "leader_trait_expertise_voidcraft"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
+				any_owned_leader = {
+						has_trait = "leader_trait_curator"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
+				any_owned_leader = {
+						has_trait = "leader_trait_maniacal"
 				}
 			}
 		}
@@ -1035,8 +990,7 @@ tech_orbital_hyperfogs = {
 		factor = 10
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
@@ -1064,8 +1018,7 @@ tech_photosynthetic_fogs = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
@@ -1075,8 +1028,7 @@ tech_photosynthetic_fogs = {
 		weight = 10
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
@@ -1119,10 +1071,9 @@ tech_autonomous_fogs = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
+				has_skill > 2
 			}
 		}
 	}
@@ -1139,8 +1090,7 @@ tech_autonomous_fogs = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -1173,8 +1123,7 @@ tech_nano_optimizations = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1183,8 +1132,7 @@ tech_nano_optimizations = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1215,8 +1163,7 @@ tech_femtoscale_robotics = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1226,8 +1173,7 @@ tech_femtoscale_robotics = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1254,8 +1200,7 @@ tech_sophont_networks = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1264,8 +1209,7 @@ tech_sophont_networks = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1289,8 +1233,7 @@ tech_universal_programmable_matter = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1299,8 +1242,7 @@ tech_universal_programmable_matter = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1342,17 +1284,14 @@ tech_pk_mass_deconstructor = {
 		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
+				any_owned_leader = {
+						has_trait = "leader_trait_maniacal"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
+				any_owned_leader = {
+						has_trait = "leader_trait_curator"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_voidcraft"
+				any_owned_leader = {
+						has_trait = "leader_trait_expertise_voidcraft"
 				}
 			}			
 		}	
@@ -1380,8 +1319,7 @@ tech_sapient_housing = {
 		factor = 1.5
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -1391,8 +1329,7 @@ tech_sapient_housing = {
 		factor = 2
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -1421,8 +1358,7 @@ tech_sophont_infrastructure = {
 		factor = 4
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
@@ -1432,8 +1368,7 @@ tech_sophont_infrastructure = {
 		factor = 5 # Important tech
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
@@ -1476,10 +1411,9 @@ tech_sophont_fogs = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
+				has_skill > 2
 			}
 		}
 	}
@@ -1496,8 +1430,7 @@ tech_sophont_fogs = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
 			}
 		}
@@ -1523,8 +1456,7 @@ tech_self_healing_armor = {
 		factor = 1.25
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1533,8 +1465,7 @@ tech_self_healing_armor = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1560,8 +1491,7 @@ tech_miniaturized_autowars = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
@@ -1570,8 +1500,7 @@ tech_miniaturized_autowars = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
@@ -1595,8 +1524,7 @@ tech_megamachine_strategies = {
 		factor = 1.5
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_military_theory"
 			}
 		}
@@ -1605,8 +1533,7 @@ tech_megamachine_strategies = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_military_theory"
 			}
 		}
@@ -1637,8 +1564,7 @@ tech_optical_phased_arrays = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}	
@@ -1656,8 +1582,7 @@ tech_optical_phased_arrays = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
@@ -1690,8 +1615,7 @@ tech_femto_optimizations = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1700,8 +1624,7 @@ tech_femto_optimizations = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1744,8 +1667,7 @@ tech_attoscale_mechanics = {
 		}
 		modifier = {
 			factor = 2.5
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1755,8 +1677,7 @@ tech_attoscale_mechanics = {
 		factor = 10.0
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1784,8 +1705,7 @@ tech_toposophont_systems = {
 		factor = 0.15
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1795,8 +1715,7 @@ tech_toposophont_systems = {
 		factor = 0.15
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1823,8 +1742,7 @@ tech_nano_encryption = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1841,8 +1759,7 @@ tech_nano_encryption = {
 		weight = 3
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1869,8 +1786,7 @@ tech_nano_decryption = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1887,8 +1803,7 @@ tech_nano_decryption = {
 		weight = 3
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = physics
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_computing"
 			}
 		}
@@ -1920,8 +1835,7 @@ tech_atto_optimizations = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1930,8 +1844,7 @@ tech_atto_optimizations = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
@@ -1963,8 +1876,7 @@ tech_nano_torpedoes = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}	
@@ -1982,8 +1894,7 @@ tech_nano_torpedoes = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}
@@ -2015,8 +1926,7 @@ tech_nano_swarmer_missile = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}	
@@ -2034,8 +1944,7 @@ tech_nano_swarmer_missile = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_propulsion"
 			}
 		}
@@ -2064,15 +1973,13 @@ tech_great_archailect = {
 		factor = 0.25
 		modifier = {
 			factor = 2
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_maniacal"
 			}
 		}
 		modifier = {
 			factor = 2
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_spark_of_genius"
 			}
 		}
@@ -2105,8 +2012,7 @@ tech_great_archailect = {
 		factor = 10
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
+			any_owned_leader = {
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
 		}
