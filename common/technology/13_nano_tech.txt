@@ -7,7 +7,7 @@ tech_micromechanic_constructs = {
 	category = { industry }
 	weight = 0  # because this is awarded via AP only
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	ai_weight = { weight = 0 }
 }
@@ -26,7 +26,7 @@ tech_attoscale_mechanics = {
 
 	weight = @tier5weight3
 
-	potential = { has_ascension_perk = ap_nanotech }
+	potential = { nectd_has_ap_nanotech = yes }
 
 	modifier = {
 		description = tech_attoscale_mechanics_modifier_desc
@@ -75,7 +75,7 @@ tech_toposophont_systems = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -117,7 +117,7 @@ tech_nano_encryption = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -165,7 +165,7 @@ tech_nano_decryption = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -213,7 +213,7 @@ tech_atto_optimizations = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -256,7 +256,7 @@ tech_nano_torpedoes = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -299,7 +299,7 @@ tech_nano_swarmer_missile = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -342,7 +342,7 @@ tech_great_archailect = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -408,7 +408,7 @@ tech_toposophont_fogs = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -439,7 +439,7 @@ tech_toposophont_combat_computers = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	# Unlocks toposophont combat computers

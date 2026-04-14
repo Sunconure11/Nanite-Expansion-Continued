@@ -33,8 +33,7 @@ ap_nanotech = {
 		factor = 15
 		modifier = { factor = 2 is_materialist = yes }
 		modifier = { factor = 2 has_ascension_perk = ap_the_flesh_is_weak }
-		modifier = { factor = 2 has_ascension_perk = ap_synthetic_evolution }
-		modifier = { factor = 2 has_ascension_perk = ap_synthetic_age }
+		modifier = { factor = 4 has_synthetic_ascension = yes }
 		modifier = { factor = 2 has_genetic_ascension = yes }
 		modifier = { factor = 2 has_ascension_perk = ap_mind_over_matter }
 	}

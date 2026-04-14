@@ -12,7 +12,7 @@ tech_micromechanic_constructs = {
 	weight = @tier3weight1
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -30,7 +30,7 @@ tech_swarm_logic = {
 	weight = @tier3weight2
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -66,7 +66,7 @@ tech_self_reconfiguring_micromatter = {
 	weight = @tier3weight2
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -99,7 +99,7 @@ tech_ubiquitous_smartdust = {
 	weight = @tier3weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -162,7 +162,7 @@ tech_micro_optimizations = {
 	weight = @tier3weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -203,7 +203,7 @@ tech_military_micromachines = {
 	weight = @tier3weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -264,7 +264,7 @@ tech_nanoscale_automatons = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -302,7 +302,7 @@ tech_adaptive_housing = {
 	weight = @tier4weight1
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -340,7 +340,7 @@ tech_self_assembling_infrastructure = {
 	weight = @tier5weight1
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -379,7 +379,7 @@ tech_emergent_intelligences = {
 	weight = @tier4weight1
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -415,7 +415,7 @@ tech_self_replicating_nanites = {
 	weight = @tier4weight2
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -449,7 +449,7 @@ tech_subsumption_bombardment = {
 	weight = @tier4weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -502,7 +502,7 @@ tech_identity_subsumption = {
 	weight = @tier4weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -589,7 +589,7 @@ tech_nanoform_workers = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 		is_mechanical_empire = yes
 	}
 
@@ -668,7 +668,7 @@ tech_nanoform_uplifting = {
 	weight = 0
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -697,7 +697,7 @@ tech_nanoform_gestalt = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 		is_machine_empire = yes
 	}
 
@@ -776,7 +776,7 @@ tech_terminal_integration = {
 	weight = 0
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -803,7 +803,7 @@ tech_smart_immune_systems = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 		OR = {	
 			has_country_flag = umbratellus_empire
 			NOR = {
@@ -853,7 +853,7 @@ tech_perpetual_herd_immunity = {
 	weight = 0
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -880,7 +880,7 @@ tech_post_mechanical_cybernetics = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 		OR = {
 			is_cyborg_empire = yes
 			has_country_flag = umbratellus_empire
@@ -926,7 +926,7 @@ tech_nanite_augmentation = {
 	weight = 0
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -950,7 +950,7 @@ tech_orbital_hyperfogs = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -1000,7 +1000,7 @@ tech_photosynthetic_fogs = {
 	weight = @tier4weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1037,7 +1037,7 @@ tech_autonomous_fogs = {
 	weight = @tier4weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -1100,7 +1100,7 @@ tech_nano_optimizations = {
 	weight = @tier4weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1144,7 +1144,7 @@ tech_femtoscale_robotics = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1182,7 +1182,7 @@ tech_sophont_networks = {
 	weight = @tier5weight1
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1218,7 +1218,7 @@ tech_universal_programmable_matter = {
 	weight = @tier5weight2
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -1256,7 +1256,7 @@ tech_pk_mass_deconstructor = {
 	potential = {
 		host_has_dlc = "Apocalypse"
 		has_country_flag = colossus_project
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1300,7 +1300,7 @@ tech_sapient_housing = {
 	weight = @tier5weight2
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1338,7 +1338,7 @@ tech_sophont_infrastructure = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1377,7 +1377,7 @@ tech_sophont_fogs = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -1441,7 +1441,7 @@ tech_self_healing_armor = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	weight_modifier = {
@@ -1475,7 +1475,7 @@ tech_miniaturized_autowars = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	## unlock strike craft 4
@@ -1509,7 +1509,7 @@ tech_megamachine_strategies = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1542,7 +1542,7 @@ tech_optical_phased_arrays = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1592,7 +1592,7 @@ tech_femto_optimizations = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1636,7 +1636,7 @@ tech_attoscale_mechanics = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -1686,7 +1686,7 @@ tech_toposophont_systems = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1724,7 +1724,7 @@ tech_nano_encryption = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1768,7 +1768,7 @@ tech_nano_decryption = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	modifier = {
@@ -1812,7 +1812,7 @@ tech_atto_optimizations = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -1854,7 +1854,7 @@ tech_nano_torpedoes = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1904,7 +1904,7 @@ tech_nano_swarmer_missile = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 	
 	weight_modifier = {
@@ -1954,7 +1954,7 @@ tech_great_archailect = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -2022,7 +2022,7 @@ tech_toposophont_fogs = {
 	is_rare = yes
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
     modifier = {
@@ -2045,7 +2045,7 @@ tech_toposophont_combat_computers = {
 	weight = @tier5weight3
 
 	potential = {
-		has_ascension_perk = ap_nanotech
+		nectd_has_ap_nanotech = yes
 	}
 
 	# unlocks toposophont combat computers

@@ -29,3 +29,7 @@ is_nanite_country = {
 		}
 	}
 }
+
+nectd_has_ap_nanotech = {
+	has_ascension_perk = ap_nanotech
+}
