@@ -4,7 +4,6 @@
 
 trait_nanite_enhanced = {
 	cost = 0
-	potential_crossbreeding_chance = 1.0
 	icon = "gfx/interface/icons/traits/trait_nanite_enhanced_species.dds"
 	improves_leaders = no
 	initial = no
