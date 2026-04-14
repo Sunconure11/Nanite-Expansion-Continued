@@ -120,7 +120,7 @@ archailect_species_first_synth = {
 
 archailect_diverse_future = {
 	envoys_add = 4
-	trade_value_mult = 0.25
+	planet_jobs_trade_produces_mult = 0.25
 	planet_immigration_pull_mult = 0.75
 }
 
