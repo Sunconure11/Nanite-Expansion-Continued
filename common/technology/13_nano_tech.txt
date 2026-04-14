@@ -20,19 +20,13 @@ tech_attoscale_mechanics = {
 	tier = 5
 	is_rare = yes
 
-	category = {
-		materials
-	}
+	category = { materials }
 
-	prerequisites = {
-		"tech_sophont_fogs"
-	}
+	prerequisites = { "tech_sophont_fogs" }
 
 	weight = @tier5weight3
 
-	potential = {
-		has_ascension_perk = ap_nanotech
-	}
+	potential = { has_ascension_perk = ap_nanotech }
 
 	modifier = {
 		description = tech_attoscale_mechanics_modifier_desc
@@ -53,13 +47,13 @@ tech_attoscale_mechanics = {
 			factor = 2.5
 			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
+	}
 
-		ai_weight = {
-			factor = 10
-			modifier = {
-				factor = 1.25
-				has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
-			}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
