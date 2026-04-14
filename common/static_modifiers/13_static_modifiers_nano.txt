@@ -103,12 +103,12 @@ archailect_calculated_strategist = {
 archailect_serenity_now = {
 	planet_stability_add = 10
 	country_consumer_goods_produces_mult = 0.15
-	local_trade_protection_add = 100
+	country_trade_produces_mult = 0.15
 }
 
 archailect_species_first = {
 	intel_encryption_add = 2
-	pop_growth_speed = 0.15
+	logistic_growth_mult = 0.15
 	country_starbase_capacity_add = 25
 }
 
@@ -121,7 +121,7 @@ archailect_species_first_synth = {
 archailect_diverse_future = {
 	envoys_add = 4
 	planet_jobs_trade_produces_mult = 0.25
-	planet_immigration_pull_mult = 0.75
+	# planet_immigration_pull_mult = 0.75
 }
 
 archailect_revolutionary_awakening = {
@@ -149,7 +149,7 @@ archailect_master_mundane = {
 }
 
 archailect_hive_ai = {
-	pop_growth_speed = 0.15
+	logistic_growth_mult = 0.15
 	country_energy_produces_mult = 0.15
 	planet_jobs_upkeep_mult = -0.15
 }
