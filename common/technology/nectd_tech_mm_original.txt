@@ -127,7 +127,7 @@ tech_ubiquitous_smartdust = {
 			factor = 1.25
 			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_skill > 2
+				has_total_skill > 2
 			}
 		}
 	}
@@ -227,7 +227,7 @@ tech_military_micromachines = {
 			factor = 1.25
 			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_skill > 2
+				has_total_skill > 2
 			}
 		}
 	}
@@ -542,14 +542,14 @@ tech_identity_subsumption = {
 		modifier = {
 			factor = 1.5
 			any_owned_leader = {
-				has_skill > 4
+				has_total_skill > 4
 			}
 		}
 		modifier = {
 			factor = 0.75
 			NOT = {
 				any_owned_leader = {
-						has_skill > 3
+						has_total_skill > 3
 				}
 			}
 		}
@@ -1065,7 +1065,7 @@ tech_autonomous_fogs = {
 			factor = 1.25
 			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_skill > 2
+				has_total_skill > 2
 			}
 		}
 	}
@@ -1405,7 +1405,7 @@ tech_sophont_fogs = {
 			factor = 1.25
 			any_owned_leader = {
 				has_trait = "leader_trait_expertise_industry"
-				has_skill > 2
+				has_total_skill > 2
 			}
 		}
 	}
