@@ -38,7 +38,7 @@ weapon_component_template = {
 	}
 
 	component_set = "NANO_BEAM"
-	upgrades_to = "ENERGY_LANCE_TEMPORAL"
+	# upgrades_to = "ENERGY_LANCE_TEMPORAL"
 	projectile_gfx = "nemesis_01_ion_cannon"
 
 	size_restriction = {

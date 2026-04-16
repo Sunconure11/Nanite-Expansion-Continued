@@ -23,7 +23,7 @@ utility_component_template = {
 	}
 
 	component_set = "NANO_ARMOR"
-	upgrades_to = "SMALL_TEMPORAL_ARMOR"
+	# upgrades_to = "SMALL_TEMPORAL_ARMOR"
 
 	resources = {
 		category = ship_components
@@ -63,7 +63,7 @@ utility_component_template = {
 	}
 
 	component_set = "NANO_ARMOR"
-	upgrades_to = "MEDIUM_TEMPORAL_ARMOR"
+	# upgrades_to = "MEDIUM_TEMPORAL_ARMOR"
 
 	resources = {
 		category = ship_components
@@ -103,7 +103,7 @@ utility_component_template = {
 	}
 
 	component_set = "NANO_ARMOR"
-	upgrades_to = "LARGE_TEMPORAL_ARMOR"
+	# upgrades_to = "LARGE_TEMPORAL_ARMOR"
 
 	resources = {
 		category = ship_components

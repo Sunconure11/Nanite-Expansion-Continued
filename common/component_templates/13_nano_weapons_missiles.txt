@@ -22,7 +22,7 @@ weapon_component_template = {
 	}
 
 	component_set = "TORPEDO_NANO"
-	upgrades_to = "TORPEDO_TEMPORAL"
+	# upgrades_to = "TORPEDO_TEMPORAL"
 	projectile_gfx = "large_torpedo_03"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
@@ -86,7 +86,7 @@ weapon_component_template = {
 	}
 
 	component_set = "NANO_SWARMER_MISSILE"
-	upgrades_to = "TEMPORAL_SWARMER_MISSILE"
+	# upgrades_to = "TEMPORAL_SWARMER_MISSILE"
 	projectile_gfx = "swarmer_missiles_02"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
