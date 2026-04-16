@@ -55,3 +55,11 @@ is_giga_crisis_faction = {
 	always = no
 } # Gigastructural Engineering & More
 
+merg_is_frozen = {
+	always = no
+}
+is_giga_habitat = {
+	always = no
+}
+
+# EOF

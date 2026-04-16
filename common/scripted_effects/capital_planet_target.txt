@@ -35,7 +35,7 @@ get_capital_planet = {
 						solar_system = { exists = starbase }
 					}
 					position = 0
-					order_by = trigger:num_sapient_pops
+					order_by = trigger:pop_amount
 					# weights = {
 					# 	base = 1
 					#	modifier = { add = 3 solar_system = { is_capital_system = yes } }
