@@ -274,15 +274,26 @@ building_universal_constructor_1 = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			alloys = 2
-			consumer_goods = 2
-			nanites = -1
-			mult = value:bath_attendant_skill
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = { has_technology = tech_atto_optimizations }
+				}
+			}
+			alloys = 3  # was 2
+			consumer_goods = 3  # was 2
+			# nanites = -1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
 		}
 		produces = {
 			trigger = {
+				exists = owner
 				owner = { has_technology = tech_atto_optimizations }
 			}
+			alloys = 2
+			consumer_goods = 2
+			# nanites = -1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
 			mult = 2
 		}
 		cost = {
@@ -292,6 +303,28 @@ building_universal_constructor_1 = {
 		upkeep = {
 			energy = @b2_upkeep
 			nanites = 5
+		}
+		# NANITE UPKEEP
+		# Takes former negative nanite production into upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = { has_technology = tech_atto_optimizations }
+				}
+			}
+			nanites = 1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
+		}
+
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_atto_optimizations }
+			}
+			nanites = 1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
+			mult = 2
 		}
 	}
 
@@ -377,18 +410,29 @@ building_universal_constructor_2 = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			exotic_gases = 1
-			rare_crystals = 1
-			volatile_motes = 1
-			nanites = -1
-			mult = value:bath_attendant_skill
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = { has_technology = tech_atto_optimizations }
+				}
+			}
+			exotic_gases = 2
+			rare_crystals = 2
+			volatile_motes = 2
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
 		}
 		produces = {
 			trigger = {
+				exists = owner
 				owner = { has_technology = tech_atto_optimizations }
 			}
+			exotic_gases = 2
+			rare_crystals = 2
+			volatile_motes = 2
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
 			mult = 2
 		}
+
 		cost = {
 			alloys = 1500
 			nanites = @b3_rare_cost
@@ -396,6 +440,25 @@ building_universal_constructor_2 = {
 		upkeep = {
 			energy = @b3_upkeep
 			nanites = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = { has_technology = tech_atto_optimizations }
+				}
+			}
+			nanites = 1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_atto_optimizations }
+			}
+			nanites = 1
+			mult = value:nectd_calc_factory_foundry_jobs_div_100
+			mult = 2
 		}
 	}
 
