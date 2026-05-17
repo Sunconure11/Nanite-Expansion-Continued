@@ -1,0 +1,112 @@
+spriteTypes = {
+	# Great Archailect
+	spriteType = {
+		name = "GFX_great_archailect_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_00.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_01_cauchy.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_02_main_databank.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_3_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_03_central_processor.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_4_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_04_quantum_compiler.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_5_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_05_networking_arrays.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_6_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_06_jovian_brain.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_7_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	# Variations on the 'Complete' icon
+	spriteType = {
+		name = "GFX_great_archailect_8_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_9_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_10_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_11_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_12_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_13_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_14_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_15_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_16_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_17_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/great_archailect_outliner_07_complete.dds"
+	}
+
+	# Orbital Hyperfog
+	spriteType = {
+		name = "GFX_orbital_hyperfog_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/orbital_hyperfog_outliner_00.dds"
+	}
+	spriteType = {
+		name = "GFX_orbital_hyperfog_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/orbital_hyperfog_outliner_01_central_processor.dds"
+	}
+	spriteType = {
+		name = "GFX_orbital_hyperfog_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/orbital_hyperfog_outliner_02_swarm_coordinator.dds"
+	}
+	spriteType = {
+		name = "GFX_orbital_hyperfog_3_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/orbital_hyperfog_outliner_03_complete.dds"
+	}
+
+	# Build icons
+	spriteType = {
+		name = "GFX_great_archailect_build_icon"
+		textureFile = "gfx/interface/icons/megastructures/megastructures_build_menu/build_menu_great_archailect.dds"
+	}
+	spriteType = {
+		name = "GFX_great_archailect_0_build_icon"
+		textureFile = "gfx/interface/icons/megastructures/megastructures_build_menu/build_menu_great_archailect.dds"
+	}
+	spriteType = {
+		name = "GFX_orbital_hyperfog_build_icon"
+		textureFile = "gfx/interface/icons/megastructures/megastructures_build_menu/build_menu_orbital_hyperfog.dds"
+	}
+	spriteType = {
+		name = "GFX_orbital_hyperfog_0_build_icon"
+		textureFile = "gfx/interface/icons/megastructures/megastructures_build_menu/build_menu_orbital_hyperfog.dds"
+	}
+}
