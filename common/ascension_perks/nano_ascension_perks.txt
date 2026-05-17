@@ -25,7 +25,6 @@ ap_nanotech = {
 
 	potential = {
 		has_distar = yes
-		has_utopia = yes
 		# is_ai = no
 	}
 
