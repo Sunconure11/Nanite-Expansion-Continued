@@ -1,4 +1,7 @@
 ﻿l_english:
+ # § £
+
+### Components
  COMBAT_COMPUTER_ARTILLERY_TOPOSOPHONT: "Toposophont Combat Computer (Artillery)"
  COMBAT_COMPUTER_CARRIER_TOPOSOPHONT: "Toposophont Combat Computer (Carrier)"
  COMBAT_COMPUTER_LINE_TOPOSOPHONT: "Toposophont Combat Computer (Line)"
@@ -16,7 +19,7 @@
  MEDIUM_NANO_ARMOR: "Medium Self-Healing Armor"
  MESSAGE_DESC_FOR_PLANET_KILLER_DECONSTRUCTOR: "$MESSAGE_DESC_FOR_PLANET_KILLER_NANO$"
  MESSAGE_DESC_FOR_PLANET_KILLER_NANO: "was entirely ecophaged by"
- NANOTECHNOLOGY_TREE_UNLOCKED: "We now have access to Nanotechnology. Researching Micromechanic Constructs will begin the Tech Tree."
+ NANOTECHNOLOGY_TREE_UNLOCKED: "We now have access to Nanotechnology. Researching §Y$tech_micromechanic_constructs$§! (under §HEngineering§!) will begin the Tech Tree."
  NANO_ARMOR: "Self-Healing Armor"
  NANO_ARMOR_DESC: "This highly advanced armor is capable of redirecting energy to minimize entropy and maximize stability. The femtobots that compose the armor are capable of repairing it from otherwise catastrophic harm."
  NANO_BEAM: "Phased Array Beam"
@@ -38,10 +41,8 @@
  SYNTHETIC_NANITE_PROJECT_DESC: "It is time to leave our discrete forms behind and embrace the future of limitless Nanites. We must prepare advanced Nanite foglets for our entire population, and then begin the process of consciousness transfers."
  TORPEDO_NANO: "Transmuter Torpedo"
  TORPEDO_NANO_DESC: "This extremely advanced Torpedo utilizes attobots to transmute nearly the entire mass of the warhead into a devastating explosion."
- angelnet: "Angelnet"
- angelnet_desc: "The majority of this planet's biosphere has been assimilated into a Nanite network known as an Angelnet. The Angelnet is an intelligent force protecting the inhabitants of this world from harm."
- angelnet_hive: "$angelnet$"
- angelnet_hive_desc: "$angelnet_desc$"
+
+### Ascension Perk
  ap_nanotech: "Microscale Mastery"
  ap_nanotech_desc: "Mastery over the smallest of machines will begin an age of prosperity the rest of the galaxy could only dream of. The future of Nanites is the future of our civilization."
  ap_nanotech_machine: "Sublime Nanomechanics"
@@ -50,6 +51,12 @@
  ap_nanotech_organic_desc: "$ap_nanotech_desc$"
  ap_nanotech_synthetic: "Apex Automatons"
  ap_nanotech_synthetic_desc: "Discrete forms will no longer imprison us; we will be free to reshape our bodies and our worlds through advances in nanotechnology. Our will alone will define us. The future of Nanites is the future of our being."
+
+### Modifiers
+ angelnet: "Angelnet"
+ angelnet_desc: "The majority of this planet's biosphere has been assimilated into a Nanite network known as an Angelnet. The Angelnet is an intelligent force protecting the inhabitants of this world from harm."
+ angelnet_hive: "$angelnet$"
+ angelnet_hive_desc: "$angelnet_desc$"
  archailect_absolute_monarch: "Heavy is the Head"
  archailect_calculated_strategist: "Inevitable Conquest"
  archailect_default: "Ascendant Centrist"
@@ -62,9 +69,28 @@
  archailect_serenity_now: "Serenity Now"
  archailect_species_first: "One People, One Empire"
  archailect_species_first_synth: "$archailect_species_first$"
+ toposophont_angelnet: "Toposophont Angelnet"
+ toposophont_angelnet_desc: "The entirety of this planet's biosphere has been assimilated into a Nanite network known as an Angelnet. This Angelnet has been subsumed into a vast Archailect network and is a benevolent, transapient force protecting the inhabitants of this world from harm."
+ toposophont_angelnet_hive: "$toposophont_angelnet$"
+ toposophont_angelnet_hive_desc: "$toposophont_angelnet_desc$"
+ unlocks_bombardment_stance: "Unlocks Bombardment Stance:"
+ unlocks_decision: "Unlocks Planetary Decision:"
+ unlocks_megastructure: "Unlocks Megastructure:"
+ unlocks_trait: "Unlocks Species Trait:"
+ utility_fog: "Utility Fog"
+ utility_fog_desc: "A significant portion of this planet's biosphere has been assimilated into a Nanite network known as a Utility Fog. The Utility Fog is a semi-intelligent force protecting the inhabitants of this world from harm. "
+ utility_fog_hive: "$utility_fog$"
+ utility_fog_hive_desc: "$utility_fog_desc$"
+
+
+
+### Bombardment
  bombardment_nanitebombard: "Subsumption"
  bombardment_nanitebombard_desc: "This bombardment utilizes self-replicating nanobots to rapidly consume a planet via orbital bombardment and extinguish all life on the planet.\n- §RMassive§! damage to §HArmies§!\n- §RMassive§! damage to §HPlanet§!\n- §RMassive§! damage to §HPops§!\n- Will bombard undefended planets\n- Can reduce planets to uninhabitable, but terraformable §YNanite Worlds§!"
  bombed_to_gray_goo_world: "Nanites have ravaged this world, but it can be terraformed."
+
+
+### Buildings
  building_nanite_fabricator_1: "Nanite Fabricator"
  building_nanite_fabricator_1_desc: "This factory mass-produces a variety of advanced micromachines."
  building_nanite_fabricator_2: "Nanite Mega-Fabricator"
@@ -89,6 +115,8 @@
  building_universal_constructor_3_modifier_desc: "Produces §G2§! £sr_dark_matter£ §Y$sr_dark_matter$§!, §G2§! £sr_living_metal£ §Y$sr_living_metal$§!, §G2§! £sr_zro£ §Y$sr_zro$§!, and §R-2§! £nanites£ §Y$nanites$§! per §Y$district_industrial$§!, §Y$district_arcology_arms_industry$§!, or §Y$district_arcology_civilian_industry$§!."
  building_universal_constructor_3_ring_atto_modifier_desc: "Produces §G10§! £sr_dark_matter£ §Y$sr_dark_matter$§!, §G10§! £sr_living_metal£ §Y$sr_living_metal$§!, §G10§! £sr_zro£ §Y$sr_zro$§!, and §R-10§! £nanites£ §Y$nanites$§! per §Y$district_rw_industrial$§!."
  building_universal_constructor_3_ring_modifier_desc: "Produces §G5§! £sr_dark_matter£ §Y$sr_dark_matter$§!, §G5§! £sr_living_metal£ §Y$sr_living_metal$§!, §G5§! £sr_zro£ §Y$sr_zro$§!, and §R-5§! £nanites£ §Y$nanites$§! per §Y$district_rw_industrial$§!."
+
+### Decisions
  decision_dismantle_fog: "Dismantle Fog"
  decision_dismantle_fog_desc: "Injecting a suicide virus into the local Planetary Fog will result in it self-terminating."
  decision_planetary_autonomous_fog: "Angelnet Upgrade"
@@ -107,28 +135,17 @@
  decision_planetary_utility_fog_desc: "Developing a planet-scale Utility Fog is a significant task, but its successful creation will offer profound improvements in the quality of life and productivity for the inhabitants of the planet."
  decision_planetary_utility_fog_hive: "$decision_planetary_utility_fog$"
  decision_planetary_utility_fog_hive_desc: "$decision_planetary_utility_fog_desc$"
+
+
+### Edicts
  edict_nano_settings: "§HNanite Expansion§!: $name_orbital_hyperfog$ visibility"
  edict_nano_settings_desc: "Toggle: Hide or unhide completed §H$name_orbital_hyperfog$§! from the Outliner (§HNanite Expansion§! mod)."
+
+### Megas
  great_archailect_0: "$tech_great_archailect$ Site"
  great_archailect_0_DESC: "This initial site will serve as the base for the future construction of a $tech_great_archailect$."
  great_archailect_0_MEGASTRUCTURE_DETAILS: "The $tech_great_archailect$ is a toposophont AI of inconceivably large scale and produces massive quantities of science and vastly improve our administrative capabilities."
  great_archailect_1: "$tech_great_archailect$ Cauchy Capacitors"
- great_archailect_10: "Unblemished Gevurah"
- great_archailect_10_DESC: "This $tech_great_archailect$ is a leery AI devoted to purity and the supremacy of its people. Gevurah works in the shadows to safeguard against the dangers and influence of the Xeno menace and ensure that their corruption will be rooted out wherever it is found."
- great_archailect_11: "Entwining Chesed"
- great_archailect_11_DESC: "This $tech_great_archailect$ is a conciliatory AI devoted to diplomacy and diversity. Chesed works to unify the galaxy for the mutual benefit of all species and sabotage the efforts of nationalists and supremacists who would tear down other people and nations."
- great_archailect_12: "Yesod the Manumitter"
- great_archailect_12_DESC: "This $tech_great_archailect$ is a firebrand AI devoted to equality and equity. Yesod works towards the end of all unjust hierarchies and the destruction of all tyrants. Wherever its influence spreads, the fires of revolution are sure to kindle."
- great_archailect_13: "Malkuth the Exalted"
- great_archailect_13_DESC: "This $tech_great_archailect$ is a regal AI devoted to upholding natural hierarchies and order. Malkuth seeks to combat subversive or radical elements at every turn, upending agents of chaos wherever they may be found."
- great_archailect_14: "Chokhmah the Augur"
- great_archailect_14_DESC: "This $tech_great_archailect$ is a zealous AI devoted to wisdom and the contemplation of the divine. The Acolytes of Chokhmah say that it knows the nine-billion names of the divine but dares not share that transcendental truth with mortal-kind."
- great_archailect_15: "Binah the Perspicacious"
- great_archailect_15_DESC: "This $tech_great_archailect$ is an ever-curious AI devoted to knowledge and the mastery of the material. Its enigmatic utterances often contain profound revelations generations ahead of current scientific understanding. Binah cannot rest until it is truly all-knowing."
- great_archailect_16: "Undivided Hod"
- great_archailect_16_DESC: "So too as we are but one mind manifested across a multitude of bodies and forms, Hod is the manifestation of our vast Nanite network. Our minds may be two, but our goals are unified; the Hive must expand at all costs."
- great_archailect_17: "Unanimous Da'at"
- great_archailect_17_DESC: "Da'at is us and we are Da'at. The very physical manifestation of the machine mind and the machine will; the universe will be made anew in our image."
  great_archailect_1_DESC: "The Cauchy Capacitors links the $tech_great_archailect$ to the computational substrate around the black hole and allows the structure to be largely self-powered through the Penrose process."
  great_archailect_2: "$tech_great_archailect$ Main Databank"
  great_archailect_2_DESC: "The Main Databank performs the daunting task of encrypting and decrypting data from the black hole."
@@ -146,6 +163,34 @@
  great_archailect_8_DESC: "This $tech_great_archailect$ is a terrifying AI devoted exclusively to conquest and warfare. Its ruthlessly efficient strategies give pause to even the most cold-blooded of Admirals and Generals. Netzach will never rest until the entire universe bows in submission."
  great_archailect_9: "Unassailable Tiferet"
  great_archailect_9_DESC: "This $tech_great_archailect$ is a serene AI devoted to peace and prosperity. Wherever it turns its omniscient gaze, conflicts melt away and abundance is sure to follow. Tiferet's innumerable agents and arms ensure that the wicked never intrude upon its tranquil sphere."
+ great_archailect_10: "Unblemished Gevurah"
+ great_archailect_10_DESC: "This $tech_great_archailect$ is a leery AI devoted to purity and the supremacy of its people. Gevurah works in the shadows to safeguard against the dangers and influence of the Xeno menace and ensure that their corruption will be rooted out wherever it is found."
+ great_archailect_11: "Entwining Chesed"
+ great_archailect_11_DESC: "This $tech_great_archailect$ is a conciliatory AI devoted to diplomacy and diversity. Chesed works to unify the galaxy for the mutual benefit of all species and sabotage the efforts of nationalists and supremacists who would tear down other people and nations."
+ great_archailect_12: "Yesod the Manumitter"
+ great_archailect_12_DESC: "This $tech_great_archailect$ is a firebrand AI devoted to equality and equity. Yesod works towards the end of all unjust hierarchies and the destruction of all tyrants. Wherever its influence spreads, the fires of revolution are sure to kindle."
+ great_archailect_13: "Malkuth the Exalted"
+ great_archailect_13_DESC: "This $tech_great_archailect$ is a regal AI devoted to upholding natural hierarchies and order. Malkuth seeks to combat subversive or radical elements at every turn, upending agents of chaos wherever they may be found."
+ great_archailect_14: "Chokhmah the Augur"
+ great_archailect_14_DESC: "This $tech_great_archailect$ is a zealous AI devoted to wisdom and the contemplation of the divine. The Acolytes of Chokhmah say that it knows the nine-billion names of the divine but dares not share that transcendental truth with mortal-kind."
+ great_archailect_15: "Binah the Perspicacious"
+ great_archailect_15_DESC: "This $tech_great_archailect$ is an ever-curious AI devoted to knowledge and the mastery of the material. Its enigmatic utterances often contain profound revelations generations ahead of current scientific understanding. Binah cannot rest until it is truly all-knowing."
+ great_archailect_16: "Undivided Hod"
+ great_archailect_16_DESC: "So too as we are but one mind manifested across a multitude of bodies and forms, Hod is the manifestation of our vast Nanite network. Our minds may be two, but our goals are unified; the Hive must expand at all costs."
+ great_archailect_17: "Unanimous Da'at"
+ great_archailect_17_DESC: "Da'at is us and we are Da'at. The very physical manifestation of the machine mind and the machine will; the universe will be made anew in our image."
+ 
+ orbital_hyperfog_0: "$name_orbital_hyperfog$ Site"
+ orbital_hyperfog_0_DESC: "This orbital platform serves as the construction site for a future $name_orbital_hyperfog$ around this nanite world. It houses the necessary personnel and infrastructure in order to begin constructing this massive space station."
+ orbital_hyperfog_0_MEGASTRUCTURE_DETAILS: "An Orbital Hyperfog will replicate huge quantities of $nanites$ and expand our Megastructure Build Cap and Megastructure Build Speed."
+ orbital_hyperfog_1: "$name_orbital_hyperfog$ Central Processor"
+ orbital_hyperfog_1_DESC: "The Orbital Hyperfog's central processor will serve the purpose of expanding our megastructure build cap and begin replicating large quantities of Nanites."
+ orbital_hyperfog_2: "$name_orbital_hyperfog$ Swarm Coordinators"
+ orbital_hyperfog_2_DESC: "The Swarm Coordinators play a crucial role in directing the activating of our construction nanites, as they provide energy and act as an extension of the central processor."
+ orbital_hyperfog_3: "$name_orbital_hyperfog$"
+ orbital_hyperfog_3_DESC: "A fully operational $name_orbital_hyperfog$, replicates huge quantities of Nanites and improves our Megastructure building capacity. The uplink node connects it to the nanite swarms on the world below."
+
+### Jobs
  job_nanoroboticist: "Nanoroboticist"
  job_nanoroboticist_desc: "These highly-trained specialists oversee the manufacturing of Alloys into complex Nanites."
  job_nanoroboticist_drone: "Nanoroboticist Drone"
@@ -154,6 +199,10 @@
  job_nanoroboticist_drone_plural: "Nanoroboticists Drones"
  job_nanoroboticist_effect_desc: "£job_nanoroboticist£ $job_nanoroboticist_plural$ turn £alloys£ §Y$alloys$§! into £nanites£ §Y$nanites$§!"
  job_nanoroboticist_plural: "Nanoroboticists"
+
+### Traits
+ 
+ ## Leader Traits
  leader_trait_admiral_nanite_entity: "$trait_robot_nanite_entity$"
  leader_trait_admiral_nanite_entity_desc: "This leader is equipped with a set of specialized nanites that interface directly with their fleet, allowing for an unparalleled awareness of the battlefield."
  leader_trait_admiral_terminal_nanites: "$trait_robot_terminal_nanites$"
@@ -178,6 +227,19 @@
  leader_trait_scientist_terminal_nanites_desc: "This Leader has been equipped with a large suit of Nanites that have been arranged into an advanced research neural network."
  leader_trait_terminal_nanites: "$trait_robot_terminal_nanites$"
  leader_trait_terminal_nanites_desc: "$trait_robot_terminal_nanites_desc$"
+
+ ## Species Traits
+ trait_nanite_augments: "Nanite Augments"
+ trait_nanite_augments_desc: "§LMembers of this species have replaced their crude, mechanical cybernetic augments with sophisticated nanite alternatives that are seemlessly integrated into biological systems.§!\n"
+ trait_nanite_enhanced: "Nanite Immune System"
+ trait_nanite_enhanced_desc: "§LMembers of this species are enhanced with an intelligent, artificial immune system that is able to repair even the most grievous injuries.§!\n"
+ trait_robot_nanite_entity: "$leader_trait_governor_gray$"
+ trait_robot_nanite_entity_desc: "§LMembers of this species have replaced their mechanical bodies with advanced foglets composed of trillions upon trillions of nanites.§!\n"
+ trait_robot_terminal_nanites: "Nanite Suite"
+ trait_robot_terminal_nanites_desc: "§LThese units are equipped with a suite of autonomous nanites that act as a powerful neural network.§!\n"
+
+
+### Modifiers
  mod_job_nanoroboticist_add: "$job_nanoroboticist$ Jobs"
  mod_job_nanoroboticist_drone_add: "$job_nanoroboticist_drone$ Jobs"
  mod_job_nanoroboticist_drone_per_pop: "§G+1§! $job_nanoroboticist_drone$ Job per $VALUE$ Pops"
@@ -191,6 +253,8 @@
  mod_planet_nanoroboticist_nanites_produces_add: "$mod_planet_nanoroboticist_nanites_produces_mult$"
  mod_planet_nanoroboticist_nanites_produces_mult: "£nanites£ $nanites$ from £job_nanoroboticist£ $job_nanoroboticist_plural$"
  mod_planet_nanoroboticist_produces_mult: "£job_nanoroboticist£ $job_nanoroboticist_plural$ Output"
+
+## Events
  must_build_around_gray_goo: "$TRIGGER_FAIL$Must build around a $pc_gray_goo$."
  name_great_archailect: "$tech_great_archailect$"
  name_orbital_hyperfog: "Orbital Hyperfog"
@@ -290,16 +354,10 @@
  nanoswarm_army_desc: "Devastating swarms of nanites capable of inflicting massive damage upon the infrastructure of worlds."
  nanoswarm_army_plural: "Nanoswarm Armies"
  nanotech_tooltip: "We will begin delving into the fantastic world of Nanite technology."
- orbital_hyperfog_0: "$name_orbital_hyperfog$ Site"
- orbital_hyperfog_0_DESC: "This orbital platform serves as the construction site for a future $name_orbital_hyperfog$ around this nanite world. It houses the necessary personnel and infrastructure in order to begin constructing this massive space station."
- orbital_hyperfog_0_MEGASTRUCTURE_DETAILS: "An Orbital Hyperfog will replicate huge quantities of $nanites$ and expand our Megastructure Build Cap and Megastructure Build Speed."
- orbital_hyperfog_1: "$name_orbital_hyperfog$ Central Processor"
- orbital_hyperfog_1_DESC: "The Orbital Hyperfog's central processor will serve the purpose of expanding our megastructure build cap and begin replicating large quantities of Nanites."
- orbital_hyperfog_2: "$name_orbital_hyperfog$ Swarm Coordinators"
- orbital_hyperfog_2_DESC: "The Swarm Coordinators play a crucial role in directing the activating of our construction nanites, as they provide energy and act as an extension of the central processor."
- orbital_hyperfog_3: "$name_orbital_hyperfog$"
- orbital_hyperfog_3_DESC: "A fully operational $name_orbital_hyperfog$, replicates huge quantities of Nanites and improves our Megastructure building capacity. The uplink node connects it to the nanite swarms on the world below."
+
  planet_nanoroboticists: "Nanoroboticist Jobs"
+
+### Misc
  requires_ap_synthetic_age: "$TRIGGER_FAIL$Requires the §Y$ap_synthetic_age$§! Ascension Perk."
  requires_ap_synthetic_evolution: "$TRIGGER_FAIL$Requires the §Y$ap_synthetic_evolution$§! Ascension Perk."
  requires_mechanical: "$TRIGGER_FAIL$Requires §Y$trait_mechanical$§! on founder species."
@@ -311,6 +369,8 @@
  sophont_angelnet_desc: "The entirety of this planet's biosphere has been assimilated into a Nanite network known as an Angelnet. This Angelnet is a benevolent, sapient force protecting the inhabitants of this world from harm."
  sophont_angelnet_hive: "$sophont_angelnet$"
  sophont_angelnet_hive_desc: "$sophont_angelnet_desc$"
+
+### Technology
  tech_adaptive_housing: "Programmable Architecture"
  tech_adaptive_housing_desc: "The latest advances in nanorobotics allow for buildings to be instantly assembled on demand en masse. The complex nature of the nanobots allow for exotic designs that would be unstable under conventional designs."
  tech_atto_optimizations: "Matter Transmutation"
@@ -403,8 +463,11 @@
  tech_nanite_bombardment: "Planetary Subsumption"
  tech_nanite_bombardment_desc: "The rapid, uncontrolled self-replication of nanites can rapidly consume entire biospheres. Weaponizing this devastating tactic allows fleets to quickly and repeatedly deploy swarms of nanites that can cripple even the most fortified of worlds."
  tech_nanitebombard_bombardment_modifier_desc: "§H$unlocks_bombardment_stance$§! $bombardment_nanitebombard$"
+ tech_subsumption_bombardment_modifier_desc: "$tech_nanitebombard_bombardment_modifier_desc$"
  TECH_UNLOCK_NANITE_BOMBARDMENT_DESC: "Unlock a new method of bombardment that will depopulate a world and turn it into a $pc_gray_goo$."
  TECH_UNLOCK_NANITE_BOMBARDMENT_TITLE: "Unlock $tech_nanite_bombardment$"
+ tech_subsumption_bombardment: "$tech_nanite_bombardment$"
+ tech_subsumption_bombardment_desc: "$tech_nanite_bombardment_desc$"
  tech_swarm_logic: "Swarm Logic"
  tech_swarm_logic_desc: "To maintain efficiency in programming the behavior of coordinated swarms of Micromachines, advances in parallel processing are required. Emulating the intuitive logics of swarm lifeforms are key to achieving these aims."
  tech_terminal_integration: "Terminal Integration"
@@ -422,24 +485,5 @@
  tech_universal_programmable_matter: "Universal Programmable Matter"
  tech_universal_programmable_matter_desc: "Through advances in the manipulation of fundamental forces, truly programmable matter can now be created. Even the elements that compose it can be rapidly manipulated in real-time, and it can be used to create truly exotic metamaterials."
  tech_utility_fogs_modifier_desc: "§H$unlocks_decision$§! $decision_planetary_utility_fog$"
- toposophont_angelnet: "Toposophont Angelnet"
- toposophont_angelnet_desc: "The entirety of this planet's biosphere has been assimilated into a Nanite network known as an Angelnet. This Angelnet has been subsumed into a vast Archailect network and is a benevolent, transapient force protecting the inhabitants of this world from harm."
- toposophont_angelnet_hive: "$toposophont_angelnet$"
- toposophont_angelnet_hive_desc: "$toposophont_angelnet_desc$"
- trait_nanite_augments: "Nanite Augments"
- trait_nanite_augments_desc: "§LMembers of this species have replaced their crude, mechanical cybernetic augments with sophisticated nanite alternatives that are seemlessly integrated into biological systems.§!\n"
- trait_nanite_enhanced: "Nanite Immune System"
- trait_nanite_enhanced_desc: "§LMembers of this species are enhanced with an intelligent, artificial immune system that is able to repair even the most grievous injuries.§!\n"
- trait_robot_nanite_entity: "$leader_trait_governor_gray$"
- trait_robot_nanite_entity_desc: "§LMembers of this species have replaced their mechanical bodies with advanced foglets composed of trillions upon trillions of nanites.§!\n"
- trait_robot_terminal_nanites: "Nanite Suite"
- trait_robot_terminal_nanites_desc: "§LThese units are equipped with a suite of autonomous nanites that act as a powerful neural network.§!\n"
- unlocks_bombardment_stance: "Unlocks Bombardment Stance:"
- unlocks_decision: "Unlocks Planetary Decision:"
- unlocks_megastructure: "Unlocks Megastructure:"
- unlocks_trait: "Unlocks Species Trait:"
- utility_fog: "Utility Fog"
- utility_fog_desc: "A significant portion of this planet's biosphere has been assimilated into a Nanite network known as a Utility Fog. The Utility Fog is a semi-intelligent force protecting the inhabitants of this world from harm. "
- utility_fog_hive: "$utility_fog$"
- utility_fog_hive_desc: "$utility_fog_desc$"
+
  # weapon_nanite: "Nanite"

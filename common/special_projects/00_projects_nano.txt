@@ -8,7 +8,7 @@ special_project = {
 			}
 			scope = this
 			add = 150
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology
@@ -22,7 +22,7 @@ special_project = {
 
 	on_success = {
 		# Use event target so a capital-conquering country is not affected
-		event_target:synth_nano_owner = {
+		event_target:synth_nano_owner@root = {
 			country_event = { id = nano.1311 }
 		}
 	}
@@ -41,7 +41,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = physics_technology
@@ -74,7 +74,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = society_technology
@@ -107,7 +107,7 @@ special_project = {
 			}
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology

@@ -1,7 +1,10 @@
+
 namespace = nano_dialog
+
 ####################################################
 ### Orbital Hyperfog ###############################
 ####################################################
+
 country_event = {
 	id = nano_dialog.1310
 	title = "nano_dialog.1310.name"
@@ -10,7 +13,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_start
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "astral_rift.130.a" }
+
+	option = {
+		name = "astral_rift.130.a"
+	}
 }
 
 country_event = {
@@ -21,7 +27,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1321.a" }
+
+	option = {
+		name = "nano_dialog.1321.a"
+	}
 }
 
 country_event = {
@@ -32,7 +41,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1323.a" }
+
+	option = {
+		name = "nano_dialog.1323.a"
+	}
 }
 
 country_event = {
@@ -43,12 +55,16 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "astral_planes.100.a" }
+
+	option = {
+		name = "astral_planes.100.a"
+	}
 }
 
 ####################################################
 ### Great Archailect ###############################
 ####################################################
+
 country_event = {
 	id = nano_dialog.1320
 	title = "nano_dialog.1320.name"
@@ -57,7 +73,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_start
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "04_END_RIVALRY_ACCEPT_NEUTRAL" }
+
+	option = {
+		name = "04_END_RIVALRY_ACCEPT_NEUTRAL"
+	}
 }
 
 country_event = {
@@ -68,7 +87,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1321.a" }
+
+	option = {
+		name = "nano_dialog.1321.a"
+	}
 }
 
 country_event = {
@@ -79,7 +101,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_upgrade_panel
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "astral_rift.130.a" }
+
+	option = {
+		name = "astral_rift.130.a"
+	}
 }
 
 country_event = {
@@ -90,7 +115,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "nano_dialog.1323.a" }
+
+	option = {
+		name = "nano_dialog.1323.a"
+	}
 }
 
 country_event = {
@@ -101,7 +129,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "FANTASTIC" }
+
+	option = {
+		name = "FANTASTIC"
+	}
 }
 
 country_event = {
@@ -112,7 +143,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "astral_planes.100.a" }
+
+	option = {
+		name = "astral_planes.100.a"
+	}
 }
 
 country_event = {
@@ -123,7 +157,10 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
-	option = { name = "ASTOUNDING" }
+
+	option = {
+		name = "ASTOUNDING"
+	}
 }
 
 country_event = {
@@ -134,9 +171,13 @@ country_event = {
 	show_sound = event_dyson_sphere_build_complete
 	location = event_target:nano_planet
 	is_triggered_only = yes
+
 	immediate = {
 		if = {
-			limit = { NOT = { exists = event_target:nano_planet } exists = fromfromfrom.orbit }
+			limit = {
+				NOT = { exists = event_target:nano_planet }
+				exists = fromfromfrom.orbit
+			}
 			fromfromfrom.orbit = { save_event_target_as = nano_planet }
 		}
 		random_playable_country = {
@@ -150,10 +191,14 @@ country_event = {
 			}
 		}
 	}
+
 	after = {
 		owner = {
 			country_event = { id = nano.1340 }
 		}
 	}
-	option = { name = "envoy_events.15.A" }
+
+	option = {
+		name = "envoy_events.15.A"
+	}
 }

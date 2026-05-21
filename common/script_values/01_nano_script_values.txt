@@ -2,3 +2,17 @@ nano_giga_cost_mult = {
 	base = 1
 	modifier = { add = 1 has_global_flag = gigastructures_enabled }
 }
+
+nectd_calc_factory_foundry_jobs_div_100 = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = total_workforce_with_job_tag
+		trigger_scope = planet
+		parameters = {
+			tags = { alloys consumer_goods }
+		}
+		mode = add
+	}
+	divide = 150
+	min = 1
+}

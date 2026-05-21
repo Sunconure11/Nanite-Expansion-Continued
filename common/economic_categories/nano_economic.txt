@@ -7,5 +7,5 @@ planet_nanoroboticists = {
 	# generate_add_modifiers = {
 	# 	produces
 	# }
-	modifier_category = pop
+	modifier_category = pop_job
 }

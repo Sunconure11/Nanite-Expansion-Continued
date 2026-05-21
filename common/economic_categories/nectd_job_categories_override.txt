@@ -1,0 +1,7 @@
+planet_jobs_robotic = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+	modifier_category = pop_job
+}

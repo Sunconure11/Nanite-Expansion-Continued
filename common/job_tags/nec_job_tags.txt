@@ -1,0 +1,4 @@
+# Nanite Ascension Continued (NEC) job tags
+
+nanites
+nectd_job_tag_nanites

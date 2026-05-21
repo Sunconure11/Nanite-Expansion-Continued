@@ -1,10 +1,16 @@
+
 orbital_hyperfog_0 = {
 	entity = "construction_platform_entity"
 	construction_entity = "construction_platform_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	prerequisites = { tech_orbital_hyperfogs }
+
+	prerequisites = {
+		tech_orbital_hyperfogs
+	}
+
 	build_time = 1800
+
 	resources = {
 		category = megastructures
 		cost = {
@@ -12,12 +18,22 @@ orbital_hyperfog_0 = {
 			nanites = 500
 			influence = 75
 		}
-		upkeep = { energy = 5 }
+		upkeep = {
+			energy = 5
+		}
 	}
-	potential = { has_technology = tech_orbital_hyperfogs }
+
+	potential = {
+		has_technology = tech_orbital_hyperfogs
+	}
+
 	possible = {
-		custom_tooltip = { fail_text = "requires_inside_border" is_inside_border = from }
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
 	}
+
 	placement_rules = {
 		planet_possible = {
 			custom_tooltip = {
@@ -35,7 +51,10 @@ orbital_hyperfog_0 = {
 					status = yes
 				}
 			}
-			custom_tooltip = { fail_text = "requires_no_anomaly" has_anomaly = no }
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				has_anomaly = no
+			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
 				# can_build_megastructure_on_planet = yes
@@ -57,12 +76,31 @@ orbital_hyperfog_0 = {
 				fail_text = "requires_not_minor_planetary_body"
 				is_asteroid = no
 			}
-			custom_tooltip = { fail_text = "requires_not_star" is_star = no }
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
 		}
 		# Use these for all non-star megastructures
 	}
+
 	ai_weight = {
 		weight = 10		# Default = 100
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_country_flag = has_recently_built_orbital_hyperfog
+					count_owned_megastructure = {
+						count > 2
+						limit = { is_megastructure_type = orbital_hyperfog_3 }
+					}
+					has_megastructure = orbital_hyperfog_0
+					has_megastructure = orbital_hyperfog_1
+					has_megastructure = orbital_hyperfog_2
+				}
+			}
+		}
 		# Is this system a good location?
 		modifier = {
 			factor = 0.5
@@ -74,20 +112,11 @@ orbital_hyperfog_0 = {
 		# Do we lean towards this from federation/ethic/civic?
 		# How many of this megastructure can the AI build?
 		modifier = {
-			factor = 0
-			from = {
-				OR = {
-					has_country_flag = has_recently_built_orbital_hyperfog
-					count_owned_megastructure = { limit = { is_megastructure_type = orbital_hyperfog_3 } count > 2 }
-				}
-			}
-		}
-		modifier = {
 			factor = 0.33
 			from = {
 				count_owned_megastructure = {
-					limit = { is_megastructure_type = orbital_hyperfog_3 }
 					count = 2
+					limit = { is_megastructure_type = orbital_hyperfog_3 }
 				}
 			}
 		}
@@ -95,22 +124,13 @@ orbital_hyperfog_0 = {
 			factor = 0.66
 			from = {
 				count_owned_megastructure = {
-					limit = { is_megastructure_type = orbital_hyperfog_3 }
 					count = 1
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			from = {
-				OR = {
-					has_megastructure = orbital_hyperfog_0
-					has_megastructure = orbital_hyperfog_1
-					has_megastructure = orbital_hyperfog_2
+					limit = { is_megastructure_type = orbital_hyperfog_3 }
 				}
 			}
 		}
 	}
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = {
@@ -127,6 +147,7 @@ orbital_hyperfog_0 = {
 			country_event = { id = nano_dialog.1310 }			# Notification
 		}
 	}
+
 	# show_in_outliner = yes
 	outliner_trigger = {
 		exists = owner
@@ -139,26 +160,45 @@ orbital_hyperfog_1 = {
 	construction_entity = "nano_hyperfog_phase_01_core_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	upgrade_from = { orbital_hyperfog_0 }
+
+	upgrade_from = {
+		orbital_hyperfog_0
+	}
+
 	build_time = 1800
+
 	resources = {
 		category = megastructures
-		cost = { alloys = 3600 nanites = 100 }
-		upkeep = { energy = 25 }
-		produces = { nanites = 15 }
+		cost = {
+			alloys = 3600
+			nanites = 100
+		}
+		upkeep = {
+			energy = 25
+		}
+		produces = {
+			nanites = 15
+		}
 	}
+
 	possible = {
 		from = { has_technology = tech_orbital_hyperfogs }
 	}
-	country_modifier = { country_megastructure_build_cap_add = 1 }
-	ai_weight = { factor = 10 }	# If we can build it, we will build it
+
+	country_modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+
+	ai_weight = {
+		factor = 10
+	}	# If we can build it, we will build it
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
-		from = {
-			country_event = { id = nano_dialog.1311 }
-		}		# Notification
+		from = { country_event = { id = nano_dialog.1311 } }		# Notification
 	}
+
 	# show_in_outliner = yes
 	outliner_trigger = {
 		exists = owner
@@ -171,26 +211,46 @@ orbital_hyperfog_2 = {
 	construction_entity = "nano_hyperfog_phase_02_construction_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	upgrade_from = { orbital_hyperfog_1 }
+
+	upgrade_from = {
+		orbital_hyperfog_1
+	}
+
 	build_time = 1800
+
 	resources = {
 		category = megastructures
-		cost = { alloys = 4000 nanites = 100 }
-		upkeep = { energy = 30 }
-		produces = { nanites = 25 }
+		cost = {
+			alloys = 4000
+			nanites = 100
+		}
+		upkeep = {
+			energy = 30
+		}
+		produces = {
+			nanites = 25
+		}
 	}
+
 	possible = {
 		from = { has_technology = tech_orbital_hyperfogs }
 	}
-	country_modifier = { country_megastructure_build_cap_add = 1 megastructure_build_speed_mult = 0.1 }
-	ai_weight = { factor = 10 }	# If we can build it, we will build it
+
+	country_modifier = {
+		country_megastructure_build_cap_add = 1
+		megastructure_build_speed_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 10
+	}	# If we can build it, we will build it
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
-		from = {
-			country_event = { id = nano_dialog.1312 }
-		}		# Notification
+		from = { country_event = { id = nano_dialog.1312 } }		# Notification
 	}
+
 	# show_in_outliner = yes
 	outliner_trigger = {
 		exists = owner
@@ -203,19 +263,40 @@ orbital_hyperfog_3 = {
 	construction_entity = "nano_hyperfog_phase_03_construction_entity"
 	portrait = "GFX_megastructure_gray_goo_world"
 	place_entity_on_planet_plane = no
-	upgrade_from = { orbital_hyperfog_2 }
+
+	upgrade_from = {
+		orbital_hyperfog_2
+	}
+
 	build_time = 1800
+
 	resources = {
 		category = megastructures
-		cost = { alloys = 4000 energy = 10000 }
-		upkeep = { energy = 40 }
-		produces = { nanites = 50 }
+		cost = {
+			alloys = 4000
+			energy = 10000
+		}
+		upkeep = {
+			energy = 40
+		}
+		produces = {
+			nanites = 50
+		}
 	}
+
 	possible = {
 		from = { has_technology = tech_orbital_hyperfogs }
 	}
-	country_modifier = { country_megastructure_build_cap_add = 1 megastructure_build_speed_mult = 0.2 }
-	ai_weight = { factor = 10 }	# If we can build it, we will build it
+
+	country_modifier = {
+		country_megastructure_build_cap_add = 1
+		megastructure_build_speed_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 10
+	}	# If we can build it, we will build it
+
 	on_build_complete = {
 		save_event_target_as = nano_system
 		fromfrom.planet = { save_event_target_as = nano_planet }
@@ -223,6 +304,7 @@ orbital_hyperfog_3 = {
 			country_event = { id = nano_dialog.1313 }			# Notification
 		}
 	}
+
 	# show_in_outliner = yes
 	outliner_trigger = {
 		exists = owner
