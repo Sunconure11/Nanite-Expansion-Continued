@@ -1,6 +1,6 @@
 # Override this to enable mult
 planet_engineers = {
-	modifier_category = pop_job
+	modifier_category = colony	# 4.5: pop_job category removed; all vanilla job categories use colony
 	parent = planet_researchers
 	generate_add_modifiers = {
 		produces

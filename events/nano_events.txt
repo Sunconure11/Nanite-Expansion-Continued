@@ -457,18 +457,16 @@ country_event = {
 	title = nano.1340.name
 	desc = nano.1340.desc
 	picture = GFX_evt_sapient_AI
-	location = from
+	location = capital_scope
 	is_triggered_only = yes
 
 	immediate = {
-		owner = { set_country_flag = great_archailect_event }
+		set_country_flag = great_archailect_event
 	}
 
 	after = {
-		owner = {
-			add_research_option = tech_toposophont_fogs
-			add_research_option = tech_toposophont_combat_computers
-		}
+		add_research_option = tech_toposophont_fogs
+		add_research_option = tech_toposophont_combat_computers
 	}
 
 	option = {
@@ -483,17 +481,13 @@ country_event = {
 		}
 		name = nano.1340.a
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_8 }
-		owner = {
-			add_modifier = { modifier = archailect_calculated_strategist }
-		}
+		add_modifier = { modifier = archailect_calculated_strategist }
 	}
 	option = {
 		trigger = { is_pacifist = yes }
 		name = nano.1340.b
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_9 }
-		owner = {
-			add_modifier = { modifier = archailect_serenity_now }
-		}
+		add_modifier = { modifier = archailect_serenity_now }
 	}
 	option = {
 		trigger = {
@@ -502,9 +496,7 @@ country_event = {
 		}
 		name = nano.1340.c
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_10 }
-		owner = {
-			add_modifier = { modifier = archailect_species_first }
-		}
+		add_modifier = { modifier = archailect_species_first }
 	}
 	option = {
 		trigger = {
@@ -513,17 +505,13 @@ country_event = {
 		}
 		name = nano.1340.c
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_10 }
-		owner = {
-			add_modifier = { modifier = archailect_species_first_synth }
-		}
+		add_modifier = { modifier = archailect_species_first_synth }
 	}
 	option = {
 		trigger = { is_xenophile = yes }
 		name = nano.1340.d
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_11 }
-		owner = {
-			add_modifier = { modifier = archailect_diverse_future }
-		}
+		add_modifier = { modifier = archailect_diverse_future }
 	}
 	option = {
 		trigger = {
@@ -534,17 +522,13 @@ country_event = {
 		}
 		name = nano.1340.e
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_12 }
-		owner = {
-			add_modifier = { modifier = archailect_revolutionary_awakening }
-		}
+		add_modifier = { modifier = archailect_revolutionary_awakening }
 	}
 	option = {
 		trigger = { is_authoritarian = yes }
 		name = nano.1340.f
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_13 }
-		owner = {
-			add_modifier = { modifier = archailect_absolute_monarch }
-		}
+		add_modifier = { modifier = archailect_absolute_monarch }
 	}
 	option = {
 		trigger = {
@@ -556,9 +540,7 @@ country_event = {
 		}
 		name = nano.1340.g
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_14 }
-		owner = {
-			add_modifier = { modifier = archailect_divine_calling }
-		}
+		add_modifier = { modifier = archailect_divine_calling }
 	}
 	option = {
 		trigger = {
@@ -571,31 +553,23 @@ country_event = {
 		}
 		name = nano.1340.h
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_15 }
-		owner = {
-			add_modifier = { modifier = archailect_master_mundane }
-		}
+		add_modifier = { modifier = archailect_master_mundane }
 	}
 	option = {
 		trigger = { is_hive_empire = yes }
 		name = nano.1340.i
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_16 }
-		owner = {
-			add_modifier = { modifier = archailect_hive_ai }
-		}
+		add_modifier = { modifier = archailect_hive_ai }
 	}
 	option = {
 		trigger = { is_machine_empire = yes }
 		name = nano.1340.j
 		event_target:nano_personality_decision = { upgrade_megastructure_to = great_archailect_17 }
-		owner = {
-			add_modifier = { modifier = archailect_machine_ai }
-		}
+		add_modifier = { modifier = archailect_machine_ai }
 	}
 	option = {
 		name = nano.1340.k
-		owner = {
-			add_modifier = { modifier = archailect_default }
-		}
+		add_modifier = { modifier = archailect_default }
 	}
 }
 

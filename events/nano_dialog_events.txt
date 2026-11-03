@@ -193,9 +193,9 @@ country_event = {
 	}
 
 	after = {
-		owner = {
-			country_event = { id = nano.1340 }
-		}
+		# Root of this event is already the builder country (fired via
+		# from = { country_event } from the megastructure), so no owner wrapper.
+		country_event = { id = nano.1340 }
 	}
 
 	option = {

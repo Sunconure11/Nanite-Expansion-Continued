@@ -486,4 +486,9 @@
  tech_universal_programmable_matter_desc: "Through advances in the manipulation of fundamental forces, truly programmable matter can now be created. Even the elements that compose it can be rapidly manipulated in real-time, and it can be used to create truly exotic metamaterials."
  tech_utility_fogs_modifier_desc: "§H$unlocks_decision$§! $decision_planetary_utility_fog$"
 
+ # 4.5: loc for economic-category modifiers enabled by the mod's category overrides
+ mod_planet_jobs_robotic_produces_mult: "Robotic Pop Job Output"
+ mod_planet_engineers_produces_mult: "Resources Produced from $researcher_type_plural_with_icon$"
+ mod_planet_engineers_engineering_research_produces_mult: "$engineering_produced_from$ $researcher_type_plural_with_icon$"
+
  # weapon_nanite: "Nanite"

@@ -1,4 +1,4 @@
-version="2.0"
+version="2.2.3"
 tags={
 	"Military"
 	"Technologies"
@@ -6,7 +6,7 @@ tags={
 	"Economy"
 	"Events"
 }
-name="Nanite Expansion Continued"
-supported_version="v4.3.*"
-remote_file_id="3142620942"
-
+name="Nanite Expansion Continued (Vibe Coded 4.5 Update)"
+picture="thumbnail.png"
+supported_version="4.5.*"
+remote_file_id="3817013256"

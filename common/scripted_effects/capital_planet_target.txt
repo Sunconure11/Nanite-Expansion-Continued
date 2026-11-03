@@ -14,35 +14,23 @@ get_capital_planet = {
 				num_owned_planets > 0
 				any_owned_planet = { is_colony = yes }
 			}
-			if = {
+			# 4.5: any_owned_sector/ordered_owned_sector were removed in the sector
+			# rework; use the ordered_owned_planet path directly.
+			ordered_owned_planet = {
 				limit = {
-					num_sectors > 0
-					any_owned_sector = { exists = sector_capital }
+					is_colony = yes
+					is_colonizable = no
+					exists = space_owner
+					solar_system = { exists = starbase }
 				}
-				ordered_owned_sector = {
-					limit = { exists = sector_capital }
-					position = 0
-					order_by = trigger:pop_amount
-					sector_capital = { save_event_target_as = capital_planet }
-				}
-			}
-			else = {
-				ordered_owned_planet = {
-					limit = {
-						is_colony = yes
-						is_colonizable = no
-						exists = space_owner
-						solar_system = { exists = starbase }
-					}
-					position = 0
-					order_by = trigger:pop_amount
-					# weights = {
-					# 	base = 1
-					#	modifier = { add = 3 solar_system = { is_capital_system = yes } }
-					# 	modifier = { add = 3 pop_amount > 300 }
-					# }
-					save_event_target_as = capital_planet
-				}
+				position = 0
+				order_by = trigger:pop_amount
+				# weights = {
+				# 	base = 1
+				#	modifier = { add = 3 solar_system = { is_capital_system = yes } }
+				# 	modifier = { add = 3 pop_amount > 300 }
+				# }
+				save_event_target_as = capital_planet
 			}
 			if = {
 				limit = {

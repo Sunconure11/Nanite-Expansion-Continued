@@ -3,5 +3,5 @@ planet_jobs_robotic = {
 	generate_mult_modifiers = {
 		produces
 	}
-	modifier_category = pop_job
+	modifier_category = colony	# 4.5: pop_job category removed; all vanilla job categories use colony
 }

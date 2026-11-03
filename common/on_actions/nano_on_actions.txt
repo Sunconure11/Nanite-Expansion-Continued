@@ -6,7 +6,9 @@ on_game_start = {
 }
 
 ### Subsumption Bombardment ###
-on_planet_zero_pops = {
+# 4.5: engine on_action renamed from on_planet_zero_pops (removed) to on_colony_zero_pops
+# Scope: This = Colony, From = Bombarder
+on_colony_zero_pops = {
 	events = {
 		nano.1300
 	}

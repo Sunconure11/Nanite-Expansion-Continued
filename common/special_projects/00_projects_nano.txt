@@ -1,3 +1,17 @@
+# Balance note (4.5 pass):
+# The per-pop terms below were written against the pre-4.0 pop scale. In 4.x
+# population is tracked in much finer units, so "add = 150/250" per pop produced
+# costs in the millions of research points (test play reported a 970+ year
+# estimate for the Nanite Revolution project).
+# Re-tuned to vanilla ascension-project levels (SYNTHETIC_EVOLUTION_PROJECT is
+# base 1000 + 2/pop, FLESH_IS_WEAK_PROJECT is base 500 + 1/pop, BREACHING_SHROUD_
+# PROJECT is base 500 + 1/pop), with a small premium for the nanite variants.
+# Actual duration still depends on the empire's research output, but it is now
+# in the same band as vanilla ascension paths instead of out of reach.
+# Approximate check: 150/pop at ~100k pop units = 15M cost, which at ~1.3k
+# engineering/month is the ~970 years that was reported. 2/pop makes the same
+# empire ~200k cost, i.e. vanilla Synthetic Evolution pacing.
+
 # Synthetic Nanoform Project
 special_project = {
 	key = "SYNTHETIC_NANITE_PROJECT"
@@ -7,7 +21,7 @@ special_project = {
 			limit = {
 			}
 			scope = this
-			add = 150
+			add = 2
 			calc = pop_amount
 		}
 	}
@@ -40,7 +54,7 @@ special_project = {
 			limit = {
 			}
 			scope = this
-			add = 250
+			add = 3
 			calc = pop_amount
 		}
 	}
@@ -73,7 +87,7 @@ special_project = {
 			limit = {
 			}
 			scope = this
-			add = 250
+			add = 3
 			calc = pop_amount
 		}
 	}
@@ -106,7 +120,7 @@ special_project = {
 			limit = {
 			}
 			scope = this
-			add = 250
+			add = 3
 			calc = pop_amount
 		}
 	}

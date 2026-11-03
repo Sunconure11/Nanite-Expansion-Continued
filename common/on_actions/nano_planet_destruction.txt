@@ -1,8 +1,22 @@
 # Nano Colossus
+# 4.5 parity: main destruction event goes last (it can remove the planet/country),
+# plus awareness.150 / origin.3245 and the _queued/_unqueued variants used by all
+# vanilla planet killers in common\on_actions\01_planet_destruction.txt.
 on_destroy_planet_with_PLANET_KILLER_NANO = {
 	events = {
 		crisis.5015
-		nano_colossus.1300
-		planet_destruction.600 # Frag holy world
+		planet_destruction.600	# Frag holy world
+		origin.3245				# Glassing a Progenitors Nest
+		awareness.150			# 4.5: chance to gain awareness from planet killer use
+		nano_colossus.1300		# goes last because it can kill a country/planet
 	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANO_queued = {
+	events = {
+		fircon.5035	# Solarpunk Planet queued
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANO_unqueued = {
 }

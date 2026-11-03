@@ -1,24 +1,34 @@
 
 namespace = nano_colossus
 # Transmuted
-planet_event = {
+# 4.5: planet killer destruction events use carrier scope
+# (mirrors vanilla planet_destruction.100 in events\planet_destruction_events.txt)
+carrier_event = {
 	id = nano_colossus.1300
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
+		# Don't fire the narrative event if the planet is destroyed by an arkship (4.5)
 		if = {
-			limit = { merg_is_frozen = yes }
-			from.owner = {
-				country_event = { id = nano_colossus.1301 }
-			}
-		}
-		else_if = {
 			limit = {
-				NOT = { is_planet_class = pc_ai }
+				from = {
+					is_arkship_ship = no
+				}
 			}
-			from.owner = {
-				country_event = { id = nano_colossus.1301 }
+			if = {
+				limit = { merg_is_frozen = yes }
+				from.owner = {
+					country_event = { id = nano_colossus.1301 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { is_planet_class = pc_ai }
+				}
+				from.owner = {
+					country_event = { id = nano_colossus.1301 }
+				}
 			}
 		}
 		# Dismantle observation post
@@ -34,9 +44,9 @@ planet_event = {
 				is_planet_class = pc_ai
 				NOT = { has_planet_flag = machine_lair }
 			}
-			set_planet_flag = destroyed_by_colossus
-			set_planet_flag = planet_cracked
-			planet_event = { id = crisis.2040 }
+			set_carrier_flag = destroyed_by_colossus
+			set_carrier_flag = planet_cracked
+			carrier_event = { id = crisis.2040 }
 		}
 		# Contingency Final Machine World
 		if = {
@@ -44,11 +54,11 @@ planet_event = {
 				is_planet_class = pc_ai
 				has_planet_flag = machine_lair
 			}
-			set_planet_flag = destroyed_by_colossus
-			set_planet_flag = planet_cracked
+			set_carrier_flag = destroyed_by_colossus
+			set_carrier_flag = planet_cracked
 			from.owner = { save_event_target_as = final_machine_world_destroyer }
 			stop_crisis_sound = yes
-			planet_event = { id = crisis.2046 }
+			carrier_event = { id = crisis.2046 }
 		}
 		# Swarm Situation Log counter
 		if = {
@@ -56,7 +66,7 @@ planet_event = {
 				exists = owner
 				owner = { is_country_type = swarm }
 			}
-			every_playable_country = {
+			every_country = {
 				limit = { has_event_chain = "prethoryn_scourge_chain" }
 				add_event_chain_counter = {
 					event_chain = "prethoryn_scourge_chain"
@@ -204,26 +214,40 @@ planet_event = {
 		if = {
 			limit = { exists = owner }
 			owner = {
-				add_static_war_exhaustion = {
-					attacker = from.fleet.owner
-					location = root
-					value_for_planet_destruction = 1.0
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance (4.5 vanilla guard)
+						is_at_war_with = from.fleet.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.fleet.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
 				}
 			}
 		}
+		# 4.5: destroy the orbital defence fleet so it doesn't orbit a dead world
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			destroy_fleet = orbital_defence
+		}
 		remove_all_buildings = yes
 		every_owned_pop_group = {
-			kill_pop_group = {
-				pop_group = this
-				amount = 100%
-			}
+			kill_all_pop = yes	# 4.5: vanilla scripted effect; "amount = 100%" was never valid
 		}
 		destroy_colony = yes
 		# Destroy habitats and ringworlds
 		if = {
 			limit = { merg_is_habitat = yes }
+			clear_consecration_effect = yes	# 4.5: vanilla clears consecrations before cracking habitats
 			spawn_habitat_cracker_effect = yes
 			remove_planet = yes
+		}
+		else_if = {
+			limit = { is_planet_class = pc_cosmogenesis_world }	# 4.5: Cosmogenesis lathe worlds
+			spawn_lathe_cracker_effect = yes
 		}
 		else_if = {
 			limit = { has_ringworld_output_boost = yes }

@@ -6,3 +6,8 @@
 @nanotier6cost1 = 64000
 @nanotier6cost2 = 80000
 @nanotier6cost3 = 96000
+
+# 4.5: vanilla removed this variable when reworking rare tech weights; the tech
+# files still use it for the Technological Ascendancy weight bonus. Restoring the
+# pre-4.x vanilla value keeps those techs from getting factor = 0.
+@ap_technological_ascendancy_rare_tech = 2

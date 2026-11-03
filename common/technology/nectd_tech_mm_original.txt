@@ -444,7 +444,6 @@ tech_subsumption_bombardment = {
 	cost = @tier4cost3
 	tier = 4
 	category = { propulsion }
-	ai_update_type = military
 	prerequisites = { "tech_self_replicating_nanites" "tech_military_micromachines" }
 	weight = @tier4weight3
 
@@ -664,7 +663,6 @@ tech_nanoform_uplifting = {
 	tier = 4
 	is_rare = yes
 	category = { industry }
-	ai_update_type = military
 	weight = 0
 
 	potential = {
@@ -772,7 +770,6 @@ tech_terminal_integration = {
 	tier = 4
 	is_rare = yes
 	category = { voidcraft }
-	ai_update_type = military
 	weight = 0
 
 	potential = {
@@ -849,7 +846,6 @@ tech_perpetual_herd_immunity = {
 	category = { biology }
 	tier = 4
 	is_rare = yes
-	ai_update_type = all
 	weight = 0
 
 	potential = {
@@ -922,7 +918,6 @@ tech_nanite_augmentation = {
 	category = { industry }
 	tier = 4
 	is_rare = yes
-	ai_update_type = all
 	weight = 0
 
 	potential = {
@@ -944,7 +939,6 @@ tech_orbital_hyperfogs = {
 	cost = @tier4cost3
 	tier = 4
 	category = { voidcraft }
-	ai_update_type = all
 	prerequisites = { "tech_self_replicating_nanites" }
 	weight = @tier4weight3
 	is_rare = yes
@@ -1250,7 +1244,6 @@ tech_pk_mass_deconstructor = {
 	is_reverse_engineerable = no
 	category = { voidcraft }
 	prerequisites = { "tech_subsumption_bombardment" "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 	
 	potential = {
@@ -1435,7 +1428,6 @@ tech_self_healing_armor = {
 	cost = @tier5cost3
 	tier = 5
 	category = { materials }
-	ai_update_type = all
 	prerequisites = { "tech_ship_armor_5" "tech_universal_programmable_matter" }
 	weight = @tier5weight3
 	is_rare = yes
@@ -1469,7 +1461,6 @@ tech_miniaturized_autowars = {
 	cost = @tier5cost3
 	area = engineering
 	tier = 5
-	ai_update_type = military
 	category = { voidcraft }
 	prerequisites = { "tech_strike_craft_3" "tech_self_healing_armor" }
 	weight = @tier5weight3
@@ -1537,7 +1528,6 @@ tech_optical_phased_arrays = {
 	cost = @tier5cost3
 	tier = 5
 	category = { particles }
-	ai_update_type = military
 	prerequisites = { "tech_titans" "tech_self_healing_armor" }
 	weight = @tier5weight3
 
@@ -1645,12 +1635,19 @@ tech_attoscale_mechanics = {
 	
 	weight_modifier = {
 		factor = 0.5
+		# 4.5: Tier 6 requires Galactic Wonders. Vanilla merged the old DLC-split
+		# perks into the single ap_galactic_wonders; the three legacy IDs are now
+		# save-compat stubs (potential = always = no). Check all four via OR
+		# (same pattern as vanilla's has_galactic_wonders scripted trigger).
 		modifier = {
 			factor = 0
-			NOR = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_megacorp
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			NOT = {
+				OR = {
+					has_ascension_perk = ap_galactic_wonders
+					has_ascension_perk = ap_galactic_wonders_utopia
+					has_ascension_perk = ap_galactic_wonders_megacorp
+					has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+				}
 			}
 		}
 		modifier = {
@@ -1849,7 +1846,6 @@ tech_nano_torpedoes = {
 	cost = @nanotier6cost3
 	tier = 5
 	category = { propulsion }
-	ai_update_type = military
 	prerequisites = { "tech_torpedoes_3" "tech_atto_optimizations" }
 	weight = @tier5weight3
 
@@ -1899,7 +1895,6 @@ tech_nano_swarmer_missile = {
 	cost = @nanotier6cost3
 	tier = 5
 	category = { propulsion }
-	ai_update_type = military
 	prerequisites = { "tech_swarmer_missiles_2" "tech_atto_optimizations" }
 	weight = @tier5weight3
 
@@ -1948,7 +1943,6 @@ tech_great_archailect = {
 	cost = @nanotier6cost3
 	tier = 5
 	category = { voidcraft }
-	ai_update_type = all
 	prerequisites = { "tech_nano_encryption" "tech_nano_decryption" "tech_atto_optimizations" }
 	weight = @tier5weight3
 	is_rare = yes
@@ -1978,7 +1972,10 @@ tech_great_archailect = {
 		modifier = {
 			factor = 2
 			OR = {
+				# 4.5: include the unified perk; legacy IDs kept for old saves
+				has_ascension_perk = ap_galactic_wonders
 				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_megacorp
 				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
 			}
 		}
@@ -2039,7 +2036,6 @@ tech_toposophont_combat_computers = {
 	tier = 5
 	cost = @nanotier6cost3
 	category = { computing }
-	ai_update_type = military
 	is_rare = yes
 	prerequisites = { "tech_great_archailect" }
 	weight = @tier5weight3

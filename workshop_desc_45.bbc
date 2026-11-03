@@ -1,0 +1,59 @@
+[h1]Nanite Expansion Continued — Vibe Coded 4.5 Update[/h1]
+
+[h2]What is this?[/h2]
+A standalone update of [b]Nanite Expansion Continued[/b], bringing the mod up to [i]Stellaris 4.5[/i] (tested on 4.5.2 "Cygnus"). It contains the complete mod content plus a round of compatibility and bug fixes. You do [b]not[/b] need the 4.3 workshop version installed — and you should [b]not[/b] run both at once, as this is a full replacement.
+
+This is an [b]unofficial compatibility update[/b]. All of the mod's content — the technologies, megastructures, events, graphics and writing — is the work of the original authors credited below.
+
+[hr]
+[h2]Features (carried over from Nanite Expansion Continued)[/h2]
+[list]
+[*]40+ nanotechnology technologies exploring scales from the micro to the atto and everything between, inspired by the Orion's Arm sci-fi encyclopedia
+[*]Nanotech ascension paths for Organic, Synth and Machine empires
+[*]Two megastructures: the [b]Orbital Hyperfog[/b] and the [b]Great Archailect[/b] — a giant AI entity whose "personality" you get to influence through its event chain
+[*]A Colossus planet killer that transmutes worlds into nanite worlds, unique ship components, and the Grey Tempest-style strike craft
+[*]New buildings and jobs, three new armies, a subsumption bombardment stance, upgradable planet modifiers, and traits for Synths and Machines equivalent to the Brain Slug for Organics
+[/list]
+
+The full mod documentation can be found [url=//docs.google.com/document/d/e/2PACX-1vT3nr03aAEjxLBPIIKEdtvgF1tSk9VwqCy2SZcBPrWedbQy6oQ1nlwCKKy546lKKaqQOmaOP5p_IZlH/pub]here.[/url]
+
+[hr]
+[h2]What's fixed in this 4.5 update[/h2]
+[list]
+[*]Subsumption Bombardment works again (the game event hook it relied on was renamed in 4.5)
+[*]Tier 6 nanotech research gate fixed — Galactic Wonders once again unlocks the atto-scale tech chain (the perk check was updated for the perk merge in current Stellaris)
+[*]Nano Colossus fully integrated with the 4.5 planet-killer rework (awareness, Contingency machine worlds, Cosmogenesis worlds, arkships, and more)
+[*]The Great Archailect personality event now correctly applies its empire modifiers and research options (it previously failed silently)
+[*]Bombardment particle effects restored for all bombardment stances added since 4.3 (pox, seed bombing, voidworm invasion, firestorm, seismic bombing, ...)
+[*]Technological Ascendancy no longer suppresses nanotech research weights
+[*]Economic bonuses from the Archailect modifiers and the nanotech ascension perk work again
+[*]Various other 4.5 script fixes: sector-rework fallout, economic categories, trait icon parameters, planet-killer component gating, and more
+[/list]
+
+[hr]
+[h2]Installation[/h2]
+Copy the mod folder into your Stellaris mods directory (Documents/Paradox Interactive/Stellaris/mods/) and enable it in the launcher. Use this [b]instead of[/b] the 4.3 version of Nanite Expansion Continued — do not enable both.
+
+[hr]
+[h2]Compatibility[/h2]
+[list]
+[*]Gigastructural Engineering: supported — this mod should load [i]after[/i] Gigastructural Engineering
+[*]The Merger of Rules: supported
+[*]Overwrites the vanilla orbital bombardment effects entity; minor graphical conflicts are possible with other mods that replace it
+[/list]
+
+[hr]
+[h2]Credits[/h2]
+[list]
+[*][url=https://steamcommunity.com/id/machinamystica][b]Machina Mystica[/b][/url] — author of the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2498990660][b]Nanite Expansion[/b][/url], released free of charge
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3142620942][b]Nanite Expansion Continued[/b][/url] — the continuation this 4.5 update is based on ([url=https://github.com/Sunconure11/Nanite-Expansion-Continued]source repository[/url])
+[*][url=//steamcommunity.com/id/thomasstone]Tom Stone[/url] — many of the icons and graphics
+[*][url=//steamcommunity.com/profiles/76561198073880617]Elowiny[/url] — use of the Matryoshka Model
+[*][url=//steamcommunity.com/id/oldent]OldEnt[/url] — troubleshooting assistance
+[*]zerg, Fabien and Haly — Simplified Chinese, French and Russian translations
+[/list]
+The mod is released under the Unlicense (public domain).
+
+[hr]
+[h2]AI usage disclosure[/h2]
+The 4.5 compatibility work behind this update — the audit of the mod's scripts against the 4.5.2 game files, the code fixes listed above, and this workshop page text — was produced with the assistance of an AI coding agent (OpenWork). The underlying mod content remains the work of the original authors credited above. Reports of problems with the 4.5 fixes are welcome; investigations of those reports may also use AI assistance.

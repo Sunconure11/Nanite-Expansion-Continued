@@ -8,6 +8,7 @@ leader_trait_nanite_entity = {
 
 	inline_script = {
 		script = trait/icon
+		CLASS = leader	# 4.5: trait/icon inline script requires the CLASS parameter
 		ICON = "GFX_leader_trait_nanite_entity"
 		RARITY = common
 		COUNCIL = triggered
@@ -76,6 +77,7 @@ leader_trait_terminal_nanites = {
 
 	inline_script = {
 		script = trait/icon
+		CLASS = leader	# 4.5: trait/icon inline script requires the CLASS parameter
 		ICON = "GFX_leader_trait_nanite_entity"
 		RARITY = common
 		COUNCIL = triggered
