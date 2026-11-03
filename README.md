@@ -14,6 +14,11 @@ workshop mod. Do not enable both at the same time.
    (Vibe Coded 4.5 Update)* (`supported_version = 4.5.*`).
 3. Enable it in your playset **instead of** the 4.3 workshop version.
 
+A ready-to-install package is published on the
+[Releases](https://github.com/shadowtheimpure/Nanite-Expansion-Continued-Vibe-Coded-Update-/releases/latest)
+page (`nanite_expansion_continued_45_v2.2.3.zip`) — extract it into the same
+`mods` folder and enable it the same way.
+
 ## Changes vs. the 4.3 mod (4.3 → 4.5 compatibility)
 
 ### Critical fixes (features that silently stopped working)
